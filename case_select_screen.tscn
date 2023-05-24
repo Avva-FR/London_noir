@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxojrl25bbf0i"]
+
+[ext_resource type="Texture2D" uid="uid://bdcwj8if8twdd" path="res://pictures/folder.svg" id="1_e8t35"]
+[ext_resource type="Script" path="res://case_select_screen.gd" id="1_pwmw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3bp3"]
+
+[node name="Case_select_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwmw3")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 39.0
+offset_right = 1616.0
+offset_bottom = 1162.0
+scale = Vector2(0.245829, 0.206982)
+texture_normal = ExtResource("1_e8t35")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(506, 536)
+scale = Vector2(5.88, 1.64)
+shape = SubResource("RectangleShape2D_q3bp3")

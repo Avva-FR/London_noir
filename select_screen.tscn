@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn2smoiisldl4"]
+
+[ext_resource type="Script" path="res://select_screen.gd" id="1_7vmlp"]
+[ext_resource type="Texture2D" uid="uid://b2v8wui8hjkxs" path="res://pictures/select_screen.png" id="1_ue0q7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xa66j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddgh7"]
+
+[node name="Select_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vmlp")
+
+[node name="SelectScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ue0q7")
+
+[node name="Cases_button" type="TouchScreenButton" parent="SelectScreen"]
+texture_filter = 1
+position = Vector2(3.33331, -256.667)
+scale = Vector2(35.9265, 7.66667)
+texture_pressed = SubResource("ViewportTexture_xa66j")
+shape = SubResource("RectangleShape2D_ddgh7")
+shape_centered = false
+metadata/is_pressed = false
+
+[node name="Tutorial_button" type="TouchScreenButton" parent="SelectScreen"]
+texture_filter = 1
+position = Vector2(3.33331, -60)
+scale = Vector2(35.9265, 7.66667)
+texture_pressed = SubResource("ViewportTexture_xa66j")
+shape = SubResource("RectangleShape2D_ddgh7")
+shape_centered = false
+metadata/is_pressed = false
+
+[node name="Settings_button" type="TouchScreenButton" parent="SelectScreen"]
+texture_filter = 1
+position = Vector2(5, 170)
+scale = Vector2(35.9265, 7.66667)
+texture_pressed = SubResource("ViewportTexture_xa66j")
+shape = SubResource("RectangleShape2D_ddgh7")
+shape_centered = false
+metadata/is_pressed = false
+
+[node name="cases_botton1" type="TextureButton" parent="SelectScreen"]
+anchors_preset = -1
+anchor_left = 0.502
+anchor_top = 0.262
+anchor_right = 0.502
+anchor_bottom = 0.262
+offset_left = -1320.84
+offset_top = -615.96
+offset_right = -600.84
+offset_bottom = -463.96
+
+[node name="tutorial_button1" type="TextureButton" parent="SelectScreen"]
+anchors_preset = -1
+anchor_left = 0.502
+anchor_top = 0.444
+anchor_right = 0.502
+anchor_bottom = 0.444
+offset_left = -1318.84
+offset_top = -616.52
+offset_right = -601.84
+offset_bottom = -463.52
+
+[node name="settings_button1" type="TextureButton" parent="SelectScreen"]
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.657
+anchor_right = 0.503
+anchor_bottom = 0.657
+offset_left = -1319.09
+offset_top = -616.227
+offset_right = -602.093
+offset_bottom = -463.227
+
+[connection signal="pressed" from="SelectScreen/Cases_button" to="." method="_on_cases_button_pressed"]
+[connection signal="pressed" from="SelectScreen/Tutorial_button" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="SelectScreen/Settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="SelectScreen/cases_botton1" to="." method="_on_cases_botton_1_pressed"]
+[connection signal="pressed" from="SelectScreen/tutorial_button1" to="." method="_on_tutorial_button_1_pressed"]
+[connection signal="pressed" from="SelectScreen/settings_button1" to="." method="_on_settings_button_1_pressed"]
