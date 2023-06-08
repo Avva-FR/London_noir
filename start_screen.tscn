@@ -1,29 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb6w4r1bf2i4r"]
+[gd_scene load_steps=3 format=3 uid="uid://cb6w4r1bf2i4r"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_oyrb8"]
-[ext_resource type="Texture2D" uid="uid://cd1snu0ck11ae" path="res://pictures/start_Screenpng.png" id="2_dx3hf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxmrd"]
-size = Vector2(270, 60)
+[ext_resource type="Texture2D" uid="uid://cd1snu0ck11ae" path="res://pictures/start_Screenpng.png" id="2_msak3"]
 
 [node name="Start_screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oyrb8")
 
 [node name="StartScreenpng" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_dx3hf")
-
-[node name="Start_button" type="TouchScreenButton" parent="StartScreenpng"]
-position = Vector2(293.333, 151.667)
-scale = Vector2(1.66667, 1.66667)
-shape = SubResource("RectangleShape2D_wxmrd")
+position = Vector2(1919.93, 1080)
+scale = Vector2(2.00008, 2)
+texture = ExtResource("2_msak3")
 
 [node name="TextureButton" type="TextureButton" parent="StartScreenpng"]
 offset_left = 68.0
@@ -31,5 +24,4 @@ offset_top = 102.0
 offset_right = 518.0
 offset_bottom = 202.0
 
-[connection signal="pressed" from="StartScreenpng/Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartScreenpng/TextureButton" to="." method="_on_texture_button_pressed"]

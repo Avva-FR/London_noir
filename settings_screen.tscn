@@ -1,10 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg2tc4jarwk86"]
+[gd_scene load_steps=3 format=3 uid="uid://bg2tc4jarwk86"]
 
 [ext_resource type="Script" path="res://settings_screen.gd" id="1_2hxnj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xlnlo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yipbv"]
 
 [node name="Settings_screen" type="Control"]
 layout_mode = 3
@@ -72,17 +70,17 @@ offset_top = 516.0
 offset_right = 797.0
 offset_bottom = 556.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Back_button"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.826
 anchor_right = 0.5
 anchor_bottom = 0.826
-offset_left = -34.0
-offset_top = -13.248
-offset_right = 27.0
-offset_bottom = 12.752
+offset_left = 1301.5
+offset_top = 1221.87
+offset_right = 1362.5
+offset_bottom = 1247.87
 text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -91,11 +89,5 @@ vertical_alignment = 1
 autoplay = true
 bus = &"Music"
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(568, 537)
-scale = Vector2(8.76, 2.28)
-shape = SubResource("RectangleShape2D_yipbv")
-
 [connection signal="value_changed" from="Panel/Music_vol_slider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
