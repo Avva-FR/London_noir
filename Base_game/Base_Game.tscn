@@ -1,0 +1,151 @@
+[gd_scene load_steps=7 format=3 uid="uid://csht10lahukfx"]
+
+[ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
+[ext_resource type="Texture2D" uid="uid://cx41tgqfnvs2w" path="res://pictures/left_tip_texture.png" id="3_py5eb"]
+[ext_resource type="Texture2D" uid="uid://xqhkbmtaqfux" path="res://pictures/right_tipp_texture.png" id="4_hgm6c"]
+[ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
+[ext_resource type="Texture2D" uid="uid://b2f050jpyv5bb" path="res://pictures/Section_dropper.png" id="6_bwnv4"]
+
+[sub_resource type="GDScript" id="GDScript_ev3ku"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_ev3ku")
+
+[node name="L_Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 800.0
+offset_right = 670.0
+offset_bottom = 1408.0
+
+[node name="L_DB_Slot1" type="CenterContainer" parent="L_Container"]
+layout_mode = 2
+
+[node name="L_DB_Frame" type="TextureRect" parent="L_Container/L_DB_Slot1"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="L_Drop_Box1" type="TextureRect" parent="L_Container/L_DB_Slot1/L_DB_Frame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="L_DB_Slot2" type="CenterContainer" parent="L_Container"]
+layout_mode = 2
+
+[node name="L_DB_Frame2" type="TextureRect" parent="L_Container/L_DB_Slot2"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="L_Drop_Box2" type="TextureRect" parent="L_Container/L_DB_Slot2/L_DB_Frame2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="L_DB_Slot3" type="CenterContainer" parent="L_Container"]
+layout_mode = 2
+
+[node name="L_DB_Frame3" type="TextureRect" parent="L_Container/L_DB_Slot3"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="L_Drop_Box3" type="TextureRect" parent="L_Container/L_DB_Slot3/L_DB_Frame3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="R_Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 3000.0
+offset_top = 801.0
+offset_right = 3200.0
+offset_bottom = 1409.0
+
+[node name="R_DB_Slot4" type="CenterContainer" parent="R_Container"]
+layout_mode = 2
+
+[node name="R_DB_Frame3" type="TextureRect" parent="R_Container/R_DB_Slot4"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="R_Drop_Box3" type="TextureRect" parent="R_Container/R_DB_Slot4/R_DB_Frame3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="R_DB_Slot2" type="CenterContainer" parent="R_Container"]
+layout_mode = 2
+
+[node name="R_DB_Frame2" type="TextureRect" parent="R_Container/R_DB_Slot2"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="R_Drop_Box2" type="TextureRect" parent="R_Container/R_DB_Slot2/R_DB_Frame2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="R_DB_Slot3" type="CenterContainer" parent="R_Container"]
+layout_mode = 2
+
+[node name="R_DB_Frame1" type="TextureRect" parent="R_Container/R_DB_Slot3"]
+layout_mode = 2
+texture = ExtResource("6_bwnv4")
+
+[node name="R_Drop_Box1" type="TextureRect" parent="R_Container/R_DB_Slot3/R_DB_Frame1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hip4l")
+
+[node name="Texture_node" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ayaya" type="TextureRect" parent="Texture_node"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 63.0
+offset_right = 321.0
+offset_bottom = 277.0
+texture = ExtResource("3_py5eb")
+script = ExtResource("4_ma1c7")
+
+[node name="Tips" type="TextureRect" parent="Texture_node"]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 148.0
+offset_right = 691.0
+offset_bottom = 361.0
+texture = ExtResource("4_hgm6c")
+script = ExtResource("4_ma1c7")

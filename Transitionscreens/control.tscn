@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Transitionscreens/control.gd" id="1_y1lui"]
+[ext_resource type="Texture2D" uid="uid://cd1snu0ck11ae" path="res://pictures/start_Screenpng.png" id="2_yryrh"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxmrd"]
+size = Vector2(270, 60)
+
+[node name="startscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y1lui")
+
+[node name="StartScreenpng" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_yryrh")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(752, 415)
+shape = SubResource("RectangleShape2D_wxmrd")

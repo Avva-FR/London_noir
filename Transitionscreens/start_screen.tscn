@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3ucqc6liue0x"]
+
+[ext_resource type="Script" path="res://Transitionscreens/control.gd" id="1_xlyev"]
+[ext_resource type="Texture2D" uid="uid://cd1snu0ck11ae" path="res://pictures/start_Screenpng.png" id="2_kp0ut"]
+
+[node name="Start_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xlyev")
+
+[node name="StartScreenpng" type="Sprite2D" parent="."]
+position = Vector2(1919.93, 1080)
+scale = Vector2(2.00008, 2)
+texture = ExtResource("2_kp0ut")
+
+[node name="TextureButton" type="TextureButton" parent="StartScreenpng"]
+offset_left = 68.0
+offset_top = 102.0
+offset_right = 518.0
+offset_bottom = 202.0
+
+[connection signal="pressed" from="StartScreenpng/TextureButton" to="." method="_on_texture_button_pressed"]
