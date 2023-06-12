@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func _on_texture_button_2_button_up():
-	get_tree().change_scene_to_file("res://Base_game/Base_game.tscn")
+	get_tree().change_scene_to_file("res://Base_game/Base_Game.tscn")
+
