@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
 [ext_resource type="Texture2D" uid="uid://b2f050jpyv5bb" path="res://pictures/Section_dropper.png" id="6_bwnv4"]
 [ext_resource type="Texture2D" uid="uid://bj3d0p5s55x6e" path="res://pictures/ER-Textures/L_Plotpoint_1/Kugel.png" id="8_5q1qt"]
-[ext_resource type="Texture2D" uid="uid://boti08abcsggy" path="res://pictures/bg_placeholer.png" id="9_8uvxx"]
 [ext_resource type="Texture2D" uid="uid://24l4y3tm12t2" path="res://pictures/ER-Textures/L_Plotpoint_1/Portier.png" id="9_brfqm"]
 [ext_resource type="Texture2D" uid="uid://cjegt880m0dkj" path="res://pictures/ER-Textures/L_Plotpoint_1/Revolver.png" id="10_4g3a5"]
 [ext_resource type="Texture2D" uid="uid://b6t8uadq4g5po" path="res://pictures/ER-Textures/L_Plotpoint_1/Pistole.png" id="10_5td0k"]
@@ -23,9 +22,107 @@
 [ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://pictures/ER-Textures/R_Plotpoint_1/schneidet.png" id="21_lm4xq"]
 [ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://pictures/ER-Textures/R_Plotpoint_1/Person.png" id="22_2vffo"]
 [ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://pictures/ER-Textures/R_Plotpoint_1/hält.png" id="23_w16s5"]
+[ext_resource type="Texture2D" uid="uid://di7tm4g6mr6pi" path="res://pictures/PIN_red.png" id="24_pg1qr"]
 [ext_resource type="Texture2D" uid="uid://bo2afqgju2pv4" path="res://pictures/ER-Textures/R_Plotpoint_1/Gegenstand.png" id="24_vp0jp"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
+script/source = "extends Control
+
+# plotpoint 1
+var l_pp1_node1
+var l_pp1_node2
+var l_pp1_node3
+var l_pp1_node4
+var l_pp1_node5
+var l_pp1_node6
+var l_pp1_node7
+var l_pp1_node8
+var l_pp1_node9
+var l_pp1_node10
+
+var r_pp1_node1
+var r_pp1_node2
+var r_pp1_node3
+var r_pp1_node4
+var r_pp1_node5
+var r_pp1_node6
+var r_pp1_node7
+var r_pp1_node8
+var r_pp1_node9
+var r_pp1_node10
+
+# spawn position for out texturerect
+var l_spawn_pos1 = Vector2(121, 143)
+var l_spawn_pos2 = Vector2(588, 128)
+var l_spawn_pos3 = Vector2(376, 424)
+var l_spawn_pos4 = Vector2(722, 584)
+var l_spawn_pos5 = Vector2(91, 658)
+var l_spawn_pos6 = Vector2(73, 1197)
+var l_spawn_pos7 = Vector2(142, 1550)
+var l_spawn_pos8 = Vector2(632, 1580)
+var l_spawn_pos9 = Vector2(361, 1808)
+var l_spawn_pos10 = Vector2(797, 1840)
+
+var r_spawn_pos1 = Vector2(3140, 1798)
+var r_spawn_pos2 = Vector2(3524, 1826)
+var r_spawn_pos3 = Vector2(2970, 1538)
+var r_spawn_pos4 = Vector2(3451, 1483)
+var r_spawn_pos5 = Vector2(3576, 1275)
+var r_spawn_pos6 = Vector2(3538, 638)
+var r_spawn_pos7 = Vector2(3117, 421)
+var r_spawn_pos8 = Vector2(3515, 346)
+var r_spawn_pos9 = Vector2(3105, 133)
+var r_spawn_pos10 = Vector2(3421, 96)
+
+#spawn positions for on clickevent on selectbutton_presses
+func _ready():
+	l_pp1_node1 = get_node(\"L_PP1_Texturesnode/L_PP1_false1\")
+	l_pp1_node2 = get_node(\"L_PP1_Texturesnode/L_PP1_false2\")
+	l_pp1_node3 = get_node(\"L_PP1_Texturesnode/L_PP1_false3\")
+	l_pp1_node4 = get_node(\"L_PP1_Texturesnode/L_PP1_false4\")
+	l_pp1_node5 = get_node(\"L_PP1_Texturesnode/L_PP1_false5\")
+	l_pp1_node6 = get_node(\"L_PP1_Texturesnode/L_PP1_false6\")
+	l_pp1_node7 = get_node(\"L_PP1_Texturesnode/L_PP1_false7\")
+	l_pp1_node8 = get_node(\"L_PP1_Texturesnode/L_PP1_true1\")
+	l_pp1_node9 = get_node(\"L_PP1_Texturesnode/L_PP1_true2\")
+	l_pp1_node10 = get_node(\"L_PP1_Texturesnode/L_PP1_true3\")
+	
+	r_pp1_node1 = get_node(\"R_PP1_Texturesnode/R_PP1_false1\")
+	r_pp1_node2 = get_node(\"R_PP1_Texturesnode/R_PP1_false2\")
+	r_pp1_node3 = get_node(\"R_PP1_Texturesnode/R_PP1_false3\")
+	r_pp1_node4 = get_node(\"R_PP1_Texturesnode/R_PP1_false4\")
+	r_pp1_node5 = get_node(\"R_PP1_Texturesnode/R_PP1_false5\")
+	r_pp1_node6 = get_node(\"R_PP1_Texturesnode/R_PP1_false6\")
+	r_pp1_node7 = get_node(\"R_PP1_Texturesnode/R_PP1_false7\")
+	r_pp1_node8 = get_node(\"R_PP1_Texturesnode/R_PP1_true1\")
+	r_pp1_node9 = get_node(\"R_PP1_Texturesnode/R_PP1_true2\")
+	r_pp1_node10 = get_node(\"R_PP1_Texturesnode/R_PP1_true3\")
+
+func _on_l_pp_1_selectbutton_pressed():
+	l_pp1_node1.position = l_spawn_pos1
+	l_pp1_node10.position = l_spawn_pos2
+	l_pp1_node4.position = l_spawn_pos3
+	l_pp1_node6.position = l_spawn_pos4
+	l_pp1_node5.position = l_spawn_pos5
+	l_pp1_node9.position = l_spawn_pos6
+	l_pp1_node2.position = l_spawn_pos7
+	l_pp1_node3.position = l_spawn_pos8
+	l_pp1_node8.position = l_spawn_pos9
+	l_pp1_node7.position = l_spawn_pos10
+
+func _on_r_pp_1_selectbutton_pressed():
+	r_pp1_node2.position = r_spawn_pos1
+	r_pp1_node10.position = r_spawn_pos2
+	r_pp1_node7.position = r_spawn_pos3
+	r_pp1_node3.position = r_spawn_pos4
+	r_pp1_node9.position = r_spawn_pos5
+	r_pp1_node4.position = r_spawn_pos6
+	r_pp1_node5.position = r_spawn_pos7
+	r_pp1_node6.position = r_spawn_pos8
+	r_pp1_node7.position = r_spawn_pos9
+	r_pp1_node8.position = r_spawn_pos10
+	
+"
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -42,91 +139,91 @@ offset_right = 1.0
 
 [node name="L_PP1_false1" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 348.0
-offset_top = 196.0
-offset_right = 548.0
-offset_bottom = 396.0
+offset_left = -492.0
+offset_top = 294.0
+offset_right = -292.0
+offset_bottom = 494.0
 texture = ExtResource("10_krin7")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false2" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 984.0
-offset_right = 336.0
-offset_bottom = 1184.0
+offset_left = -504.0
+offset_top = 1288.0
+offset_right = -304.0
+offset_bottom = 1488.0
 texture = ExtResource("11_rql5s")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false3" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 1500.0
-offset_right = 376.0
-offset_bottom = 1700.0
+offset_left = -531.0
+offset_top = 1680.0
+offset_right = -331.0
+offset_bottom = 1880.0
 texture = ExtResource("12_kvygj")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false4" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 548.0
-offset_right = 360.0
-offset_bottom = 748.0
+offset_left = -404.0
+offset_top = 567.0
+offset_right = -204.0
+offset_bottom = 767.0
 texture = ExtResource("8_5q1qt")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false5" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 680.0
-offset_top = 1636.0
-offset_right = 880.0
-offset_bottom = 1836.0
+offset_left = -225.0
+offset_top = 1376.0
+offset_right = -25.0
+offset_bottom = 1576.0
 texture = ExtResource("10_4g3a5")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false6" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 840.0
-offset_top = 1920.0
-offset_right = 1040.0
-offset_bottom = 2120.0
+offset_left = -326.0
+offset_top = 1566.0
+offset_right = -126.0
+offset_bottom = 1766.0
 texture = ExtResource("13_0jkcg")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false7" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 212.0
-offset_right = 256.0
-offset_bottom = 412.0
+offset_left = -651.0
+offset_top = 194.0
+offset_right = -451.0
+offset_bottom = 394.0
 texture = ExtResource("10_5td0k")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_true1" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 292.0
-offset_top = 1912.0
-offset_right = 492.0
-offset_bottom = 2112.0
+offset_left = -284.0
+offset_top = 1876.0
+offset_right = -84.0
+offset_bottom = 2076.0
 texture = ExtResource("9_brfqm")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP2_true2" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_true2" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 708.0
-offset_top = 88.0
-offset_right = 908.0
-offset_bottom = 288.0
+offset_left = -297.0
+offset_top = 114.0
+offset_right = -97.0
+offset_bottom = 314.0
 texture = ExtResource("3_ct1n2")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_true3" type="TextureRect" parent="L_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 496.0
-offset_right = 832.0
-offset_bottom = 696.0
+offset_left = -440.0
+offset_top = 1025.0
+offset_right = -240.0
+offset_bottom = 1225.0
 texture = ExtResource("11_ihe0u")
 script = ExtResource("4_ma1c7")
 
@@ -303,91 +400,91 @@ offset_bottom = 10.0
 
 [node name="R_PP1_false1" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 2882.0
-offset_top = 251.0
-offset_right = 3082.0
-offset_bottom = 451.0
+offset_left = 4025.0
+offset_top = 221.0
+offset_right = 4225.0
+offset_bottom = 421.0
 texture = ExtResource("15_d0rf1")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false2" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 2695.0
-offset_top = 1872.0
-offset_right = 2895.0
-offset_bottom = 2072.0
+offset_left = 4125.0
+offset_top = 1915.0
+offset_right = 4325.0
+offset_bottom = 2115.0
 texture = ExtResource("16_4or8w")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false3" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3288.0
-offset_top = 125.0
-offset_right = 3488.0
-offset_bottom = 325.0
+offset_left = 4512.0
+offset_top = 345.0
+offset_right = 4712.0
+offset_bottom = 545.0
 texture = ExtResource("17_0e8xc")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false4" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3553.0
-offset_top = 344.0
-offset_right = 3753.0
-offset_bottom = 544.0
+offset_left = 4136.0
+offset_top = 854.0
+offset_right = 4336.0
+offset_bottom = 1054.0
 texture = ExtResource("18_prooq")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false5" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 2760.0
-offset_top = 517.0
-offset_right = 2960.0
-offset_bottom = 717.0
+offset_left = 3891.0
+offset_top = 444.0
+offset_right = 4091.0
+offset_bottom = 644.0
 texture = ExtResource("19_l3t45")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false6" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3383.0
-offset_top = 895.0
-offset_right = 3583.0
-offset_bottom = 1095.0
+offset_left = 4082.0
+offset_top = 525.0
+offset_right = 4282.0
+offset_bottom = 725.0
 texture = ExtResource("20_yn3m6")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false7" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 2983.0
-offset_top = 1559.0
-offset_right = 3183.0
-offset_bottom = 1759.0
+offset_left = 4193.0
+offset_top = 1659.0
+offset_right = 4393.0
+offset_bottom = 1859.0
 texture = ExtResource("21_lm4xq")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true1" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3300.0
-offset_top = 516.0
-offset_right = 3500.0
-offset_bottom = 716.0
+offset_left = 4244.0
+offset_top = 1052.0
+offset_right = 4444.0
+offset_bottom = 1252.0
 texture = ExtResource("22_2vffo")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true2" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3423.0
-offset_top = 1507.0
-offset_right = 3623.0
-offset_bottom = 1707.0
+offset_left = 4365.0
+offset_top = 1430.0
+offset_right = 4565.0
+offset_bottom = 1630.0
 texture = ExtResource("23_w16s5")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true3" type="TextureRect" parent="R_PP1_Texturesnode"]
 layout_mode = 0
-offset_left = 3518.0
-offset_top = 1905.0
-offset_right = 3718.0
-offset_bottom = 2105.0
+offset_left = 4336.0
+offset_top = 1841.0
+offset_right = 4536.0
+offset_bottom = 2041.0
 texture = ExtResource("24_vp0jp")
 script = ExtResource("4_ma1c7")
 
@@ -616,9 +713,9 @@ script = ExtResource("2_hip4l")
 
 [node name="R_Container" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 3000.0
+offset_left = 3200.0
 offset_top = 801.0
-offset_right = 3200.0
+offset_right = 3400.0
 offset_bottom = 1409.0
 
 [node name="R_DB_Slot4" type="CenterContainer" parent="R_Container"]
@@ -669,6 +766,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_hip4l")
 
-[node name="BgPlaceholer" type="Sprite2D" parent="."]
-position = Vector2(1857, 1112)
-texture = ExtResource("9_8uvxx")
+[node name="L_PP1_Selectbutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1610.0
+offset_top = 1046.0
+offset_right = 1660.0
+offset_bottom = 1090.0
+texture_normal = ExtResource("24_pg1qr")
+
+[node name="R_PP1_Selectbutton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_right = 0.026
+offset_left = 1750.16
+offset_top = 1058.0
+offset_right = 1790.16
+offset_bottom = 1098.0
+texture_normal = ExtResource("24_pg1qr")
+
+[connection signal="pressed" from="L_PP1_Selectbutton" to="." method="_on_l_pp_1_selectbutton_pressed"]
+[connection signal="pressed" from="R_PP1_Selectbutton" to="." method="_on_r_pp_1_selectbutton_pressed"]
