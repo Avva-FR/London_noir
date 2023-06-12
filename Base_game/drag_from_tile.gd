@@ -1,14 +1,13 @@
 extends TextureRect
 
 var data = {}
-var start_slot
-var target_slot
+#var current_texture
+#signal cur_texture
 
 func _get_drag_data(at_position):
-	start_slot = get_name()
 	data["origin_node"] = self
-	data["origin_slot"] = start_slot
 	data["origin_texture"] = texture
+	data["origin_name"] = get_name()
 	# drag preview part
 	var drag_preview = TextureRect.new()
 	drag_preview.expand = true
@@ -26,8 +25,7 @@ func _can_drop_data(at_position, data):
 	return true
 
 func _drop_data(at_position, data):
-	target_slot = get_name()
-
 	var origin_texture = data["origin_texture"]
 	data["origin_node"].texture = texture
 	texture = origin_texture
+	#current_texture = texture
