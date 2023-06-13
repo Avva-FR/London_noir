@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bksxb7ynj6g7o"]
 
 [ext_resource type="Script" path="res://Transitionscreens/case_select_screen.gd" id="1_pwmw3"]
-[ext_resource type="Texture2D" uid="uid://bdcwj8if8twdd" path="res://pictures/folder.svg" id="2_8bjmo"]
+[ext_resource type="Texture2D" uid="uid://bdcwj8if8twdd" path="res://pictures/Button_textures/folder.svg" id="2_lqive"]
 
 [node name="Case_select_screen" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ offset_left = 157.0
 offset_top = 68.0
 offset_right = 868.0
 offset_bottom = 584.0
-texture_normal = ExtResource("2_8bjmo")
+texture_normal = ExtResource("2_lqive")
 
 [connection signal="button_up" from="TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

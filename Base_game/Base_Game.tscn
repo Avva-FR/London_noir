@@ -1,49 +1,49 @@
-[gd_scene load_steps=46 format=3 uid="uid://csht10lahukfx"]
+[gd_scene load_steps=46 format=3 uid="uid://duxul4rxxaqp5"]
 
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
-[ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://pictures/ER-Textures/L_Plotpoint_1/hört.png" id="3_ct1n2"]
+[ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://pictures/ER_textures/L_Plotpoint_1/hört.png" id="3_ct1n2"]
 [ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
-[ext_resource type="Texture2D" uid="uid://b2f050jpyv5bb" path="res://pictures/Section_dropper.png" id="6_bwnv4"]
-[ext_resource type="Texture2D" uid="uid://bj3d0p5s55x6e" path="res://pictures/ER-Textures/L_Plotpoint_1/Kugel.png" id="8_5q1qt"]
-[ext_resource type="Texture2D" uid="uid://24l4y3tm12t2" path="res://pictures/ER-Textures/L_Plotpoint_1/Portier.png" id="9_brfqm"]
-[ext_resource type="Texture2D" uid="uid://cjegt880m0dkj" path="res://pictures/ER-Textures/L_Plotpoint_1/Revolver.png" id="10_4g3a5"]
-[ext_resource type="Texture2D" uid="uid://b6t8uadq4g5po" path="res://pictures/ER-Textures/L_Plotpoint_1/Pistole.png" id="10_5td0k"]
-[ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://pictures/ER-Textures/L_Plotpoint_1/benutzt.png" id="10_krin7"]
-[ext_resource type="Texture2D" uid="uid://dtr2f6h4w7lub" path="res://pictures/ER-Textures/L_Plotpoint_1/Schuss.png" id="11_ihe0u"]
-[ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://pictures/ER-Textures/L_Plotpoint_1/feuert.png" id="11_rql5s"]
-[ext_resource type="Texture2D" uid="uid://c10mboqt4lxj5" path="res://pictures/ER-Textures/L_Plotpoint_2/Feuerwaffen.png" id="12_hti3n"]
-[ext_resource type="Texture2D" uid="uid://ckgp46kpb5f8u" path="res://pictures/ER-Textures/L_Plotpoint_1/hält.png" id="12_kvygj"]
-[ext_resource type="Texture2D" uid="uid://difatuoth7s74" path="res://pictures/ER-Textures/L_Plotpoint_1/sieht.png" id="13_0jkcg"]
-[ext_resource type="Texture2D" uid="uid://dqbdfsjkqw460" path="res://pictures/ER-Textures/L_Plotpoint_2/Gewehre.png" id="13_eavmd"]
-[ext_resource type="Texture2D" uid="uid://by13recixlhod" path="res://pictures/ER-Textures/L_Plotpoint_2/Revolver.png" id="14_8wof7"]
-[ext_resource type="Texture2D" uid="uid://cejkkq4qhwjmj" path="res://pictures/ER-Textures/R_Plotpoint_1/benutzt.png" id="15_d0rf1"]
-[ext_resource type="Texture2D" uid="uid://dh1ofm7eidni4" path="res://pictures/ER-Textures/L_Plotpoint_2/enthält.png" id="15_r5okq"]
-[ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://pictures/ER-Textures/R_Plotpoint_1/Koch.png" id="16_4or8w"]
-[ext_resource type="Texture2D" uid="uid://c2b1s6kj5kvl6" path="res://pictures/ER-Textures/L_Plotpoint_2/feuert.png" id="16_n35vl"]
-[ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://pictures/ER-Textures/R_Plotpoint_1/Dame.png" id="17_0e8xc"]
-[ext_resource type="Texture2D" uid="uid://w75q334qe5gl" path="res://pictures/ER-Textures/L_Plotpoint_2/schießt.png" id="17_euyyq"]
-[ext_resource type="Texture2D" uid="uid://b4cptd65avenu" path="res://pictures/ER-Textures/L_Plotpoint_2/Kugel.png" id="18_5ruap"]
-[ext_resource type="Texture2D" uid="uid://dswrv18i67m2b" path="res://pictures/ER-Textures/R_Plotpoint_1/isst.png" id="18_prooq"]
-[ext_resource type="Texture2D" uid="uid://uh7v2xbsx0jg" path="res://pictures/ER-Textures/R_Plotpoint_1/Kuchen.png" id="19_l3t45"]
-[ext_resource type="Texture2D" uid="uid://dl3fciucntf6q" path="res://pictures/ER-Textures/L_Plotpoint_2/Waffenauslage.png" id="19_vxj5l"]
-[ext_resource type="Texture2D" uid="uid://d04ay5ggiriav" path="res://pictures/ER-Textures/L_Plotpoint_2/fehlt.png" id="20_5k5ng"]
-[ext_resource type="Texture2D" uid="uid://cp1prkpod1krp" path="res://pictures/ER-Textures/R_Plotpoint_1/Messer.png" id="20_yn3m6"]
-[ext_resource type="Texture2D" uid="uid://d4k2uxv5wbv12" path="res://pictures/ER-Textures/L_Plotpoint_2/Repetierbüchse.png" id="21_aycgr"]
-[ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://pictures/ER-Textures/R_Plotpoint_1/schneidet.png" id="21_lm4xq"]
-[ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://pictures/ER-Textures/R_Plotpoint_1/Person.png" id="22_2vffo"]
-[ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://pictures/ER-Textures/R_Plotpoint_1/hält.png" id="23_w16s5"]
-[ext_resource type="Texture2D" uid="uid://di7tm4g6mr6pi" path="res://pictures/PIN_red.png" id="24_pg1qr"]
-[ext_resource type="Texture2D" uid="uid://bo2afqgju2pv4" path="res://pictures/ER-Textures/R_Plotpoint_1/Gegenstand.png" id="24_vp0jp"]
-[ext_resource type="Texture2D" uid="uid://kkmkin802xxt" path="res://pictures/ER-Textures/R_Plotpoint_2/Küchenjunge.png" id="32_jyr1s"]
-[ext_resource type="Texture2D" uid="uid://bye4l4r2poxl8" path="res://pictures/ER-Textures/R_Plotpoint_2/Geflügelschere.png" id="33_bpcmf"]
-[ext_resource type="Texture2D" uid="uid://fmb4c57wfrdw" path="res://pictures/ER-Textures/R_Plotpoint_2/Blut.png" id="34_nt3t4"]
-[ext_resource type="Texture2D" uid="uid://d02se4t7wksjb" path="res://pictures/ER-Textures/R_Plotpoint_2/benutzt.png" id="35_h15po"]
-[ext_resource type="Texture2D" uid="uid://pp3qrbxok3a1" path="res://pictures/ER-Textures/R_Plotpoint_2/schmiert.png" id="36_lmnf6"]
-[ext_resource type="Texture2D" uid="uid://nowhk77fbupr" path="res://pictures/ER-Textures/R_Plotpoint_2/lehrt.png" id="37_2aink"]
-[ext_resource type="Texture2D" uid="uid://c4u2e3m8fx7jo" path="res://pictures/ER-Textures/R_Plotpoint_2/schärft.png" id="38_prlv5"]
-[ext_resource type="Texture2D" uid="uid://dpv08me6hj20k" path="res://pictures/ER-Textures/R_Plotpoint_2/Koch.png" id="39_1nr41"]
-[ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://pictures/ER-Textures/R_Plotpoint_2/hält.png" id="40_2vfjf"]
-[ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://pictures/ER-Textures/R_Plotpoint_2/Messer.png" id="41_mi6cg"]
+[ext_resource type="Texture2D" uid="uid://b6umfj2cgq4aa" path="res://pictures/ER_textures/Section_dropper.png" id="6_bwnv4"]
+[ext_resource type="Texture2D" uid="uid://bj3d0p5s55x6e" path="res://pictures/ER_textures/L_Plotpoint_1/Kugel.png" id="8_5q1qt"]
+[ext_resource type="Texture2D" uid="uid://24l4y3tm12t2" path="res://pictures/ER_textures/L_Plotpoint_1/Portier.png" id="9_brfqm"]
+[ext_resource type="Texture2D" uid="uid://cjegt880m0dkj" path="res://pictures/ER_textures/L_Plotpoint_1/Revolver.png" id="10_4g3a5"]
+[ext_resource type="Texture2D" uid="uid://b6t8uadq4g5po" path="res://pictures/ER_textures/L_Plotpoint_1/Pistole.png" id="10_5td0k"]
+[ext_resource type="Texture2D" uid="uid://dtr2f6h4w7lub" path="res://pictures/ER_textures/L_Plotpoint_1/Schuss.png" id="11_ihe0u"]
+[ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://pictures/ER_textures/L_Plotpoint_1/feuert.png" id="11_rql5s"]
+[ext_resource type="Texture2D" uid="uid://c10mboqt4lxj5" path="res://pictures/ER_textures/L_Plotpoint_2/Feuerwaffen.png" id="12_hti3n"]
+[ext_resource type="Texture2D" uid="uid://ckgp46kpb5f8u" path="res://pictures/ER_textures/L_Plotpoint_1/hält.png" id="12_kvygj"]
+[ext_resource type="Texture2D" uid="uid://difatuoth7s74" path="res://pictures/ER_textures/L_Plotpoint_1/sieht.png" id="13_0jkcg"]
+[ext_resource type="Texture2D" uid="uid://dqbdfsjkqw460" path="res://pictures/ER_textures/L_Plotpoint_2/Gewehre.png" id="13_eavmd"]
+[ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://pictures/ER_textures/L_Plotpoint_1/benutzt.png" id="15_d0rf1"]
+[ext_resource type="Texture2D" uid="uid://dh1ofm7eidni4" path="res://pictures/ER_textures/L_Plotpoint_2/enthält.png" id="15_r5okq"]
+[ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://pictures/ER_textures/R_Plotpoint_1/Koch.png" id="16_4or8w"]
+[ext_resource type="Texture2D" uid="uid://c2b1s6kj5kvl6" path="res://pictures/ER_textures/L_Plotpoint_2/feuert.png" id="16_n35vl"]
+[ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://pictures/ER_textures/R_Plotpoint_1/Dame.png" id="17_0e8xc"]
+[ext_resource type="Texture2D" uid="uid://w75q334qe5gl" path="res://pictures/ER_textures/L_Plotpoint_2/schießt.png" id="17_euyyq"]
+[ext_resource type="Texture2D" uid="uid://b4cptd65avenu" path="res://pictures/ER_textures/L_Plotpoint_2/Kugel.png" id="18_5ruap"]
+[ext_resource type="Texture2D" uid="uid://dswrv18i67m2b" path="res://pictures/ER_textures/R_Plotpoint_1/isst.png" id="18_prooq"]
+[ext_resource type="Texture2D" uid="uid://uh7v2xbsx0jg" path="res://pictures/ER_textures/R_Plotpoint_1/Kuchen.png" id="19_l3t45"]
+[ext_resource type="Texture2D" uid="uid://dl3fciucntf6q" path="res://pictures/ER_textures/L_Plotpoint_2/Waffenauslage.png" id="19_vxj5l"]
+[ext_resource type="Texture2D" uid="uid://d04ay5ggiriav" path="res://pictures/ER_textures/L_Plotpoint_2/fehlt.png" id="20_5k5ng"]
+[ext_resource type="Texture2D" uid="uid://cp1prkpod1krp" path="res://pictures/ER_textures/R_Plotpoint_1/Messer.png" id="20_yn3m6"]
+[ext_resource type="Texture2D" uid="uid://by13recixlhod" path="res://pictures/ER_textures/L_Plotpoint_2/Revolver.png" id="21_aycgr"]
+[ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://pictures/ER_textures/R_Plotpoint_1/schneidet.png" id="21_lm4xq"]
+[ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://pictures/ER_textures/R_Plotpoint_1/Person.png" id="22_2vffo"]
+[ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://pictures/ER_textures/R_Plotpoint_1/hält.png" id="23_w16s5"]
+[ext_resource type="Texture2D" uid="uid://bo2afqgju2pv4" path="res://pictures/ER_textures/R_Plotpoint_1/Gegenstand.png" id="24_vp0jp"]
+[ext_resource type="Texture2D" uid="uid://kkmkin802xxt" path="res://pictures/ER_textures/R_Plotpoint_2/Küchenjunge.png" id="32_jyr1s"]
+[ext_resource type="Texture2D" uid="uid://bye4l4r2poxl8" path="res://pictures/ER_textures/R_Plotpoint_2/Geflügelschere.png" id="33_bpcmf"]
+[ext_resource type="Texture2D" uid="uid://fmb4c57wfrdw" path="res://pictures/ER_textures/R_Plotpoint_2/Blut.png" id="34_nt3t4"]
+[ext_resource type="Texture2D" uid="uid://d02se4t7wksjb" path="res://pictures/ER_textures/R_Plotpoint_2/benutzt.png" id="35_h15po"]
+[ext_resource type="Texture2D" uid="uid://pp3qrbxok3a1" path="res://pictures/ER_textures/R_Plotpoint_2/schmiert.png" id="36_lmnf6"]
+[ext_resource type="Texture2D" uid="uid://nowhk77fbupr" path="res://pictures/ER_textures/R_Plotpoint_2/lehrt.png" id="37_2aink"]
+[ext_resource type="Texture2D" uid="uid://c4u2e3m8fx7jo" path="res://pictures/ER_textures/R_Plotpoint_2/schärft.png" id="38_prlv5"]
+[ext_resource type="Texture2D" uid="uid://dpv08me6hj20k" path="res://pictures/ER_textures/R_Plotpoint_2/Koch.png" id="39_1nr41"]
+[ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://pictures/ER_textures/R_Plotpoint_2/hält.png" id="40_2vfjf"]
+[ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://pictures/ER_textures/R_Plotpoint_2/Messer.png" id="41_mi6cg"]
+[ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://pictures/Button_textures/r_submit_button.png" id="43_ynilc"]
+[ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://pictures/Button_textures/l_submit_button.png" id="44_h8ixp"]
+[ext_resource type="Texture2D" uid="uid://bki5mwk6tyxh6" path="res://pictures/Button_textures/PIN_red.png" id="44_hqjsy"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
 script/source = "extends Control
@@ -146,6 +146,7 @@ func _ready():
 	l_select_button2 = get_node(\"L_PP2_Selectbutton\")
 	
 	r_select_button1 = get_node(\"R_PP1_Selectbutton\")
+	r_select_button2 = get_node(\"R_PP2_Selectbutton\")
 	
 	# dropbox_nodes
 	l_db_box1 = get_node(\"L_Container/L_DB_Slot1/L_DB_Frame/L_Drop_Box1\")
@@ -255,6 +256,8 @@ func _on_l_pp_2_selectbutton_pressed():
 	l_pp2_node8.position = l_spawn_pos3
 	l_pp2_node9.position = l_spawn_pos10
 	l_pp2_node10.position = l_spawn_pos7
+	# disable current button 
+	l_select_button2.disabled = true
 
 
 func _on_r_pp_2_selectbutton_pressed():
@@ -285,6 +288,16 @@ func _on_r_pp_2_selectbutton_pressed():
 	r_pp2_node2.position = r_spawn_pos7
 	r_pp2_node4.position = r_spawn_pos10
 	r_pp2_node5.position = r_spawn_pos9
+	# disable to not call freed pointers
+	r_select_button2.disabled = true
+
+
+func _on_r_submit_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_l_submit_button_pressed():
+	pass # Replace with function body.
 "
 
 [node name="Control" type="Control"]
@@ -306,7 +319,7 @@ offset_left = -688.0
 offset_top = 182.0
 offset_right = -488.0
 offset_bottom = 382.0
-texture = ExtResource("10_krin7")
+texture = ExtResource("15_d0rf1")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false2" type="TextureRect" parent="L_PP1_Texturesnode"]
@@ -419,7 +432,7 @@ offset_left = -616.0
 offset_top = 664.0
 offset_right = -416.0
 offset_bottom = 864.0
-texture = ExtResource("14_8wof7")
+texture = ExtResource("21_aycgr")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false4" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -1055,7 +1068,7 @@ offset_left = 1610.0
 offset_top = 1046.0
 offset_right = 1660.0
 offset_bottom = 1090.0
-texture_normal = ExtResource("24_pg1qr")
+texture_normal = ExtResource("44_hqjsy")
 
 [node name="R_PP1_Selectbutton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -1066,7 +1079,7 @@ offset_left = 1750.16
 offset_top = 1058.0
 offset_right = 1790.16
 offset_bottom = 1098.0
-texture_normal = ExtResource("24_pg1qr")
+texture_normal = ExtResource("44_hqjsy")
 
 [node name="L_PP2_Selectbutton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -1074,7 +1087,7 @@ offset_left = 1251.0
 offset_top = 823.0
 offset_right = 1291.0
 offset_bottom = 863.0
-texture_normal = ExtResource("24_pg1qr")
+texture_normal = ExtResource("44_hqjsy")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -1082,9 +1095,37 @@ offset_left = 2170.0
 offset_top = 1205.0
 offset_right = 2220.0
 offset_bottom = 1249.0
-texture_normal = ExtResource("24_pg1qr")
+texture_normal = ExtResource("44_hqjsy")
+
+[node name="R_submit_button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.833
+anchor_top = 0.372
+anchor_right = 0.886
+anchor_bottom = 0.652
+offset_left = 228.28
+offset_top = 225.48
+offset_right = 104.76
+offset_bottom = -229.32
+texture_normal = ExtResource("43_ynilc")
+
+[node name="L_submit_button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.122
+anchor_top = 0.37
+anchor_right = 0.175
+anchor_bottom = 0.652
+offset_left = -110.48
+offset_top = 229.8
+offset_right = -234.0
+offset_bottom = -229.32
+texture_normal = ExtResource("44_h8ixp")
 
 [connection signal="pressed" from="L_PP1_Selectbutton" to="." method="_on_l_pp_1_selectbutton_pressed"]
 [connection signal="pressed" from="R_PP1_Selectbutton" to="." method="_on_r_pp_1_selectbutton_pressed"]
 [connection signal="pressed" from="L_PP2_Selectbutton" to="." method="_on_l_pp_2_selectbutton_pressed"]
 [connection signal="pressed" from="R_PP2_Selectbutton" to="." method="_on_r_pp_2_selectbutton_pressed"]
+[connection signal="pressed" from="R_submit_button" to="." method="_on_r_submit_button_pressed"]
+[connection signal="pressed" from="L_submit_button" to="." method="_on_l_submit_button_pressed"]

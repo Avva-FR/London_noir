@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dc4dd2wb1fqkc"]
 
 [ext_resource type="Script" path="res://Transitionscreens/select_screen.gd" id="1_7vmlp"]
-[ext_resource type="Texture2D" uid="uid://b2v8wui8hjkxs" path="res://pictures/select_screen.png" id="2_h6uuy"]
+[ext_resource type="Texture2D" uid="uid://c3yq2ckw8lf8l" path="res://pictures/BG_textures/select_screen.png" id="2_pkd1i"]
 
 [node name="Select_screen" type="Control"]
 layout_mode = 3
@@ -15,7 +15,7 @@ script = ExtResource("1_7vmlp")
 [node name="SelectScreen" type="Sprite2D" parent="."]
 position = Vector2(1920, 1079.5)
 scale = Vector2(2, 1.99907)
-texture = ExtResource("2_h6uuy")
+texture = ExtResource("2_pkd1i")
 
 [node name="cases_botton" type="TextureButton" parent="SelectScreen"]
 anchors_preset = -1
