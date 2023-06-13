@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://duxul4rxxaqp5"]
+[gd_scene load_steps=50 format=3 uid="uid://duxul4rxxaqp5"]
 
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://pictures/ER_textures/L_Plotpoint_1/hört.png" id="3_ct1n2"]
@@ -41,9 +41,13 @@
 [ext_resource type="Texture2D" uid="uid://dpv08me6hj20k" path="res://pictures/ER_textures/R_Plotpoint_2/Koch.png" id="39_1nr41"]
 [ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://pictures/ER_textures/R_Plotpoint_2/hält.png" id="40_2vfjf"]
 [ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://pictures/ER_textures/R_Plotpoint_2/Messer.png" id="41_mi6cg"]
+[ext_resource type="Texture2D" uid="uid://dbpcjksevmwa2" path="res://pictures/Button_textures/left_tip_texture.png" id="42_mkth7"]
+[ext_resource type="Texture2D" uid="uid://b7i48tguesjd7" path="res://pictures/Button_textures/right_tipp_texture.png" id="43_4ui56"]
 [ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://pictures/Button_textures/r_submit_button.png" id="43_ynilc"]
 [ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://pictures/Button_textures/l_submit_button.png" id="44_h8ixp"]
 [ext_resource type="Texture2D" uid="uid://bki5mwk6tyxh6" path="res://pictures/Button_textures/PIN_red.png" id="44_hqjsy"]
+[ext_resource type="Texture2D" uid="uid://ehnj35ftxn2y" path="res://pictures/Button_textures/L_Info_button.png" id="46_w4lus"]
+[ext_resource type="Texture2D" uid="uid://c721dem6j6qra" path="res://pictures/Button_textures/R_Info_button.png" id="47_023nd"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
 script/source = "extends Control
@@ -59,6 +63,16 @@ var r_select_button1
 var r_select_button2
 var r_select_button3
 var r_select_button4
+# tip buttons
+var l_tip_button1
+var l_tip_button2
+var r_tip_button1
+var r_tip_button2
+# case info buttons
+var l_caseinfo_button1
+var l_caseinfo_button2
+var r_caseinfo_button1
+var r_caseinfo_button2
 #dropboxes
 var l_db_box1
 var l_db_box2
@@ -135,19 +149,25 @@ var r_pp2_node7
 var r_pp2_node8
 var r_pp2_node9
 var r_pp2_node10
-
-
-
+ 
 #spawn positions for on clickevent on selectbutton_presses
 # @Todo fill in once ready
 func _ready():
 	# select_button nodes
-	l_select_button1 = get_node(\"L_PP1_Selectbutton\")
-	l_select_button2 = get_node(\"L_PP2_Selectbutton\")
-	
-	r_select_button1 = get_node(\"R_PP1_Selectbutton\")
-	r_select_button2 = get_node(\"R_PP2_Selectbutton\")
-	
+	l_select_button1 = get_node(\"Select_Buttonsnode/L_PP1_Selectbutton\")
+	l_select_button2 = get_node(\"Select_Buttonsnode/L_PP2_Selectbutton\")
+	r_select_button1 = get_node(\"Select_Buttonsnode/R_PP1_Selectbutton\")
+	r_select_button2 = get_node(\"Select_Buttonsnode/R_PP2_Selectbutton\")
+	# caseinfo buttons
+	l_caseinfo_button1 = get_node(\"Misc_Buttonsnode/L_caseinfo_button_1\")
+	l_caseinfo_button2 = get_node(\"Misc_Buttonsnode/L_caseinfo_button_2\")
+	r_caseinfo_button1 = get_node(\"Misc_Buttonsnode/R_caseinfo_button_1\")
+	r_caseinfo_button2 = get_node(\"Misc_Buttonsnode/R_caseinfo_button_2\")
+	# tip buttons
+	l_tip_button1 = get_node(\"Misc_Buttonsnode/L_tip_1\")
+	l_tip_button2 = get_node(\"Misc_Buttonsnode/L_tip_2\")
+	r_tip_button1 = get_node(\"Misc_Buttonsnode/R_tip_1\")
+	r_tip_button2 = get_node(\"Misc_Buttonsnode/R_tip_2\")
 	# dropbox_nodes
 	l_db_box1 = get_node(\"L_Container/L_DB_Slot1/L_DB_Frame/L_Drop_Box1\")
 	l_db_box2 = get_node(\"L_Container/L_DB_Slot2/L_DB_Frame2/L_Drop_Box2\")
@@ -297,6 +317,34 @@ func _on_r_submit_button_pressed():
 
 
 func _on_l_submit_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_l_tip_1_pressed():
+	pass # Replace with function body.
+
+
+func _on_l_tip_2_pressed():
+	pass # Replace with function body.
+
+
+func _on_r_tip_1_pressed():
+	pass # Replace with function body.
+
+
+func _on_r_tip_2_pressed():
+	pass # Replace with function body.
+
+
+func _on_l_caseinfo_button_1_pressed():
+	pass # Replace with function body.
+
+
+func _on_l_caseinfo_button_2_pressed():
+	pass # Replace with function body.
+
+
+func _on_r_caseinfo_button_1_pressed():
 	pass # Replace with function body.
 "
 
@@ -1062,7 +1110,103 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_hip4l")
 
-[node name="L_PP1_Selectbutton" type="TextureButton" parent="."]
+[node name="Misc_Buttonsnode" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="L_tip_1" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
+offset_left = 1298.0
+offset_top = 144.0
+offset_right = 1419.0
+offset_bottom = 358.0
+texture_normal = ExtResource("42_mkth7")
+
+[node name="L_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
+offset_left = 1268.0
+offset_top = 1727.0
+offset_right = 1389.0
+offset_bottom = 1941.0
+texture_normal = ExtResource("42_mkth7")
+
+[node name="R_tip_1" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
+offset_left = 2547.0
+offset_top = 174.0
+offset_right = 2666.0
+offset_bottom = 387.0
+texture_normal = ExtResource("43_4ui56")
+
+[node name="R_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
+offset_left = 2559.0
+offset_top = 1696.0
+offset_right = 2678.0
+offset_bottom = 1909.0
+texture_normal = ExtResource("43_4ui56")
+
+[node name="R_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.833
+anchor_top = 0.372
+anchor_right = 0.886
+anchor_bottom = 0.652
+offset_left = 3393.68
+offset_top = 1014.12
+offset_right = 3471.56
+offset_bottom = 1152.92
+texture_normal = ExtResource("43_ynilc")
+
+[node name="L_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.122
+anchor_top = 0.37
+anchor_right = 0.175
+anchor_bottom = 0.652
+offset_left = 353.12
+offset_top = 1014.2
+offset_right = 431.0
+offset_bottom = 1152.92
+texture_normal = ExtResource("44_h8ixp")
+
+[node name="L_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 1764.0
+offset_right = 1225.0
+offset_bottom = 1927.0
+texture_normal = ExtResource("46_w4lus")
+
+[node name="L_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
+offset_left = 1137.0
+offset_top = 173.0
+offset_right = 1227.0
+offset_bottom = 336.0
+texture_normal = ExtResource("46_w4lus")
+
+[node name="R_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
+offset_left = 2729.0
+offset_top = 1736.0
+offset_right = 2819.0
+offset_bottom = 1899.0
+texture_normal = ExtResource("47_023nd")
+
+[node name="R_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
+offset_left = 2693.0
+offset_top = 189.0
+offset_right = 2783.0
+offset_bottom = 352.0
+texture_normal = ExtResource("47_023nd")
+
+[node name="Select_Buttonsnode" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="L_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
 offset_left = 1610.0
 offset_top = 1046.0
@@ -1070,26 +1214,26 @@ offset_right = 1660.0
 offset_bottom = 1090.0
 texture_normal = ExtResource("44_hqjsy")
 
-[node name="R_PP1_Selectbutton" type="TextureButton" parent="."]
+[node name="R_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.026
 anchor_right = 0.026
-offset_left = 1750.16
+offset_left = 1848.96
 offset_top = 1058.0
-offset_right = 1790.16
-offset_bottom = 1098.0
+offset_right = 1898.96
+offset_bottom = 1102.0
 texture_normal = ExtResource("44_hqjsy")
 
-[node name="L_PP2_Selectbutton" type="TextureButton" parent="."]
+[node name="L_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
 offset_left = 1251.0
 offset_top = 823.0
-offset_right = 1291.0
-offset_bottom = 863.0
+offset_right = 1301.0
+offset_bottom = 867.0
 texture_normal = ExtResource("44_hqjsy")
 
-[node name="R_PP2_Selectbutton" type="TextureButton" parent="."]
+[node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
 offset_left = 2170.0
 offset_top = 1205.0
@@ -1097,35 +1241,17 @@ offset_right = 2220.0
 offset_bottom = 1249.0
 texture_normal = ExtResource("44_hqjsy")
 
-[node name="R_submit_button" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.833
-anchor_top = 0.372
-anchor_right = 0.886
-anchor_bottom = 0.652
-offset_left = 228.28
-offset_top = 225.48
-offset_right = 104.76
-offset_bottom = -229.32
-texture_normal = ExtResource("43_ynilc")
-
-[node name="L_submit_button" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.122
-anchor_top = 0.37
-anchor_right = 0.175
-anchor_bottom = 0.652
-offset_left = -110.48
-offset_top = 229.8
-offset_right = -234.0
-offset_bottom = -229.32
-texture_normal = ExtResource("44_h8ixp")
-
-[connection signal="pressed" from="L_PP1_Selectbutton" to="." method="_on_l_pp_1_selectbutton_pressed"]
-[connection signal="pressed" from="R_PP1_Selectbutton" to="." method="_on_r_pp_1_selectbutton_pressed"]
-[connection signal="pressed" from="L_PP2_Selectbutton" to="." method="_on_l_pp_2_selectbutton_pressed"]
-[connection signal="pressed" from="R_PP2_Selectbutton" to="." method="_on_r_pp_2_selectbutton_pressed"]
-[connection signal="pressed" from="R_submit_button" to="." method="_on_r_submit_button_pressed"]
-[connection signal="pressed" from="L_submit_button" to="." method="_on_l_submit_button_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/L_tip_1" to="." method="_on_l_tip_1_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/L_tip_2" to="." method="_on_l_tip_2_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_tip_1" to="." method="_on_r_tip_1_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_tip_2" to="." method="_on_r_tip_2_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_submit_button" to="." method="_on_r_submit_button_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/L_submit_button" to="." method="_on_l_submit_button_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_1" to="." method="_on_l_caseinfo_button_1_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_2" to="." method="_on_l_caseinfo_button_2_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_caseinfo_button_1" to="." method="_on_r_caseinfo_button_1_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_caseinfo_button_2" to="." method="_on_r_caseinfo_button_1_pressed"]
+[connection signal="pressed" from="Select_Buttonsnode/L_PP1_Selectbutton" to="." method="_on_l_pp_1_selectbutton_pressed"]
+[connection signal="pressed" from="Select_Buttonsnode/R_PP1_Selectbutton" to="." method="_on_r_pp_1_selectbutton_pressed"]
+[connection signal="pressed" from="Select_Buttonsnode/L_PP2_Selectbutton" to="." method="_on_l_pp_2_selectbutton_pressed"]
+[connection signal="pressed" from="Select_Buttonsnode/R_PP2_Selectbutton" to="." method="_on_r_pp_2_selectbutton_pressed"]
