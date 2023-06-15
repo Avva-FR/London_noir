@@ -1,5 +1,6 @@
-[gd_scene load_steps=50 format=3 uid="uid://duxul4rxxaqp5"]
+[gd_scene load_steps=56 format=3 uid="uid://duxul4rxxaqp5"]
 
+[ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://pictures/BG_textures/backgrounds/bg_game.svg" id="1_33edi"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://pictures/ER_textures/L_Plotpoint_1/hört.png" id="3_ct1n2"]
 [ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
@@ -45,15 +46,22 @@
 [ext_resource type="Texture2D" uid="uid://b7i48tguesjd7" path="res://pictures/Button_textures/right_tipp_texture.png" id="43_4ui56"]
 [ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://pictures/Button_textures/r_submit_button.png" id="43_ynilc"]
 [ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://pictures/Button_textures/l_submit_button.png" id="44_h8ixp"]
-[ext_resource type="Texture2D" uid="uid://bki5mwk6tyxh6" path="res://pictures/Button_textures/PIN_red.png" id="44_hqjsy"]
 [ext_resource type="Texture2D" uid="uid://ehnj35ftxn2y" path="res://pictures/Button_textures/L_Info_button.png" id="46_w4lus"]
 [ext_resource type="Texture2D" uid="uid://c721dem6j6qra" path="res://pictures/Button_textures/R_Info_button.png" id="47_023nd"]
+[ext_resource type="Texture2D" uid="uid://beb3ca4yu872w" path="res://pictures/Button_textures/Pins/yellow_pin_left.svg" id="49_0y7kx"]
+[ext_resource type="Texture2D" uid="uid://coiywtttsbh7p" path="res://pictures/Button_textures/Pins/gray_pin_left.svg" id="50_wguqy"]
+[ext_resource type="Texture2D" uid="uid://crxm8wp8mnp0j" path="res://pictures/Button_textures/Pins/yellow_pin_right.svg" id="51_i25jb"]
+[ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://pictures/Button_textures/Pins/gray_pin_right.svg" id="52_4y6un"]
+[ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://pictures/Button_textures/Pins/red_pin_right.svg" id="53_4im8k"]
+[ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://pictures/Button_textures/Pins/red_pin_left.svg" id="54_3e8eq"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
 script/source = "extends Control
 
 # empty texture
 var empty_texture = load(\"res://pictures/empty_texture.png\")
+# signals
+var original_node_name
 # selectbuttons
 var l_select_button1
 var l_select_button2
@@ -153,6 +161,7 @@ var r_pp2_node10
 #spawn positions for on clickevent on selectbutton_presses
 # @Todo fill in once ready
 func _ready():
+	#connect(\"get\")
 	# select_button nodes
 	l_select_button1 = get_node(\"Select_Buttonsnode/L_PP1_Selectbutton\")
 	l_select_button2 = get_node(\"Select_Buttonsnode/L_PP2_Selectbutton\")
@@ -233,6 +242,7 @@ func _on_l_pp_1_selectbutton_pressed():
 	l_pp1_node3.position = l_spawn_pos8
 	l_pp1_node8.position = l_spawn_pos9
 	l_pp1_node7.position = l_spawn_pos10
+	l_select_button1.disabled = true
 
 func _on_r_pp_1_selectbutton_pressed():
 	r_pp1_node2.position = r_spawn_pos1
@@ -245,6 +255,7 @@ func _on_r_pp_1_selectbutton_pressed():
 	r_pp1_node6.position = r_spawn_pos8
 	r_pp1_node7.position = r_spawn_pos9
 	r_pp1_node8.position = r_spawn_pos10
+	r_select_button1.disabled = true
 	
 # handles selection of 2nd plotpoint
 func _on_l_pp_2_selectbutton_pressed():
@@ -356,6 +367,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_ev3ku")
+
+[node name="BgGame" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+scale = Vector2(1.77696, 1.99815)
+texture = ExtResource("1_33edi")
 
 [node name="L_PP1_Texturesnode" type="Control" parent="."]
 anchors_preset = 0
@@ -1124,6 +1140,7 @@ offset_bottom = 358.0
 texture_normal = ExtResource("42_mkth7")
 
 [node name="L_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
 offset_left = 1268.0
 offset_top = 1727.0
 offset_right = 1389.0
@@ -1139,6 +1156,7 @@ offset_bottom = 387.0
 texture_normal = ExtResource("43_4ui56")
 
 [node name="R_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
 offset_left = 2559.0
 offset_top = 1696.0
 offset_right = 2678.0
@@ -1180,6 +1198,7 @@ offset_bottom = 1927.0
 texture_normal = ExtResource("46_w4lus")
 
 [node name="L_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
 offset_left = 1137.0
 offset_top = 173.0
 offset_right = 1227.0
@@ -1195,6 +1214,7 @@ offset_bottom = 1899.0
 texture_normal = ExtResource("47_023nd")
 
 [node name="R_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
+layout_mode = 0
 offset_left = 2693.0
 offset_top = 189.0
 offset_right = 2783.0
@@ -1212,7 +1232,8 @@ offset_left = 1610.0
 offset_top = 1046.0
 offset_right = 1660.0
 offset_bottom = 1090.0
-texture_normal = ExtResource("44_hqjsy")
+texture_normal = ExtResource("49_0y7kx")
+texture_disabled = ExtResource("50_wguqy")
 
 [node name="R_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 1
@@ -1223,7 +1244,8 @@ offset_left = 1848.96
 offset_top = 1058.0
 offset_right = 1898.96
 offset_bottom = 1102.0
-texture_normal = ExtResource("44_hqjsy")
+texture_normal = ExtResource("51_i25jb")
+texture_disabled = ExtResource("52_4y6un")
 
 [node name="L_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
@@ -1231,7 +1253,8 @@ offset_left = 1251.0
 offset_top = 823.0
 offset_right = 1301.0
 offset_bottom = 867.0
-texture_normal = ExtResource("44_hqjsy")
+texture_normal = ExtResource("53_4im8k")
+texture_disabled = ExtResource("50_wguqy")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
@@ -1239,7 +1262,8 @@ offset_left = 2170.0
 offset_top = 1205.0
 offset_right = 2220.0
 offset_bottom = 1249.0
-texture_normal = ExtResource("44_hqjsy")
+texture_normal = ExtResource("54_3e8eq")
+texture_disabled = ExtResource("52_4y6un")
 
 [connection signal="pressed" from="Misc_Buttonsnode/L_tip_1" to="." method="_on_l_tip_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_tip_2" to="." method="_on_l_tip_2_pressed"]

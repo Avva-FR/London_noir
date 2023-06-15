@@ -1,7 +1,8 @@
 extends TextureRect
 
 var data = {}
-var _origin_node_name
+signal node_name_on_drag
+var origin_node_name
 
 func _get_drag_data(at_position):
 	data["origin_texture"] = texture
@@ -21,4 +22,4 @@ func _get_drag_data(at_position):
 	return data
 
 func get_origin_node_name():
-	return _origin_node_name
+	emit_signal("node_name_on_drag", origin_node_name)
