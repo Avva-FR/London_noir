@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://duxul4rxxaqp5"]
+[gd_scene load_steps=57 format=3 uid="uid://duxul4rxxaqp5"]
 
 [ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://pictures/BG_textures/backgrounds/bg_game.svg" id="1_33edi"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://pictures/Button_textures/Pins/gray_pin_right.svg" id="52_4y6un"]
 [ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://pictures/Button_textures/Pins/red_pin_right.svg" id="53_4im8k"]
 [ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://pictures/Button_textures/Pins/red_pin_left.svg" id="54_3e8eq"]
+[ext_resource type="Script" path="res://Base_game/global_vars.gd" id="55_jo8fx"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
 script/source = "extends Control
@@ -377,7 +378,7 @@ texture = ExtResource("1_33edi")
 anchors_preset = 0
 offset_right = 1.0
 
-[node name="L_PP1_false1" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false1" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -688.0
 offset_top = 182.0
@@ -386,7 +387,7 @@ offset_bottom = 382.0
 texture = ExtResource("15_d0rf1")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false2" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false2" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -624.0
 offset_top = 256.0
@@ -395,7 +396,7 @@ offset_bottom = 456.0
 texture = ExtResource("11_rql5s")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false3" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false3" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -683.0
 offset_top = 208.0
@@ -404,7 +405,7 @@ offset_bottom = 408.0
 texture = ExtResource("12_kvygj")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false4" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false4" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -668.0
 offset_top = 195.0
@@ -413,7 +414,7 @@ offset_bottom = 395.0
 texture = ExtResource("8_5q1qt")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false5" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false5" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -645.0
 offset_top = 272.0
@@ -422,7 +423,7 @@ offset_bottom = 472.0
 texture = ExtResource("10_4g3a5")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false6" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false6" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -622.0
 offset_top = 238.0
@@ -431,7 +432,7 @@ offset_bottom = 438.0
 texture = ExtResource("13_0jkcg")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_false7" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_false7" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -651.0
 offset_top = 194.0
@@ -440,7 +441,7 @@ offset_bottom = 394.0
 texture = ExtResource("10_5td0k")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_true1" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_true1" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -636.0
 offset_top = 208.0
@@ -449,7 +450,7 @@ offset_bottom = 408.0
 texture = ExtResource("9_brfqm")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_true2" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_true2" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -609.0
 offset_top = 194.0
@@ -458,7 +459,7 @@ offset_bottom = 394.0
 texture = ExtResource("3_ct1n2")
 script = ExtResource("4_ma1c7")
 
-[node name="L_PP1_true3" type="TextureRect" parent="L_PP1_Texturesnode"]
+[node name="L_PP1_true3" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
 layout_mode = 0
 offset_left = -612.0
 offset_top = 229.0
@@ -1030,7 +1031,7 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("6_bwnv4")
 
-[node name="L_Drop_Box1" type="TextureRect" parent="L_Container/L_DB_Slot1/L_DB_Frame"]
+[node name="Drop_Box_L1" type="TextureRect" parent="L_Container/L_DB_Slot1/L_DB_Frame"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1046,7 +1047,7 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("6_bwnv4")
 
-[node name="L_Drop_Box2" type="TextureRect" parent="L_Container/L_DB_Slot2/L_DB_Frame2"]
+[node name="Drop_Box_L2" type="TextureRect" parent="L_Container/L_DB_Slot2/L_DB_Frame2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1062,7 +1063,7 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("6_bwnv4")
 
-[node name="L_Drop_Box3" type="TextureRect" parent="L_Container/L_DB_Slot3/L_DB_Frame3"]
+[node name="Drop_Box_L3" type="TextureRect" parent="L_Container/L_DB_Slot3/L_DB_Frame3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1265,11 +1266,13 @@ offset_bottom = 1249.0
 texture_normal = ExtResource("54_3e8eq")
 texture_disabled = ExtResource("52_4y6un")
 
+[node name="Node" type="Node" parent="."]
+script = ExtResource("55_jo8fx")
+
 [connection signal="pressed" from="Misc_Buttonsnode/L_tip_1" to="." method="_on_l_tip_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_tip_2" to="." method="_on_l_tip_2_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/R_tip_1" to="." method="_on_r_tip_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/R_tip_2" to="." method="_on_r_tip_2_pressed"]
-[connection signal="pressed" from="Misc_Buttonsnode/R_submit_button" to="." method="_on_r_submit_button_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_submit_button" to="." method="_on_l_submit_button_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_1" to="." method="_on_l_caseinfo_button_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_2" to="." method="_on_l_caseinfo_button_2_pressed"]
