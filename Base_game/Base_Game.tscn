@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://duxul4rxxaqp5"]
+[gd_scene load_steps=58 format=3 uid="uid://duxul4rxxaqp5"]
 
 [ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://pictures/BG_textures/backgrounds/bg_game.svg" id="1_33edi"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dqbdfsjkqw460" path="res://pictures/ER_textures/L_Plotpoint_2/Gewehre.png" id="13_eavmd"]
 [ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://pictures/ER_textures/L_Plotpoint_1/benutzt.png" id="15_d0rf1"]
 [ext_resource type="Texture2D" uid="uid://dh1ofm7eidni4" path="res://pictures/ER_textures/L_Plotpoint_2/enthält.png" id="15_r5okq"]
+[ext_resource type="Texture2D" uid="uid://d4k2uxv5wbv12" path="res://pictures/ER_textures/L_Plotpoint_2/Repetierbüchse.png" id="15_ujknq"]
 [ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://pictures/ER_textures/R_Plotpoint_1/Koch.png" id="16_4or8w"]
 [ext_resource type="Texture2D" uid="uid://c2b1s6kj5kvl6" path="res://pictures/ER_textures/L_Plotpoint_2/feuert.png" id="16_n35vl"]
 [ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://pictures/ER_textures/R_Plotpoint_1/Dame.png" id="17_0e8xc"]
@@ -212,8 +213,6 @@ var r_pp4_node8
 var r_pp4_node9
 var r_pp4_node10
 
-
- 
 #spawn positions for on clickevent on selectbutton_presses
 # @Todo fill in once ready
 func _ready():
@@ -234,12 +233,12 @@ func _ready():
 	r_tip_button1 = get_node(\"Misc_Buttonsnode/R_tip_1\")
 	r_tip_button2 = get_node(\"Misc_Buttonsnode/R_tip_2\")
 	# dropbox_nodes
-	l_db_box1 = get_node(\"L_Container/L_DB_Slot1/L_DB_Frame/L_Drop_Box1\")
-	l_db_box2 = get_node(\"L_Container/L_DB_Slot2/L_DB_Frame2/L_Drop_Box2\")
-	l_db_box3 = get_node(\"L_Container/L_DB_Slot3/L_DB_Frame3/L_Drop_Box3\")
-	r_db_box1 = get_node(\"R_Container/R_DB_Slot3/R_DB_Frame1/R_Drop_Box1\")
-	r_db_box2 = get_node(\"R_Container/R_DB_Slot2/R_DB_Frame2/R_Drop_Box2\")
-	r_db_box3 = get_node(\"R_Container/R_DB_Slot4/R_DB_Frame3/R_Drop_Box3\")
+	l_db_box1 = get_node(\"L_Container/L_DB_Slot1/L_DB_Frame/Drop_Box_L1\")
+	l_db_box2 = get_node(\"L_Container/L_DB_Slot2/L_DB_Frame2/Drop_Box_L2\")
+	l_db_box3 = get_node(\"L_Container/L_DB_Slot3/L_DB_Frame3/Drop_Box_L3\")
+	r_db_box1 = get_node(\"R_Container/R_DB_Slot1/R_DB_Frame1/Drop_Box_R1\")
+	r_db_box2 = get_node(\"R_Container/R_DB_Slot2/R_DB_Frame2/Drop_Box_R2\")
+	r_db_box3 = get_node(\"R_Container/R_DB_Slot3/R_DB_Frame3/Drop_Box_R3\")
 	# 1st plotpoint
 	l_pp1_node1 = get_node(\"L_PP1_Texturesnode/L_PP1_false1\")
 	l_pp1_node2 = get_node(\"L_PP1_Texturesnode/L_PP1_false2\")
@@ -338,6 +337,54 @@ func _ready():
 	r_select_button2.disabled = true
 	#r_select_button3.disabled = true
 	#r_select_button4.disabled = true
+	
+func reset_lpp1_names() -> void:
+	l_pp1_node1.set_name(\"L_PP1_false1\")
+	l_pp1_node2.set_name(\"L_PP1_false2\")
+	l_pp1_node3.set_name(\"L_PP1_false3\")
+	l_pp1_node4.set_name(\"L_PP1_false4\")
+	l_pp1_node5.set_name(\"L_PP1_false5\")
+	l_pp1_node6.set_name(\"L_PP1_false6\")
+	l_pp1_node7.set_name(\"L_PP1_false7\")
+	l_pp1_node8.set_name(\"L_PP1_true1\")
+	l_pp1_node9.set_name(\"L_PP1_true2\")
+	l_pp1_node10.set_name(\"L_PP1_true3\")
+
+func reset_rpp1_names() -> void:
+	r_pp1_node1.set_name(\"R_PP1_false1\")
+	r_pp1_node2.set_name(\"R_PP1_false2\")
+	r_pp1_node3.set_name(\"R_PP1_false3\")
+	r_pp1_node4.set_name(\"R_PP1_false4\")
+	r_pp1_node5.set_name(\"R_PP1_false5\")
+	r_pp1_node6.set_name(\"R_PP1_false6\")
+	r_pp1_node7.set_name(\"R_PP1_false7\")
+	r_pp1_node8.set_name(\"R_PP1_true1\")
+	r_pp1_node9.set_name(\"R_PP1_true2\")
+	r_pp1_node10.set_name(\"R_PP1_true3\")
+
+func reset_lpp2_names() -> void:
+	l_pp2_node1.set_name(\"L_PP2_false1\")
+	l_pp2_node2.set_name(\"L_PP2_false2\")
+	l_pp2_node3.set_name(\"L_PP2_false3\")
+	l_pp2_node4.set_name(\"L_PP2_false4\")
+	l_pp2_node5.set_name(\"L_PP2_false5\")
+	l_pp2_node6.set_name(\"L_PP2_false6\")
+	l_pp2_node7.set_name(\"L_PP2_false7\")
+	l_pp2_node8.set_name(\"L_PP2_true1\")
+	l_pp2_node9.set_name(\"L_PP2_true2\")
+	l_pp2_node10.set_name(\"L_PP2_true3\")
+
+func reset_rpp2_names() -> void:
+	r_pp2_node1.set_name(\"R_PP2_false1\")
+	r_pp2_node2.set_name(\"R_PP2_false2\")
+	r_pp2_node3.set_name(\"R_PP2_false3\")
+	r_pp2_node4.set_name(\"R_PP2_false4\")
+	r_pp2_node5.set_name(\"R_PP2_false5\")
+	r_pp2_node6.set_name(\"R_PP2_false6\")
+	r_pp2_node7.set_name(\"R_PP2_false7\")
+	r_pp2_node8.set_name(\"R_PP2_true1\")
+	r_pp2_node9.set_name(\"R_PP2_true2\")
+	r_pp2_node10.set_name(\"R_PP2_true3\")
 	
 func set_lpp1_pos() -> void:
 	l_pp1_node1.position = l_spawn_pos1
@@ -463,18 +510,14 @@ func _on_r_pp_1_selectbutton_pressed():
 # handles selection of 2nd plotpoint
 func _on_l_pp_2_selectbutton_pressed():
 	GlobalVars.cur_l_plotpoint = \"L_PP2\"
-	# resetting textures
 	reset_ldb_text()
-	# spawning new textures
 	set_lpp2_pos()
-	# disable current button 
 	l_select_button2.disabled = true
 	
 func _on_r_pp_2_selectbutton_pressed():
-	GlobalVars.cur_l_plotpoint = \"R_PP2\"
+	GlobalVars.cur_r_plotpoint = \"R_PP2\"
 	reset_rdb_text()
 	set_rpp2_pos()
-	# disable to not call freed pointers
 	r_select_button2.disabled = true
 
 func _on_l_submit_button_pressed():
@@ -482,16 +525,26 @@ func _on_l_submit_button_pressed():
 		if check_L_PP1_success():
 			GlobalVars.l_pp1_solved = true
 			l_select_button1.disabled = true
-			deallocate_lpp1()
 			l_select_button2.disabled = false
+			reset_ldb_text()
+			deallocate_lpp1()
 		else:
 			reset_ldb_text()
 			set_lpp1_pos()
+			
 			
 	elif GlobalVars.cur_l_plotpoint == \"L_PP2\" and GlobalVars.l_pp2_solved == false:
 		if check_L_PP2_success():
 			GlobalVars.l_pp2_solved = true
 			l_select_button2.disabled = true
+			#l_select_button3.disabled = false
+			deallocate_lpp2()
+			reset_ldb_text()
+		else:
+			reset_lpp2_names()
+			set_lpp2_pos()
+			reset_ldb_text()
+	# @ Todo 
 	elif GlobalVars.cur_l_plotpoint == \"L_PP3\" and GlobalVars.l_pp3_solved == false:
 		if check_L_PP3_success():
 			GlobalVars.l_pp3_solved = true
@@ -502,13 +555,40 @@ func _on_l_submit_button_pressed():
 			l_select_button4.disabled = true
 
 func _on_r_submit_button_pressed():
-	pass # Replace with function body.
-
-
+	if GlobalVars.cur_r_plotpoint == \"R_PP1\" and GlobalVars.r_pp1_solved == false:
+		if check_R_PP1_success():
+			GlobalVars.r_pp1_solved = true
+			r_select_button1.disabled = true
+			r_select_button2.disabled = false
+			deallocate_rpp1()
+			reset_rdb_text()
+		else:
+			reset_rpp1_names()
+			set_rpp1_pos()
+			reset_rdb_text()
+	elif GlobalVars.cur_r_plotpoint == \"R_PP2\" and GlobalVars.r_pp1_solved == true and GlobalVars.r_pp2_solved == false:
+		if check_R_PP2_success():
+			GlobalVars.r_pp2_solved = true
+			r_select_button2.disabled = true
+			#r_select_button3.disabled = false
+			deallocate_rpp2()
+			reset_rdb_text()
+		else:
+			reset_rpp2_names()
+			set_rpp2_pos()
+			reset_rdb_text()
+	elif GlobalVars.cur_r_plotpoint == \"R_PP3\":
+		pass
+	elif GlobalVars.cur_r_plotpoint == \"R_PP4\":
+		pass
 
 # @Todo
 func _on_l_tip_1_pressed():
-<<<<<<< HEAD
+	if GlobalVars.l_tip_count != 0:
+		GlobalVars.l_tip_count = 0
+	else:
+		GlobalVars.l_tip_count += 1
+		# display correspoding tip
 	if l_pp1_solved == false and l_pp2_solved == false:
 		pass
 		#display tips for 1st left plotpoint
@@ -521,21 +601,15 @@ func _on_l_tip_1_pressed():
 	elif l_pp1_solved == true and l_pp2_solved == true and l_pp3_solved == true and l_pp4_solved == false:
 		pass
 		#display tips for lpp4
-# duplicate
-=======
-	if GlobalVars.l_tip_count != 0:
-		GlobalVars.l_tip_count = 0
-	else:
-		GlobalVars.l_tip_count += 1
-		# display correspoding tip
 
-
->>>>>>> e5a15078595680fa5529de064e12f84fdcc559e6
 func _on_l_tip_2_pressed():
 	_on_l_tip_1_pressed()
 
 func _on_r_tip_1_pressed():
-<<<<<<< HEAD
+	if GlobalVars.r_tip_count != 0:
+		GlobalVars.r_tip_count = 0
+	else:
+		GlobalVars.r_tip_count += 1
 	if r_pp1_solved == false and r_pp2_solved == false:
 		pass
 		#display tips for 1st left plotpoint
@@ -551,18 +625,7 @@ func _on_r_tip_1_pressed():
 
 func _on_r_tip_2_pressed():
 	_on_r_tip_1_pressed()
-=======
-	if GlobalVars.r_tip_count != 0:
-		GlobalVars.r_tip_count = 0
-	else:
-		GlobalVars.r_tip_count += 1
-		# display correnspoding tips
 
-
-func _on_r_tip_2_pressed():
-	_on_r_tip_1_pressed()
-
->>>>>>> e5a15078595680fa5529de064e12f84fdcc559e6
 
 func _on_l_caseinfo_button_1_pressed():
 	if l_pp1_solved == false:
@@ -583,7 +646,6 @@ func _on_l_caseinfo_button_2_pressed():
 
 
 func _on_r_caseinfo_button_1_pressed():
-<<<<<<< HEAD
 	if r_pp1_solved == false:
 		pass
 	elif r_pp1_solved and l_pp2_solved == false:
@@ -596,7 +658,6 @@ func _on_r_caseinfo_button_1_pressed():
 		pass
 		# display case info of leftsides pp4 on the right side
 	
-=======
 	pass # Replace with function body.
 
 func check_L_PP1_success() -> bool:
@@ -624,7 +685,7 @@ func check_L_PP4_success() -> bool:
 		return false
 
 func check_R_PP1_success() -> bool:
-	if GlobalVars.rdb1_text == \"R_PP1_true1\" and GlobalVars.rdb2_text == \"R_PP1_true2\" and GlobalVars.rdb3_text == \"R_PP1_true\":
+	if GlobalVars.rdb1_text == \"R_PP1_true1\" and GlobalVars.rdb2_text == \"R_PP1_true2\" and GlobalVars.rdb3_text == \"R_PP1_true3\":
 		return true
 	else:
 		return false
@@ -646,7 +707,6 @@ func check_R_PP4_success() -> bool:
 		return true
 	else:
 		return false
->>>>>>> e5a15078595680fa5529de064e12f84fdcc559e6
 "
 
 [node name="Control" type="Control"]
@@ -786,7 +846,7 @@ offset_left = -616.0
 offset_top = 664.0
 offset_right = -416.0
 offset_bottom = 864.0
-texture = ExtResource("21_aycgr")
+texture = ExtResource("15_ujknq")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false4" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -1368,14 +1428,14 @@ offset_top = 801.0
 offset_right = 3400.0
 offset_bottom = 1409.0
 
-[node name="R_DB_Slot4" type="CenterContainer" parent="R_Container"]
+[node name="R_DB_Slot3" type="CenterContainer" parent="R_Container"]
 layout_mode = 2
 
-[node name="R_DB_Frame3" type="TextureRect" parent="R_Container/R_DB_Slot4"]
+[node name="R_DB_Frame3" type="TextureRect" parent="R_Container/R_DB_Slot3"]
 layout_mode = 2
 texture = ExtResource("6_bwnv4")
 
-[node name="Drop_Box_R3" type="TextureRect" parent="R_Container/R_DB_Slot4/R_DB_Frame3"]
+[node name="Drop_Box_R3" type="TextureRect" parent="R_Container/R_DB_Slot3/R_DB_Frame3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1400,14 +1460,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_hip4l")
 
-[node name="R_DB_Slot3" type="CenterContainer" parent="R_Container"]
+[node name="R_DB_Slot1" type="CenterContainer" parent="R_Container"]
 layout_mode = 2
 
-[node name="R_DB_Frame1" type="TextureRect" parent="R_Container/R_DB_Slot3"]
+[node name="R_DB_Frame1" type="TextureRect" parent="R_Container/R_DB_Slot1"]
 layout_mode = 2
 texture = ExtResource("6_bwnv4")
 
-[node name="Drop_Box_R1" type="TextureRect" parent="R_Container/R_DB_Slot3/R_DB_Frame1"]
+[node name="Drop_Box_R1" type="TextureRect" parent="R_Container/R_DB_Slot1/R_DB_Frame1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1562,6 +1622,7 @@ script = ExtResource("55_jo8fx")
 [connection signal="pressed" from="Misc_Buttonsnode/L_tip_2" to="." method="_on_l_tip_2_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/R_tip_1" to="." method="_on_r_tip_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/R_tip_2" to="." method="_on_r_tip_2_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_submit_button" to="." method="_on_r_submit_button_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_submit_button" to="." method="_on_l_submit_button_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_1" to="." method="_on_l_caseinfo_button_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_2" to="." method="_on_l_caseinfo_button_2_pressed"]

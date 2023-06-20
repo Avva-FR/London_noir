@@ -29,21 +29,21 @@ func _can_drop_data(at_position, data):
 	return true
 
 func _drop_data(at_position, data):
-<<<<<<< HEAD
+
 	var origin_texture = data["origin_texture"]
-	# replace _ondragtexture with current one
-=======
 	origin_texture = data["origin_texture"]
 	origin_node = data["origin_name"]
 	origin_node_instance = data["origin_node"]
 	# name of object dropped toblue
 	target_node = get_name()
 	# swap textures
->>>>>>> e5a15078595680fa5529de064e12f84fdcc559e6
-	data["origin_node"].texture = texture
+	# bugged rn
+	#data["origin_node"].texture = texture
 	#drop texture
 	texture = origin_texture
 	append_node()
+	print(GlobalVars.ldb1_text, GlobalVars.ldb2_text, GlobalVars.ldb3_text)
+	print("righto side: ", GlobalVars.rdb1_text, GlobalVars.rdb2_text, GlobalVars.rdb3_text)
 	
 # @ Todo i think there might be a bug cant find one as of now tho	
 func append_node() -> void:
@@ -67,26 +67,28 @@ func append_node() -> void:
 			GlobalVars.ldb3_text = temp
 	elif target_node == "Drop_Box_L2":
 		if l_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
 			if GlobalVars.ldb2_text != null:
-				var temp = GlobalVars.ldb2_text
+				var temp1 = GlobalVars.ldb2_text
 				GlobalVars.ldb2_text = origin_node
-				origin_node_instance.set_name(temp)
+				origin_node_instance.set_name(temp1)
 			else: # set nodename
 				GlobalVars.ldb2_text = origin_node
-		elif origin_node == "Drop_BoxL1" and GlobalVars.ldb1_text != null and GlobalVars.ldb2_text != null:
+		elif origin_node == "Drop_Box_L1" and GlobalVars.ldb1_text != null and GlobalVars.ldb2_text != null:
 			var temp = GlobalVars.ldb2_text
 			GlobalVars.ldb2_text = GlobalVars.ldb1_text
 			GlobalVars.ldb1_text = temp
-		elif origin_node == "Drop_BoxL3" and GlobalVars.ldb2_text != null and GlobalVars.ldb3_text != null:
+		elif origin_node == "Drop_Box_L3" and GlobalVars.ldb2_text != null and GlobalVars.ldb3_text != null:
 			var temp = GlobalVars.ldb2_text
 			GlobalVars.ldb2_text = GlobalVars.ldb3_text
 			GlobalVars.ldb3_text = temp
 	elif target_node == "Drop_Box_L3":
 		if l_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
 			if GlobalVars.ldb3_text != null:
-				var temp = GlobalVars.ldb3_text
+				var temp2 = GlobalVars.ldb3_text
 				GlobalVars.ldb3_text = origin_node
-				origin_node_instance.set_name(temp)
+				origin_node_instance.set_name(temp2)
 			else: # set nodename
 				GlobalVars.ldb3_text = origin_node
 		elif origin_node == "Drop_Box_L1" and GlobalVars.ldb1_text != null and GlobalVars.ldb3_text != null:
@@ -107,7 +109,7 @@ func append_node() -> void:
 				origin_node_instance.set_name(temp)
 			else: # set nodename
 				GlobalVars.rdb1_text = origin_node
-				# swap node names based on origin of drag event
+		# swap node names based on origin of drag event
 		elif origin_node == "Drop_Box_R2" and GlobalVars.rdb1_text != null and GlobalVars.rdb2_text != null:
 			var temp = GlobalVars.rdb1_text
 			GlobalVars.rdb1_text = GlobalVars.rdb2_text
@@ -118,24 +120,22 @@ func append_node() -> void:
 			GlobalVars.rdb3_text = temp
 	elif target_node == "Drop_Box_R2":
 		if r_subStr in origin_node and origin_node != null:
-			# check if we swapped nodes
 			if GlobalVars.rdb2_text != null:
 				var temp = GlobalVars.rdb2_text
 				GlobalVars.rdb2_text = origin_node
 				origin_node_instance.set_name(temp)
 			else: # set nodename
 				GlobalVars.rdb2_text = origin_node
-		elif origin_node == "Drop_BoxR1" and GlobalVars.rdb1_text != null and GlobalVars.rdb2_text != null:
+		elif origin_node == "Drop_Box_R1" and GlobalVars.rdb1_text != null and GlobalVars.rdb2_text != null:
 			var temp = GlobalVars.rdb2_text
 			GlobalVars.rdb2_text = GlobalVars.rdb1_text
 			GlobalVars.rdb1_text = temp
-		elif origin_node == "Drop_BoxR3" and GlobalVars.rdb2_text != null and GlobalVars.rdb3_text != null:
+		elif origin_node == "Drop_Box_R3" and GlobalVars.rdb2_text != null and GlobalVars.rdb3_text != null:
 			var temp = GlobalVars.rdb2_text
 			GlobalVars.rdb2_text = GlobalVars.rdb3_text
 			GlobalVars.rdb3_text = temp
 	elif target_node == "Drop_Box_R3":
 		if r_subStr in origin_node and origin_node != null:
-			# check if we swapped nodes
 			if GlobalVars.rdb3_text != null:
 				var temp = GlobalVars.rdb3_text
 				GlobalVars.rdb3_text = origin_node
@@ -150,3 +150,4 @@ func append_node() -> void:
 			var temp = GlobalVars.rdb3_text
 			GlobalVars.rdb3_text = GlobalVars.rdb2_text
 			GlobalVars.rdb2_text = temp
+	
