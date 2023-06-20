@@ -2,25 +2,11 @@ extends TextureRect
 
 var data = {}
 var origin_texture
-var original_node: String
-var temp_node_l: String
+var origin_node_instance
 var origin_node: String
 var target_node: String
-var subStr = "L_PP"
-
-var init_ldb1
-var init_ldb2
-var init_ldb3
-var init_rdb1
-var init_rdb2
-var init_rdb3
-
-var ldb1_text
-var ldb2_text
-var ldb3_text
-var rdb1_text
-var rdb2_text
-var rdb3_text
+var l_subStr = "L_PP"
+var r_subStr = "R_PP"
  
 func _get_drag_data(at_position):
 	data["origin_node"] = self
@@ -45,108 +31,116 @@ func _can_drop_data(at_position, data):
 func _drop_data(at_position, data):
 	origin_texture = data["origin_texture"]
 	origin_node = data["origin_name"]
-	
+	origin_node_instance = data["origin_node"]
 	# name of object dropped toblue
 	target_node = get_name()
 	# swap textures
 	data["origin_node"].texture = texture
 	texture = origin_texture
-	append_node_name()
-	check_L_PP1_success()
+	append_node()
 	
-func append_node_name() -> void:
-	# drag to ldb1
+# @ Todo i think there might be a bug cant find one as of now tho	
+func append_node() -> void:
 	if target_node == "Drop_Box_L1":
-		if subStr in origin_node and origin_node != null:
-			init_ldb1 = origin_node
-			print("init setter on node 1: ",init_ldb1)
-			print(init_ldb2)
-		elif origin_node == "Drop_Box_L2":
-			ldb1_text = init_ldb2
-			ldb2_text = init_ldb1
-			print("on node 1ldb1 text:", ldb1_text, "ldb2text", ldb2_text)
-			print("target db1 source db2")
-			#else:
-			#	print("well they are null", init_ldb1, init_ldb2)
-		elif origin_node == "Drop_Box_L3":
-			if init_ldb1 != null and init_ldb3 != null:
-				ldb1_text = init_ldb3
-				ldb3_text = init_ldb1
-				print("target db1 source db3")
-	# drag to ldb2
+		if l_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
+			if GlobalVars.ldb1_text != null:
+				var temp = GlobalVars.ldb1_text
+				GlobalVars.ldb1_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.ldb1_text = origin_node
+		# swap node names based on origin of drag event
+		elif origin_node == "Drop_Box_L2" and GlobalVars.ldb1_text != null and GlobalVars.ldb2_text != null:
+			var temp = GlobalVars.ldb1_text
+			GlobalVars.ldb1_text = GlobalVars.ldb2_text
+			GlobalVars.ldb2_text = temp
+		elif origin_node == "Drop_Box_L3" and GlobalVars.ldb1_text != null and GlobalVars.ldb3_text != null:
+			var temp = GlobalVars.ldb1_text
+			GlobalVars.ldb1_text = GlobalVars.ldb3_text
+			GlobalVars.ldb3_text = temp
 	elif target_node == "Drop_Box_L2":
-		if subStr in origin_node and origin_node != null:
-			init_ldb2 = origin_node
-			print("init setter on node 2: ",init_ldb2)
-			print(init_ldb1)
-		elif origin_node == "Drop_BoxL1":
-			if init_ldb1 != null and init_ldb2 != null:
-				ldb1_text = init_ldb2
-				ldb2_text = init_ldb1
-		elif origin_node == "Drop_Box_L3":
-			if init_ldb2 != null and init_ldb3 != null:
-				ldb2_text = init_ldb3
-				ldb3_text = init_ldb2
-	# drag to ldb 3
+		if l_subStr in origin_node and origin_node != null:
+			if GlobalVars.ldb2_text != null:
+				var temp = GlobalVars.ldb2_text
+				GlobalVars.ldb2_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.ldb2_text = origin_node
+		elif origin_node == "Drop_BoxL1" and GlobalVars.ldb1_text != null and GlobalVars.ldb2_text != null:
+			var temp = GlobalVars.ldb2_text
+			GlobalVars.ldb2_text = GlobalVars.ldb1_text
+			GlobalVars.ldb1_text = temp
+		elif origin_node == "Drop_BoxL3" and GlobalVars.ldb2_text != null and GlobalVars.ldb3_text != null:
+			var temp = GlobalVars.ldb2_text
+			GlobalVars.ldb2_text = GlobalVars.ldb3_text
+			GlobalVars.ldb3_text = temp
 	elif target_node == "Drop_Box_L3":
-		if subStr in origin_node and origin_node != null:
-			init_ldb3 = origin_node
-		elif origin_node == "Drop_Box_L1":
-			if init_ldb1 != null and init_ldb3 != null:
-				ldb1_text = init_ldb3
-				ldb3_text = init_ldb1
-		elif origin_node == "Drop_Box_L2":
-			if init_ldb2 != null and init_ldb3 != null:
-				ldb2_text = init_ldb3
-				ldb3_text = init_ldb2
-		
-
-
-
-func check_L_PP1_success() -> bool:
-	if ldb1_text == "L_PP1_true1" and ldb2_text == "L_PP1_true2" and ldb3_text == "L_PP1_true":
-		return true
-	else:
-		return false
-		
-func check_L_PP2_success() -> bool:
-	if ldb1_text == "L_PP2_true1" and ldb2_text == "L_PP2_true2" and ldb3_text == "L_PP2_true3":
-		return true
-	else:
-		return false
-		
-func check_L_PP3_success() -> bool:
-	if ldb1_text == "L_PP3_true1" and ldb2_text == "L_PP3_true2" and ldb3_text == "L_PP3_true3":
-		return true
-	else:
-		return false
-
-func check_L_PP4_success() -> bool:
-	if ldb1_text == "L_PP4_true1" and ldb2_text == "L_PP4_true2" and ldb3_text == "L_PP4_true3":
-		return true
-	else:
-		return false
-
-func check_R_PP1_success() -> bool:
-	if rdb1_text == "R_PP1_true1" and rdb2_text == "R_PP1_true2" and rdb3_text == "R_PP1_true":
-		return true
-	else:
-		return false
-		
-func check_R_PP2_success() -> bool:
-	if rdb1_text == "R_PP2_true1" and rdb2_text == "R_PP2_true2" and rdb3_text == "R_PP2_true3":
-		return true
-	else:
-		return false
-		
-func check_R_PP3_success() -> bool:
-	if rdb1_text == "R_PP3_true1" and rdb2_text == "R_PP3_true2" and rdb3_text == "R_PP3_true3":
-		return true
-	else:
-		return false
-
-func check_R_PP4_success() -> bool:
-	if rdb1_text == "R_PP4_true1" and rdb2_text == "R_PP4_true2" and rdb3_text == "R_PP4_true3":
-		return true
-	else:
-		return false
+		if l_subStr in origin_node and origin_node != null:
+			if GlobalVars.ldb3_text != null:
+				var temp = GlobalVars.ldb3_text
+				GlobalVars.ldb3_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.ldb3_text = origin_node
+		elif origin_node == "Drop_Box_L1" and GlobalVars.ldb1_text != null and GlobalVars.ldb3_text != null:
+			var temp = GlobalVars.ldb3_text
+			GlobalVars.ldb3_text = GlobalVars.ldb1_text
+			GlobalVars.ldb1_text = temp
+		elif origin_node == "Drop_Box_L2" and GlobalVars.ldb2_text != null and GlobalVars.ldb3_text != null:
+			var temp = GlobalVars.ldb3_text
+			GlobalVars.ldb3_text = GlobalVars.ldb2_text
+			GlobalVars.ldb2_text = temp
+	#right side
+	elif target_node == "Drop_Box_R1":
+		if r_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
+			if GlobalVars.rdb1_text != null:
+				var temp = GlobalVars.rdb1_text
+				GlobalVars.rdb1_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.rdb1_text = origin_node
+				# swap node names based on origin of drag event
+		elif origin_node == "Drop_Box_R2" and GlobalVars.rdb1_text != null and GlobalVars.rdb2_text != null:
+			var temp = GlobalVars.rdb1_text
+			GlobalVars.rdb1_text = GlobalVars.rdb2_text
+			GlobalVars.rdb2_text = temp
+		elif origin_node == "Drop_Box_R3" and GlobalVars.rdb1_text != null and GlobalVars.rdb3_text != null:
+			var temp = GlobalVars.rdb1_text
+			GlobalVars.rdb1_text = GlobalVars.rdb3_text
+			GlobalVars.rdb3_text = temp
+	elif target_node == "Drop_Box_R2":
+		if r_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
+			if GlobalVars.rdb2_text != null:
+				var temp = GlobalVars.rdb2_text
+				GlobalVars.rdb2_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.rdb2_text = origin_node
+		elif origin_node == "Drop_BoxR1" and GlobalVars.rdb1_text != null and GlobalVars.rdb2_text != null:
+			var temp = GlobalVars.rdb2_text
+			GlobalVars.rdb2_text = GlobalVars.rdb1_text
+			GlobalVars.rdb1_text = temp
+		elif origin_node == "Drop_BoxR3" and GlobalVars.rdb2_text != null and GlobalVars.rdb3_text != null:
+			var temp = GlobalVars.rdb2_text
+			GlobalVars.rdb2_text = GlobalVars.rdb3_text
+			GlobalVars.rdb3_text = temp
+	elif target_node == "Drop_Box_R3":
+		if r_subStr in origin_node and origin_node != null:
+			# check if we swapped nodes
+			if GlobalVars.rdb3_text != null:
+				var temp = GlobalVars.rdb3_text
+				GlobalVars.rdb3_text = origin_node
+				origin_node_instance.set_name(temp)
+			else: # set nodename
+				GlobalVars.rdb3_text = origin_node
+		elif origin_node == "Drop_Box_R1" and GlobalVars.rdb1_text != null and GlobalVars.rdb3_text != null:
+			var temp = GlobalVars.rdb3_text
+			GlobalVars.rdb3_text = GlobalVars.rdb1_text
+			GlobalVars.rdb1_text = temp
+		elif origin_node == "Drop_Box_R2" and GlobalVars.rdb2_text != null and GlobalVars.rdb3_text != null:
+			var temp = GlobalVars.rdb3_text
+			GlobalVars.rdb3_text = GlobalVars.rdb2_text
+			GlobalVars.rdb2_text = temp

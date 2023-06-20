@@ -2,7 +2,6 @@ extends TextureRect
 
 var data = {}
 
-
 func _get_drag_data(at_position):
 	data["origin_texture"] = texture
 	data["origin_node"] = self
