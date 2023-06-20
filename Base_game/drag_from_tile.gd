@@ -26,6 +26,8 @@ func _can_drop_data(at_position, data):
 
 func _drop_data(at_position, data):
 	var origin_texture = data["origin_texture"]
+	# replace _ondragtexture with current one
 	data["origin_node"].texture = texture
+	#drop texture
 	texture = origin_texture
 	#current_texture = texture

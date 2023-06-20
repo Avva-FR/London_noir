@@ -62,6 +62,15 @@ script/source = "extends Control
 var empty_texture = load(\"res://pictures/empty_texture.png\")
 # signals
 var original_node_name
+# bools
+var l_pp1_solved = false
+var l_pp2_solved = false
+var l_pp3_solved = false
+var l_pp4_solved = false
+var r_pp1_solved = false
+var r_pp2_solved = false
+var r_pp3_solved = false
+var r_pp4_solved = false
 # selectbuttons
 var l_select_button1
 var l_select_button2
@@ -332,31 +341,70 @@ func _on_l_submit_button_pressed():
 
 
 func _on_l_tip_1_pressed():
-	pass # Replace with function body.
-
-
+	if l_pp1_solved == false and l_pp2_solved == false:
+		pass
+		#display tips for 1st left plotpoint
+	elif l_pp1_solved == true and l_pp2_solved == false:
+		pass
+		# display tips for left side pp2
+	elif l_pp1_solved == true and l_pp2_solved == true and l_pp3_solved == false:
+		pass
+		#display tips for l pp3
+	elif l_pp1_solved == true and l_pp2_solved == true and l_pp3_solved == true and l_pp4_solved == false:
+		pass
+		#display tips for lpp4
+# duplicate
 func _on_l_tip_2_pressed():
-	pass # Replace with function body.
-
+	_on_l_tip_1_pressed()
 
 func _on_r_tip_1_pressed():
-	pass # Replace with function body.
-
+	if r_pp1_solved == false and r_pp2_solved == false:
+		pass
+		#display tips for 1st left plotpoint
+	elif r_pp1_solved == true and r_pp2_solved == false:
+		pass
+		# display tips for left side pp2
+	elif r_pp1_solved == true and r_pp2_solved == true and r_pp3_solved == false:
+		pass
+		#display tips for r pp3
+	elif r_pp1_solved == true and r_pp2_solved == true and r_pp3_solved == true and r_pp4_solved == false:
+		pass
+		#display tips for rpp4
 
 func _on_r_tip_2_pressed():
-	pass # Replace with function body.
-
+	_on_r_tip_1_pressed()
 
 func _on_l_caseinfo_button_1_pressed():
-	pass # Replace with function body.
-
+	if l_pp1_solved == false:
+		pass
+		# display case info for left side
+	elif l_pp1_solved and r_pp1_solved and r_pp2_solved == false:
+		pass
+		# display tips for 2nd plotpoint of rightside on the left side
+	elif l_pp1_solved and r_pp1_solved and l_pp2_solved and l_pp3_solved == false:
+		pass
+		#display caseinfo on left side for left plotpoint3
+	elif l_pp1_solved and r_pp2_solved and l_pp2_solved and l_pp3_solved and r_pp4_solved == false:
+		pass
+		# display infos for right side plotpoint 4 on left side
 
 func _on_l_caseinfo_button_2_pressed():
-	pass # Replace with function body.
+	_on_l_caseinfo_button_1_pressed()
 
 
 func _on_r_caseinfo_button_1_pressed():
-	pass # Replace with function body.
+	if r_pp1_solved == false:
+		pass
+	elif r_pp1_solved and l_pp2_solved == false:
+		pass
+		#display left pp2 info on right side
+	elif r_pp1_solved and r_pp2_solved and r_pp3_solved == false:
+		pass
+		# display info of 3rd plotpoint on the right side
+	elif l_pp1_solved and r_pp2_solved and l_pp2_solved and l_pp3_solved and l_pp4_solved == false:
+		pass
+		# display case info of leftsides pp4 on the right side
+	
 "
 
 [node name="Control" type="Control"]
