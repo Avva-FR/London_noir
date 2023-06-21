@@ -64,6 +64,8 @@ script/source = "extends Control
 var empty_texture = load(\"res://pictures/empty_texture.png\")
 # signals
 var original_node_name
+# Scenes
+var L_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/l_case_info.tscn\")
 # bools
 var l_pp1_solved = false
 var l_pp2_solved = false
@@ -628,8 +630,9 @@ func _on_r_tip_2_pressed():
 
 
 func _on_l_caseinfo_button_1_pressed():
-	if l_pp1_solved == false:
-		pass
+	if l_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP1\":
+		var L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
+		add_child(L_Case_Info_Instance)
 		# display case info for left side
 	elif l_pp1_solved and r_pp1_solved and r_pp2_solved == false:
 		pass

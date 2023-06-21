@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcwkrjmqyfp18"]
+
+[ext_resource type="Script" path="res://Base_game/Info_Scenes/Left_Case_Info.gd" id="1_sqbco"]
+[ext_resource type="Texture2D" uid="uid://c8qvr2adgm37p" path="res://pictures/Button_textures/buttons/tipp_button.svg" id="2_w7nn5"]
+
+[node name="L_Case_Info" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqbco")
+
+[node name="Exit_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 1050.0
+offset_right = 285.0
+offset_bottom = 1262.0
+texture_normal = ExtResource("2_w7nn5")
+
+[connection signal="pressed" from="Exit_button" to="." method="_on_exit_button_pressed"]
