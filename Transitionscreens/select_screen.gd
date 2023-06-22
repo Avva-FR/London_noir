@@ -10,10 +10,10 @@ func _process(delta):
 	pass
 
 func _on_cases_botton_pressed():
-	get_tree().change_scene_to_file("res://Transitionscreens/case_select_screen.tscn")
+	get_tree().change_scene_to_file("res://Transitionscreens/question_round/question_part.tscn")
 	
 func _on_tutorial_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Transitionscreens/tutorial_knowledge/tutorial_intro.tscn")
 
 func _on_settings_button_pressed():
 	get_tree().change_scene_to_file("res://Transitionscreens/settings_screen.tscn")

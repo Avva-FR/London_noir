@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc4dd2wb1fqkc"]
+[gd_scene load_steps=6 format=3 uid="uid://dc4dd2wb1fqkc"]
 
 [ext_resource type="Script" path="res://Transitionscreens/select_screen.gd" id="1_7vmlp"]
 [ext_resource type="Texture2D" uid="uid://c3yq2ckw8lf8l" path="res://pictures/BG_textures/select_screen.png" id="2_pkd1i"]
+[ext_resource type="Texture2D" uid="uid://nvxkgqtb5g61" path="res://pictures/new-Buttons/fall_button.png" id="3_yspot"]
+[ext_resource type="Texture2D" uid="uid://cv6d28xeyoq38" path="res://pictures/new-Buttons/tutorial_button.png" id="4_u5vbr"]
+[ext_resource type="Texture2D" uid="uid://c3pjjfrjtlya1" path="res://pictures/new-Buttons/einstellungen_button.png" id="5_rsols"]
 
 [node name="Select_screen" type="Control"]
 layout_mode = 3
@@ -11,45 +14,63 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vmlp")
+metadata/_edit_vertical_guides_ = [1922.0, 1118.0]
+metadata/_edit_horizontal_guides_ = [1079.0]
 
 [node name="SelectScreen" type="Sprite2D" parent="."]
-position = Vector2(1920, 1079.5)
-scale = Vector2(2, 1.99907)
+position = Vector2(1922.95, 1028.68)
+scale = Vector2(0.963315, 0.962867)
 texture = ExtResource("2_pkd1i")
 
-[node name="cases_botton" type="TextureButton" parent="SelectScreen"]
+[node name="FallButton" type="Sprite2D" parent="."]
+position = Vector2(1923, 546)
+scale = Vector2(0.402593, 0.402593)
+texture = ExtResource("3_yspot")
+
+[node name="cases_botton" type="TextureButton" parent="FallButton"]
 anchors_preset = -1
 anchor_left = 0.502
 anchor_top = 0.262
 anchor_right = 0.502
 anchor_bottom = 0.262
-offset_left = -1320.84
-offset_top = -615.96
-offset_right = -600.84
-offset_bottom = -463.96
+offset_left = -4010.0
+offset_top = -632.198
+offset_right = -13.0
+offset_bottom = 202.802
 
-[node name="tutorial_button" type="TextureButton" parent="SelectScreen"]
+[node name="TutorialButton" type="Sprite2D" parent="."]
+position = Vector2(1924, 1045)
+scale = Vector2(0.403, 0.403)
+texture = ExtResource("4_u5vbr")
+
+[node name="tutorial_button" type="TextureButton" parent="TutorialButton"]
 anchors_preset = -1
 anchor_left = 0.502
 anchor_top = 0.444
 anchor_right = 0.502
 anchor_bottom = 0.444
-offset_left = -1318.84
-offset_top = -616.52
-offset_right = -601.84
-offset_bottom = -463.52
+offset_left = -4003.0
+offset_top = -775.076
+offset_right = -3.0
+offset_bottom = 45.924
 
-[node name="settings_button" type="TextureButton" parent="SelectScreen"]
+[node name="EinstellungenButton" type="Sprite2D" parent="."]
+position = Vector2(1924, 1546)
+scale = Vector2(0.403, 0.403)
+texture = ExtResource("5_rsols")
+
+[node name="settings_button" type="TextureButton" parent="."]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.503
 anchor_top = 0.657
 anchor_right = 0.503
 anchor_bottom = 0.657
-offset_left = -1319.09
-offset_top = -616.227
-offset_right = -602.093
-offset_bottom = -463.227
+offset_left = -808.52
+offset_top = -34.12
+offset_right = 799.48
+offset_bottom = 295.88
 
-[connection signal="pressed" from="SelectScreen/cases_botton" to="." method="_on_cases_botton_pressed"]
-[connection signal="pressed" from="SelectScreen/tutorial_button" to="." method="_on_tutorial_button_pressed"]
-[connection signal="pressed" from="SelectScreen/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="FallButton/cases_botton" to="." method="_on_cases_botton_pressed"]
+[connection signal="pressed" from="TutorialButton/tutorial_button" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
