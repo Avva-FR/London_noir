@@ -26,4 +26,4 @@ func _on_menu_5_pressed():
 
 
 func _on_knowledge_next_pressed():
-	get_tree().change_scene_to_file("res://Transitionscreens/tutorial_knowledge/tutorial_entity.tscn")
+	get_tree().change_scene_to_file("res://Transitionscreens/tutorial_knowledge/tutorial_attribute.tscn")

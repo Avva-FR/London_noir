@@ -1,0 +1,166 @@
+[gd_scene load_steps=13 format=3 uid="uid://0mmojcjvrvql"]
+
+[ext_resource type="Script" path="res://Transitionscreens/tutorial_knowledge/tutorial_attribute.gd" id="1_7jn7e"]
+[ext_resource type="Texture2D" uid="uid://s2puli3kxyhm" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="3_r2evp"]
+[ext_resource type="Texture2D" uid="uid://3hoixc4j4iwy" path="res://pictures/BG_textures/tutorial_all.png" id="4_21ht5"]
+[ext_resource type="Texture2D" uid="uid://djv2splv3h1g0" path="res://pictures/new-BG/tutorial_bg_4.png" id="5_5hjgx"]
+[ext_resource type="Texture2D" uid="uid://cde7uad428nyq" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="6_av8df"]
+[ext_resource type="Texture2D" uid="uid://q4mlv0w0pf0i" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="7_dp45p"]
+[ext_resource type="FontFile" uid="uid://dwxhcxjjdc53" path="res://pictures/fonts/Thunder-ExtraLightLC.ttf" id="7_qdhlc"]
+[ext_resource type="Texture2D" uid="uid://c0pg3co3ak37x" path="res://pictures/new-Buttons/button_next.png" id="8_blt2c"]
+[ext_resource type="Texture2D" uid="uid://cx8npf5c1dany" path="res://pictures/new-BG/tutorial_bg_pinwall.png" id="8_p7c04"]
+[ext_resource type="Texture2D" uid="uid://bufouissxw7xg" path="res://pictures/new-BG/tutorial_detective.png" id="9_unj4e"]
+[ext_resource type="Texture2D" uid="uid://cl7hhcyt25mjc" path="res://pictures/new-BG/tutorial_smoke.png" id="10_llr55"]
+[ext_resource type="Texture2D" uid="uid://dl33rma464lpl" path="res://pictures/new-BG/text_shadow_1.png" id="12_a8hk2"]
+
+[node name="tutorial_attribute" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jn7e")
+metadata/_edit_vertical_guides_ = [1035.0, 1921.0, 2805.0]
+metadata/_edit_horizontal_guides_ = [1596.0]
+
+[node name="TutorialFullyBg1" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+scale = Vector2(1.99584, 1.99262)
+texture = ExtResource("3_r2evp")
+
+[node name="TutorialAll" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1859.5, 1105)
+scale = Vector2(2.4935, 2.4778)
+texture = ExtResource("4_21ht5")
+
+[node name="tutorial_bg" type="Sprite2D" parent="."]
+position = Vector2(1990.5, 1128)
+scale = Vector2(0.73625, 0.735598)
+texture = ExtResource("5_5hjgx")
+
+[node name="TutorialSidebar" type="Sprite2D" parent="."]
+position = Vector2(857.417, 1151.5)
+scale = Vector2(2.28774, 1.98438)
+texture = ExtResource("6_av8df")
+
+[node name="TutorialSidebarActive" type="Sprite2D" parent="TutorialSidebar"]
+position = Vector2(-0.182404, -0.25193)
+scale = Vector2(1.01435, 1.16942)
+texture = ExtResource("7_dp45p")
+
+[node name="menu-1" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -8.0
+offset_top = -172.0
+offset_right = 7.0
+offset_bottom = -156.0
+
+[node name="menu-2" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17624
+offset_top = -88.9449
+offset_right = 6.82376
+offset_bottom = -74.9449
+
+[node name="menu-3" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17621
+offset_top = -6.80322
+offset_right = 6.82379
+offset_bottom = 7.19678
+
+[node name="menu-4" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.61334
+offset_top = 75.3385
+offset_right = 6.38666
+offset_bottom = 89.3385
+
+[node name="menu-5" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17627
+offset_top = 156.472
+offset_right = 6.82373
+offset_bottom = 170.472
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 715.0
+offset_right = 1668.0
+offset_bottom = 863.0
+theme_override_colors/font_color = Color(1, 0.870588, 0.439216, 1)
+theme_override_fonts/font = ExtResource("7_qdhlc")
+theme_override_font_sizes/font_size = 152
+text = "Attribut"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.819
+anchor_top = -8.189
+anchor_right = -1.819
+anchor_bottom = -8.189
+offset_left = 1161.88
+offset_top = 1390.97
+offset_right = 15744.9
+offset_bottom = 1721.97
+theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
+theme_override_font_sizes/font_size = 40
+text = "Lorem ipsum dolor sit amet, consetetur 
+sadipscing elitr, sed diam nonumy eirmod 
+tempor invidunt ut labore et dolore magna 
+aliquyam erat, sed diam voluptua:"
+clip_text = true
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 455.0
+offset_right = 736.0
+offset_bottom = 715.0
+theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
+theme_override_font_sizes/font_size = 35
+text = "- At vero eos et accusam et justo duo
+- Stet clita kasd gubergren, no sea 
+- takimata sanctus est Lorem ipsum dolor 
+- amet. Lorem ipsum dolor sit amet, 
+- consetetur sadipscing elitr, sed diam  
+"
+
+[node name="ButtonNext" type="Sprite2D" parent="Label"]
+position = Vector2(238.124, 832.938)
+scale = Vector2(0.115953, 0.115953)
+texture = ExtResource("8_blt2c")
+
+[node name="knowledge_next" type="TextureButton" parent="Label/ButtonNext"]
+offset_left = -2001.89
+offset_top = -413.423
+offset_right = 2000.11
+offset_bottom = 414.577
+
+[node name="TextShadow1" type="Sprite2D" parent="."]
+position = Vector2(1202, 780.432)
+scale = Vector2(0.233, 0.141327)
+texture = ExtResource("12_a8hk2")
+
+[node name="TutorialBgPinwall" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2495.63, 1186.5)
+scale = Vector2(0.252687, 0.252687)
+texture = ExtResource("8_p7c04")
+
+[node name="TutorialDetective" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2696, 1090)
+scale = Vector2(0.223, 0.223)
+texture = ExtResource("9_unj4e")
+
+[node name="TutorialSmoke" type="Sprite2D" parent="."]
+position = Vector2(1859, 1111)
+scale = Vector2(0.997, 0.997)
+texture = ExtResource("10_llr55")
+
+[connection signal="pressed" from="TutorialSidebar/menu-1" to="." method="_on_menu_1_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu-2" to="." method="_on_menu_2_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu-3" to="." method="_on_menu_3_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu-4" to="." method="_on_menu_4_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu-5" to="." method="_on_menu_5_pressed"]
+[connection signal="pressed" from="Label/ButtonNext/knowledge_next" to="." method="_on_knowledge_next_pressed"]
