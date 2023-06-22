@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc4dd2wb1fqkc"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Transitionscreens/select_screen.gd" id="1_7vmlp"]
-[ext_resource type="Texture2D" uid="uid://c3yq2ckw8lf8l" path="res://pictures/BG_textures/select_screen.png" id="2_pkd1i"]
+[ext_resource type="Texture2D" uid="uid://c3yq2ckw8lf8l" path="res://assets/BG_textures/select_screen.png" id="2_pkd1i"]
+
 
 [node name="Select_screen" type="Control"]
 layout_mode = 3

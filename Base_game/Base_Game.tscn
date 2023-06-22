@@ -1,60 +1,60 @@
-[gd_scene load_steps=58 format=3 uid="uid://duxul4rxxaqp5"]
+[gd_scene load_steps=58 format=3 uid="uid://dsiw53ro76he6"]
 
-[ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://pictures/BG_textures/backgrounds/bg_game.svg" id="1_33edi"]
+[ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://assets/BG_textures/backgrounds/bg_game.svg" id="1_kwkms"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
-[ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://pictures/ER_textures/L_Plotpoint_1/hört.png" id="3_ct1n2"]
+[ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://assets/ER_textures/L_Plotpoint_1/benutzt.png" id="2_kynfm"]
+[ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://assets/ER_textures/L_Plotpoint_1/feuert.png" id="4_2bwnc"]
 [ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
-[ext_resource type="Texture2D" uid="uid://b6umfj2cgq4aa" path="res://pictures/ER_textures/Section_dropper.png" id="6_bwnv4"]
-[ext_resource type="Texture2D" uid="uid://bj3d0p5s55x6e" path="res://pictures/ER_textures/L_Plotpoint_1/Kugel.png" id="8_5q1qt"]
-[ext_resource type="Texture2D" uid="uid://24l4y3tm12t2" path="res://pictures/ER_textures/L_Plotpoint_1/Portier.png" id="9_brfqm"]
-[ext_resource type="Texture2D" uid="uid://cjegt880m0dkj" path="res://pictures/ER_textures/L_Plotpoint_1/Revolver.png" id="10_4g3a5"]
-[ext_resource type="Texture2D" uid="uid://b6t8uadq4g5po" path="res://pictures/ER_textures/L_Plotpoint_1/Pistole.png" id="10_5td0k"]
-[ext_resource type="Texture2D" uid="uid://dtr2f6h4w7lub" path="res://pictures/ER_textures/L_Plotpoint_1/Schuss.png" id="11_ihe0u"]
-[ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://pictures/ER_textures/L_Plotpoint_1/feuert.png" id="11_rql5s"]
-[ext_resource type="Texture2D" uid="uid://c10mboqt4lxj5" path="res://pictures/ER_textures/L_Plotpoint_2/Feuerwaffen.png" id="12_hti3n"]
-[ext_resource type="Texture2D" uid="uid://ckgp46kpb5f8u" path="res://pictures/ER_textures/L_Plotpoint_1/hält.png" id="12_kvygj"]
-[ext_resource type="Texture2D" uid="uid://difatuoth7s74" path="res://pictures/ER_textures/L_Plotpoint_1/sieht.png" id="13_0jkcg"]
-[ext_resource type="Texture2D" uid="uid://dqbdfsjkqw460" path="res://pictures/ER_textures/L_Plotpoint_2/Gewehre.png" id="13_eavmd"]
-[ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://pictures/ER_textures/L_Plotpoint_1/benutzt.png" id="15_d0rf1"]
-[ext_resource type="Texture2D" uid="uid://dh1ofm7eidni4" path="res://pictures/ER_textures/L_Plotpoint_2/enthält.png" id="15_r5okq"]
-[ext_resource type="Texture2D" uid="uid://d4k2uxv5wbv12" path="res://pictures/ER_textures/L_Plotpoint_2/Repetierbüchse.png" id="15_ujknq"]
-[ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://pictures/ER_textures/R_Plotpoint_1/Koch.png" id="16_4or8w"]
-[ext_resource type="Texture2D" uid="uid://c2b1s6kj5kvl6" path="res://pictures/ER_textures/L_Plotpoint_2/feuert.png" id="16_n35vl"]
-[ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://pictures/ER_textures/R_Plotpoint_1/Dame.png" id="17_0e8xc"]
-[ext_resource type="Texture2D" uid="uid://w75q334qe5gl" path="res://pictures/ER_textures/L_Plotpoint_2/schießt.png" id="17_euyyq"]
-[ext_resource type="Texture2D" uid="uid://b4cptd65avenu" path="res://pictures/ER_textures/L_Plotpoint_2/Kugel.png" id="18_5ruap"]
-[ext_resource type="Texture2D" uid="uid://dswrv18i67m2b" path="res://pictures/ER_textures/R_Plotpoint_1/isst.png" id="18_prooq"]
-[ext_resource type="Texture2D" uid="uid://uh7v2xbsx0jg" path="res://pictures/ER_textures/R_Plotpoint_1/Kuchen.png" id="19_l3t45"]
-[ext_resource type="Texture2D" uid="uid://dl3fciucntf6q" path="res://pictures/ER_textures/L_Plotpoint_2/Waffenauslage.png" id="19_vxj5l"]
-[ext_resource type="Texture2D" uid="uid://d04ay5ggiriav" path="res://pictures/ER_textures/L_Plotpoint_2/fehlt.png" id="20_5k5ng"]
-[ext_resource type="Texture2D" uid="uid://cp1prkpod1krp" path="res://pictures/ER_textures/R_Plotpoint_1/Messer.png" id="20_yn3m6"]
-[ext_resource type="Texture2D" uid="uid://by13recixlhod" path="res://pictures/ER_textures/L_Plotpoint_2/Revolver.png" id="21_aycgr"]
-[ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://pictures/ER_textures/R_Plotpoint_1/schneidet.png" id="21_lm4xq"]
-[ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://pictures/ER_textures/R_Plotpoint_1/Person.png" id="22_2vffo"]
-[ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://pictures/ER_textures/R_Plotpoint_1/hält.png" id="23_w16s5"]
-[ext_resource type="Texture2D" uid="uid://bo2afqgju2pv4" path="res://pictures/ER_textures/R_Plotpoint_1/Gegenstand.png" id="24_vp0jp"]
-[ext_resource type="Texture2D" uid="uid://kkmkin802xxt" path="res://pictures/ER_textures/R_Plotpoint_2/Küchenjunge.png" id="32_jyr1s"]
-[ext_resource type="Texture2D" uid="uid://bye4l4r2poxl8" path="res://pictures/ER_textures/R_Plotpoint_2/Geflügelschere.png" id="33_bpcmf"]
-[ext_resource type="Texture2D" uid="uid://fmb4c57wfrdw" path="res://pictures/ER_textures/R_Plotpoint_2/Blut.png" id="34_nt3t4"]
-[ext_resource type="Texture2D" uid="uid://d02se4t7wksjb" path="res://pictures/ER_textures/R_Plotpoint_2/benutzt.png" id="35_h15po"]
-[ext_resource type="Texture2D" uid="uid://pp3qrbxok3a1" path="res://pictures/ER_textures/R_Plotpoint_2/schmiert.png" id="36_lmnf6"]
-[ext_resource type="Texture2D" uid="uid://nowhk77fbupr" path="res://pictures/ER_textures/R_Plotpoint_2/lehrt.png" id="37_2aink"]
-[ext_resource type="Texture2D" uid="uid://c4u2e3m8fx7jo" path="res://pictures/ER_textures/R_Plotpoint_2/schärft.png" id="38_prlv5"]
-[ext_resource type="Texture2D" uid="uid://dpv08me6hj20k" path="res://pictures/ER_textures/R_Plotpoint_2/Koch.png" id="39_1nr41"]
-[ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://pictures/ER_textures/R_Plotpoint_2/hält.png" id="40_2vfjf"]
-[ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://pictures/ER_textures/R_Plotpoint_2/Messer.png" id="41_mi6cg"]
-[ext_resource type="Texture2D" uid="uid://dbpcjksevmwa2" path="res://pictures/Button_textures/left_tip_texture.png" id="42_mkth7"]
-[ext_resource type="Texture2D" uid="uid://b7i48tguesjd7" path="res://pictures/Button_textures/right_tipp_texture.png" id="43_4ui56"]
-[ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://pictures/Button_textures/r_submit_button.png" id="43_ynilc"]
-[ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://pictures/Button_textures/l_submit_button.png" id="44_h8ixp"]
-[ext_resource type="Texture2D" uid="uid://ehnj35ftxn2y" path="res://pictures/Button_textures/L_Info_button.png" id="46_w4lus"]
-[ext_resource type="Texture2D" uid="uid://c721dem6j6qra" path="res://pictures/Button_textures/R_Info_button.png" id="47_023nd"]
-[ext_resource type="Texture2D" uid="uid://beb3ca4yu872w" path="res://pictures/Button_textures/Pins/yellow_pin_left.svg" id="49_0y7kx"]
-[ext_resource type="Texture2D" uid="uid://coiywtttsbh7p" path="res://pictures/Button_textures/Pins/gray_pin_left.svg" id="50_wguqy"]
-[ext_resource type="Texture2D" uid="uid://crxm8wp8mnp0j" path="res://pictures/Button_textures/Pins/yellow_pin_right.svg" id="51_i25jb"]
-[ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://pictures/Button_textures/Pins/gray_pin_right.svg" id="52_4y6un"]
-[ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://pictures/Button_textures/Pins/red_pin_right.svg" id="53_4im8k"]
-[ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://pictures/Button_textures/Pins/red_pin_left.svg" id="54_3e8eq"]
+[ext_resource type="Texture2D" uid="uid://ckgp46kpb5f8u" path="res://assets/ER_textures/L_Plotpoint_1/hält.png" id="5_885ni"]
+[ext_resource type="Texture2D" uid="uid://bj3d0p5s55x6e" path="res://assets/ER_textures/L_Plotpoint_1/Kugel.png" id="6_rm201"]
+[ext_resource type="Texture2D" uid="uid://cjegt880m0dkj" path="res://assets/ER_textures/L_Plotpoint_1/Revolver.png" id="7_m7fq6"]
+[ext_resource type="Texture2D" uid="uid://difatuoth7s74" path="res://assets/ER_textures/L_Plotpoint_1/sieht.png" id="8_2l4yl"]
+[ext_resource type="Texture2D" uid="uid://b6t8uadq4g5po" path="res://assets/ER_textures/L_Plotpoint_1/Pistole.png" id="9_rbml0"]
+[ext_resource type="Texture2D" uid="uid://24l4y3tm12t2" path="res://assets/ER_textures/L_Plotpoint_1/Portier.png" id="10_6vmk0"]
+[ext_resource type="Texture2D" uid="uid://bt6bil33i8spb" path="res://assets/ER_textures/L_Plotpoint_1/hört.png" id="11_jpu5h"]
+[ext_resource type="Texture2D" uid="uid://dtr2f6h4w7lub" path="res://assets/ER_textures/L_Plotpoint_1/Schuss.png" id="12_30i2i"]
+[ext_resource type="Texture2D" uid="uid://c10mboqt4lxj5" path="res://assets/ER_textures/L_Plotpoint_2/Feuerwaffen.png" id="13_qd5n0"]
+[ext_resource type="Texture2D" uid="uid://dqbdfsjkqw460" path="res://assets/ER_textures/L_Plotpoint_2/Gewehre.png" id="14_6iola"]
+[ext_resource type="Texture2D" uid="uid://d4k2uxv5wbv12" path="res://assets/ER_textures/L_Plotpoint_2/Repetierbüchse.png" id="15_y7u1o"]
+[ext_resource type="Texture2D" uid="uid://dh1ofm7eidni4" path="res://assets/ER_textures/L_Plotpoint_2/enthält.png" id="16_u4b7a"]
+[ext_resource type="Texture2D" uid="uid://c2b1s6kj5kvl6" path="res://assets/ER_textures/L_Plotpoint_2/feuert.png" id="17_p25io"]
+[ext_resource type="Texture2D" uid="uid://w75q334qe5gl" path="res://assets/ER_textures/L_Plotpoint_2/schießt.png" id="18_ei67h"]
+[ext_resource type="Texture2D" uid="uid://b4cptd65avenu" path="res://assets/ER_textures/L_Plotpoint_2/Kugel.png" id="19_2ai80"]
+[ext_resource type="Texture2D" uid="uid://dl3fciucntf6q" path="res://assets/ER_textures/L_Plotpoint_2/Waffenauslage.png" id="20_buxex"]
+[ext_resource type="Texture2D" uid="uid://d04ay5ggiriav" path="res://assets/ER_textures/L_Plotpoint_2/fehlt.png" id="21_30m0r"]
+[ext_resource type="Texture2D" uid="uid://by13recixlhod" path="res://assets/ER_textures/L_Plotpoint_2/Revolver.png" id="22_jg3pd"]
+[ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://assets/ER_textures/R_Plotpoint_1/Koch.png" id="23_4ek0j"]
+[ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://assets/ER_textures/R_Plotpoint_1/Dame.png" id="24_h4nex"]
+[ext_resource type="Texture2D" uid="uid://dswrv18i67m2b" path="res://assets/ER_textures/R_Plotpoint_1/isst.png" id="25_fcjlc"]
+[ext_resource type="Texture2D" uid="uid://uh7v2xbsx0jg" path="res://assets/ER_textures/R_Plotpoint_1/Kuchen.png" id="26_0i57f"]
+[ext_resource type="Texture2D" uid="uid://cp1prkpod1krp" path="res://assets/ER_textures/R_Plotpoint_1/Messer.png" id="27_qlnfq"]
+[ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://assets/ER_textures/R_Plotpoint_1/schneidet.png" id="28_0sfgl"]
+[ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://assets/ER_textures/R_Plotpoint_1/Person.png" id="29_150re"]
+[ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://assets/ER_textures/R_Plotpoint_1/hält.png" id="30_0xisw"]
+[ext_resource type="Texture2D" uid="uid://bo2afqgju2pv4" path="res://assets/ER_textures/R_Plotpoint_1/Gegenstand.png" id="31_psgu4"]
+[ext_resource type="Texture2D" uid="uid://kkmkin802xxt" path="res://assets/ER_textures/R_Plotpoint_2/Küchenjunge.png" id="32_5xlv4"]
+[ext_resource type="Texture2D" uid="uid://bye4l4r2poxl8" path="res://assets/ER_textures/R_Plotpoint_2/Geflügelschere.png" id="33_k4agr"]
+[ext_resource type="Texture2D" uid="uid://fmb4c57wfrdw" path="res://assets/ER_textures/R_Plotpoint_2/Blut.png" id="34_xx1l7"]
+[ext_resource type="Texture2D" uid="uid://d02se4t7wksjb" path="res://assets/ER_textures/R_Plotpoint_2/benutzt.png" id="35_808ye"]
+[ext_resource type="Texture2D" uid="uid://pp3qrbxok3a1" path="res://assets/ER_textures/R_Plotpoint_2/schmiert.png" id="36_prqgd"]
+[ext_resource type="Texture2D" uid="uid://nowhk77fbupr" path="res://assets/ER_textures/R_Plotpoint_2/lehrt.png" id="37_w1qn7"]
+[ext_resource type="Texture2D" uid="uid://c4u2e3m8fx7jo" path="res://assets/ER_textures/R_Plotpoint_2/schärft.png" id="38_uku47"]
+[ext_resource type="Texture2D" uid="uid://dpv08me6hj20k" path="res://assets/ER_textures/R_Plotpoint_2/Koch.png" id="39_sbmxj"]
+[ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://assets/ER_textures/R_Plotpoint_2/hält.png" id="40_ylou7"]
+[ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://assets/ER_textures/R_Plotpoint_2/Messer.png" id="41_5lrrp"]
+[ext_resource type="Texture2D" uid="uid://b6umfj2cgq4aa" path="res://assets/ER_textures/Section_dropper.png" id="42_0hfj0"]
+[ext_resource type="Texture2D" uid="uid://dbpcjksevmwa2" path="res://assets/Button_textures/left_tip_texture.png" id="44_0wnfr"]
+[ext_resource type="Texture2D" uid="uid://b7i48tguesjd7" path="res://assets/Button_textures/right_tipp_texture.png" id="45_nt6lg"]
+[ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://assets/Button_textures/r_submit_button.png" id="46_xff5c"]
+[ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://assets/Button_textures/l_submit_button.png" id="47_gy7hi"]
+[ext_resource type="Texture2D" uid="uid://ehnj35ftxn2y" path="res://assets/Button_textures/L_Info_button.png" id="48_kmlch"]
+[ext_resource type="Texture2D" uid="uid://c721dem6j6qra" path="res://assets/Button_textures/R_Info_button.png" id="49_hf050"]
+[ext_resource type="Texture2D" uid="uid://beb3ca4yu872w" path="res://assets/Button_textures/Pins/yellow_pin_left.svg" id="50_v5mpk"]
+[ext_resource type="Texture2D" uid="uid://coiywtttsbh7p" path="res://assets/Button_textures/Pins/gray_pin_left.svg" id="51_pkbgd"]
+[ext_resource type="Texture2D" uid="uid://crxm8wp8mnp0j" path="res://assets/Button_textures/Pins/yellow_pin_right.svg" id="52_cnfyi"]
+[ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://assets/Button_textures/Pins/gray_pin_right.svg" id="53_1hkky"]
+[ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://assets/Button_textures/Pins/red_pin_right.svg" id="54_sq5ny"]
+[ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://assets/Button_textures/Pins/red_pin_left.svg" id="55_7xq13"]
 [ext_resource type="Script" path="res://Base_game/global_vars.gd" id="55_jo8fx"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
@@ -66,6 +66,7 @@ var empty_texture = load(\"res://pictures/empty_texture.png\")
 var original_node_name
 # Scenes
 var L_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/l_case_info.tscn\")
+var L_Case_Info_Instance
 # bools
 var l_pp1_solved = false
 var l_pp2_solved = false
@@ -630,12 +631,14 @@ func _on_r_tip_2_pressed():
 
 
 func _on_l_caseinfo_button_1_pressed():
-	if l_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP1\":
-		var L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
+	if GlobalVars.l_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP1\":
+		L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
 		add_child(L_Case_Info_Instance)
 		# display case info for left side
-	elif l_pp1_solved and r_pp1_solved and r_pp2_solved == false:
-		pass
+	elif GlobalVars.l_pp1_solved and GlobalVars.cur_l_plotpoint == \"L_PP2\":
+		L_Case_Info_Instance.queue_free()
+		L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
+		add_child(L_Case_Info_Instance)
 		# display tips for 2nd plotpoint of rightside on the left side
 	elif l_pp1_solved and r_pp1_solved and l_pp2_solved and l_pp3_solved == false:
 		pass
@@ -649,9 +652,9 @@ func _on_l_caseinfo_button_2_pressed():
 
 
 func _on_r_caseinfo_button_1_pressed():
-	if r_pp1_solved == false:
+	if GlobalVars.r_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"R_PP1\":
 		pass
-	elif r_pp1_solved and l_pp2_solved == false:
+	elif GlobalVars.l_pp1_solved and GlobalVars.cur_l_plotpoint == \"L_PP2\":
 		pass
 		#display left pp2 info on right side
 	elif r_pp1_solved and r_pp2_solved and r_pp3_solved == false:
@@ -724,7 +727,7 @@ script = SubResource("GDScript_ev3ku")
 [node name="BgGame" type="Sprite2D" parent="."]
 position = Vector2(1920, 1080)
 scale = Vector2(1.77696, 1.99815)
-texture = ExtResource("1_33edi")
+texture = ExtResource("1_kwkms")
 
 [node name="L_PP1_Texturesnode" type="Control" parent="."]
 anchors_preset = 0
@@ -736,7 +739,7 @@ offset_left = -688.0
 offset_top = 182.0
 offset_right = -488.0
 offset_bottom = 382.0
-texture = ExtResource("15_d0rf1")
+texture = ExtResource("2_kynfm")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false2" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -745,7 +748,7 @@ offset_left = -624.0
 offset_top = 256.0
 offset_right = -424.0
 offset_bottom = 456.0
-texture = ExtResource("11_rql5s")
+texture = ExtResource("4_2bwnc")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false3" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -754,7 +757,7 @@ offset_left = -683.0
 offset_top = 208.0
 offset_right = -483.0
 offset_bottom = 408.0
-texture = ExtResource("12_kvygj")
+texture = ExtResource("5_885ni")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false4" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -763,7 +766,7 @@ offset_left = -668.0
 offset_top = 195.0
 offset_right = -468.0
 offset_bottom = 395.0
-texture = ExtResource("8_5q1qt")
+texture = ExtResource("6_rm201")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false5" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -772,7 +775,7 @@ offset_left = -645.0
 offset_top = 272.0
 offset_right = -445.0
 offset_bottom = 472.0
-texture = ExtResource("10_4g3a5")
+texture = ExtResource("7_m7fq6")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false6" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -781,7 +784,7 @@ offset_left = -622.0
 offset_top = 238.0
 offset_right = -422.0
 offset_bottom = 438.0
-texture = ExtResource("13_0jkcg")
+texture = ExtResource("8_2l4yl")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_false7" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -790,7 +793,7 @@ offset_left = -651.0
 offset_top = 194.0
 offset_right = -451.0
 offset_bottom = 394.0
-texture = ExtResource("10_5td0k")
+texture = ExtResource("9_rbml0")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_true1" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -799,7 +802,7 @@ offset_left = -636.0
 offset_top = 208.0
 offset_right = -436.0
 offset_bottom = 408.0
-texture = ExtResource("9_brfqm")
+texture = ExtResource("10_6vmk0")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_true2" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -808,7 +811,7 @@ offset_left = -609.0
 offset_top = 194.0
 offset_right = -409.0
 offset_bottom = 394.0
-texture = ExtResource("3_ct1n2")
+texture = ExtResource("11_jpu5h")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP1_true3" type="TextureRect" parent="L_PP1_Texturesnode" groups=["LPP1"]]
@@ -817,7 +820,7 @@ offset_left = -612.0
 offset_top = 229.0
 offset_right = -412.0
 offset_bottom = 429.0
-texture = ExtResource("11_ihe0u")
+texture = ExtResource("12_30i2i")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_Texturesnode" type="Control" parent="."]
@@ -831,7 +834,7 @@ offset_left = -576.0
 offset_top = 672.0
 offset_right = -376.0
 offset_bottom = 872.0
-texture = ExtResource("12_hti3n")
+texture = ExtResource("13_qd5n0")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false2" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -840,7 +843,7 @@ offset_left = -604.0
 offset_top = 664.0
 offset_right = -404.0
 offset_bottom = 864.0
-texture = ExtResource("13_eavmd")
+texture = ExtResource("14_6iola")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false3" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -849,7 +852,7 @@ offset_left = -616.0
 offset_top = 664.0
 offset_right = -416.0
 offset_bottom = 864.0
-texture = ExtResource("15_ujknq")
+texture = ExtResource("15_y7u1o")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false4" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -858,7 +861,7 @@ offset_left = -588.0
 offset_top = 676.0
 offset_right = -388.0
 offset_bottom = 876.0
-texture = ExtResource("15_r5okq")
+texture = ExtResource("16_u4b7a")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false5" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -867,7 +870,7 @@ offset_left = -580.0
 offset_top = 688.0
 offset_right = -380.0
 offset_bottom = 888.0
-texture = ExtResource("16_n35vl")
+texture = ExtResource("17_p25io")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false6" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -876,7 +879,7 @@ offset_left = -580.0
 offset_top = 716.0
 offset_right = -380.0
 offset_bottom = 916.0
-texture = ExtResource("17_euyyq")
+texture = ExtResource("18_ei67h")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_false7" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -885,7 +888,7 @@ offset_left = -596.0
 offset_top = 704.0
 offset_right = -396.0
 offset_bottom = 904.0
-texture = ExtResource("18_5ruap")
+texture = ExtResource("19_2ai80")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_true1" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -894,7 +897,7 @@ offset_left = -608.0
 offset_top = 672.0
 offset_right = -408.0
 offset_bottom = 872.0
-texture = ExtResource("19_vxj5l")
+texture = ExtResource("20_buxex")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_true2" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -903,7 +906,7 @@ offset_left = -600.0
 offset_top = 684.0
 offset_right = -400.0
 offset_bottom = 884.0
-texture = ExtResource("20_5k5ng")
+texture = ExtResource("21_30m0r")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP2_true3" type="TextureRect" parent="L_PP2_Texturesnode"]
@@ -912,7 +915,7 @@ offset_left = -580.0
 offset_top = 688.0
 offset_right = -380.0
 offset_bottom = 888.0
-texture = ExtResource("21_aycgr")
+texture = ExtResource("22_jg3pd")
 script = ExtResource("4_ma1c7")
 
 [node name="L_PP3_Texturesnode" type="Control" parent="."]
@@ -1057,7 +1060,7 @@ offset_left = 4025.0
 offset_top = 221.0
 offset_right = 4225.0
 offset_bottom = 421.0
-texture = ExtResource("15_d0rf1")
+texture = ExtResource("2_kynfm")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false2" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1066,7 +1069,7 @@ offset_left = 4041.0
 offset_top = 259.0
 offset_right = 4241.0
 offset_bottom = 459.0
-texture = ExtResource("16_4or8w")
+texture = ExtResource("23_4ek0j")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false3" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1075,7 +1078,7 @@ offset_left = 4032.0
 offset_top = 225.0
 offset_right = 4232.0
 offset_bottom = 425.0
-texture = ExtResource("17_0e8xc")
+texture = ExtResource("24_h4nex")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false4" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1084,7 +1087,7 @@ offset_left = 4016.0
 offset_top = 294.0
 offset_right = 4216.0
 offset_bottom = 494.0
-texture = ExtResource("18_prooq")
+texture = ExtResource("25_fcjlc")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false5" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1093,7 +1096,7 @@ offset_left = 4035.0
 offset_top = 212.0
 offset_right = 4235.0
 offset_bottom = 412.0
-texture = ExtResource("19_l3t45")
+texture = ExtResource("26_0i57f")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false6" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1102,7 +1105,7 @@ offset_left = 4038.0
 offset_top = 297.0
 offset_right = 4238.0
 offset_bottom = 497.0
-texture = ExtResource("20_yn3m6")
+texture = ExtResource("27_qlnfq")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_false7" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1111,7 +1114,7 @@ offset_left = 4033.0
 offset_top = 263.0
 offset_right = 4233.0
 offset_bottom = 463.0
-texture = ExtResource("21_lm4xq")
+texture = ExtResource("28_0sfgl")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true1" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1120,7 +1123,7 @@ offset_left = 4024.0
 offset_top = 256.0
 offset_right = 4224.0
 offset_bottom = 456.0
-texture = ExtResource("22_2vffo")
+texture = ExtResource("29_150re")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true2" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1129,7 +1132,7 @@ offset_left = 4029.0
 offset_top = 246.0
 offset_right = 4229.0
 offset_bottom = 446.0
-texture = ExtResource("23_w16s5")
+texture = ExtResource("30_0xisw")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP1_true3" type="TextureRect" parent="R_PP1_Texturesnode"]
@@ -1138,7 +1141,7 @@ offset_left = 4028.0
 offset_top = 261.0
 offset_right = 4228.0
 offset_bottom = 461.0
-texture = ExtResource("24_vp0jp")
+texture = ExtResource("31_psgu4")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_Texturesnode" type="Control" parent="."]
@@ -1153,7 +1156,7 @@ offset_left = 4113.0
 offset_top = 795.0
 offset_right = 4313.0
 offset_bottom = 995.0
-texture = ExtResource("32_jyr1s")
+texture = ExtResource("32_5xlv4")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false2" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1162,7 +1165,7 @@ offset_left = 4099.0
 offset_top = 786.0
 offset_right = 4299.0
 offset_bottom = 986.0
-texture = ExtResource("33_bpcmf")
+texture = ExtResource("33_k4agr")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false3" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1171,7 +1174,7 @@ offset_left = 4095.0
 offset_top = 795.0
 offset_right = 4295.0
 offset_bottom = 995.0
-texture = ExtResource("34_nt3t4")
+texture = ExtResource("34_xx1l7")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false4" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1180,7 +1183,7 @@ offset_left = 4113.0
 offset_top = 817.0
 offset_right = 4313.0
 offset_bottom = 1017.0
-texture = ExtResource("35_h15po")
+texture = ExtResource("35_808ye")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false5" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1189,7 +1192,7 @@ offset_left = 4104.0
 offset_top = 777.0
 offset_right = 4304.0
 offset_bottom = 977.0
-texture = ExtResource("36_lmnf6")
+texture = ExtResource("36_prqgd")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false6" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1198,7 +1201,7 @@ offset_left = 4135.0
 offset_top = 804.0
 offset_right = 4335.0
 offset_bottom = 1004.0
-texture = ExtResource("37_2aink")
+texture = ExtResource("37_w1qn7")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_false7" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1207,7 +1210,7 @@ offset_left = 4113.0
 offset_top = 795.0
 offset_right = 4313.0
 offset_bottom = 995.0
-texture = ExtResource("38_prlv5")
+texture = ExtResource("38_uku47")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_true1" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1216,7 +1219,7 @@ offset_left = 4068.0
 offset_top = 772.0
 offset_right = 4268.0
 offset_bottom = 972.0
-texture = ExtResource("39_1nr41")
+texture = ExtResource("39_sbmxj")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_true2" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1225,7 +1228,7 @@ offset_left = 4126.0
 offset_top = 808.0
 offset_right = 4326.0
 offset_bottom = 1008.0
-texture = ExtResource("40_2vfjf")
+texture = ExtResource("40_ylou7")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP2_true3" type="TextureRect" parent="R_PP2_Texturesnode"]
@@ -1234,7 +1237,7 @@ offset_left = 4108.0
 offset_top = 808.0
 offset_right = 4308.0
 offset_bottom = 1008.0
-texture = ExtResource("41_mi6cg")
+texture = ExtResource("41_5lrrp")
 script = ExtResource("4_ma1c7")
 
 [node name="R_PP3_Texturesnode" type="Control" parent="."]
@@ -1381,7 +1384,7 @@ layout_mode = 2
 
 [node name="L_DB_Frame" type="TextureRect" parent="L_Container/L_DB_Slot1"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_L1" type="TextureRect" parent="L_Container/L_DB_Slot1/L_DB_Frame"]
 layout_mode = 1
@@ -1397,7 +1400,7 @@ layout_mode = 2
 
 [node name="L_DB_Frame2" type="TextureRect" parent="L_Container/L_DB_Slot2"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_L2" type="TextureRect" parent="L_Container/L_DB_Slot2/L_DB_Frame2"]
 layout_mode = 1
@@ -1413,7 +1416,7 @@ layout_mode = 2
 
 [node name="L_DB_Frame3" type="TextureRect" parent="L_Container/L_DB_Slot3"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_L3" type="TextureRect" parent="L_Container/L_DB_Slot3/L_DB_Frame3"]
 layout_mode = 1
@@ -1436,7 +1439,7 @@ layout_mode = 2
 
 [node name="R_DB_Frame3" type="TextureRect" parent="R_Container/R_DB_Slot3"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_R3" type="TextureRect" parent="R_Container/R_DB_Slot3/R_DB_Frame3"]
 layout_mode = 1
@@ -1452,7 +1455,7 @@ layout_mode = 2
 
 [node name="R_DB_Frame2" type="TextureRect" parent="R_Container/R_DB_Slot2"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_R2" type="TextureRect" parent="R_Container/R_DB_Slot2/R_DB_Frame2"]
 layout_mode = 1
@@ -1468,7 +1471,7 @@ layout_mode = 2
 
 [node name="R_DB_Frame1" type="TextureRect" parent="R_Container/R_DB_Slot1"]
 layout_mode = 2
-texture = ExtResource("6_bwnv4")
+texture = ExtResource("42_0hfj0")
 
 [node name="Drop_Box_R1" type="TextureRect" parent="R_Container/R_DB_Slot1/R_DB_Frame1"]
 layout_mode = 1
@@ -1490,7 +1493,7 @@ offset_left = 1298.0
 offset_top = 144.0
 offset_right = 1419.0
 offset_bottom = 358.0
-texture_normal = ExtResource("42_mkth7")
+texture_normal = ExtResource("44_0wnfr")
 
 [node name="L_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1498,7 +1501,7 @@ offset_left = 1268.0
 offset_top = 1727.0
 offset_right = 1389.0
 offset_bottom = 1941.0
-texture_normal = ExtResource("42_mkth7")
+texture_normal = ExtResource("44_0wnfr")
 
 [node name="R_tip_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1506,7 +1509,7 @@ offset_left = 2547.0
 offset_top = 174.0
 offset_right = 2666.0
 offset_bottom = 387.0
-texture_normal = ExtResource("43_4ui56")
+texture_normal = ExtResource("45_nt6lg")
 
 [node name="R_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1514,7 +1517,7 @@ offset_left = 2559.0
 offset_top = 1696.0
 offset_right = 2678.0
 offset_bottom = 1909.0
-texture_normal = ExtResource("43_4ui56")
+texture_normal = ExtResource("45_nt6lg")
 
 [node name="R_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 1
@@ -1527,7 +1530,7 @@ offset_left = 3393.68
 offset_top = 1014.12
 offset_right = 3471.56
 offset_bottom = 1152.92
-texture_normal = ExtResource("43_ynilc")
+texture_normal = ExtResource("46_xff5c")
 
 [node name="L_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 1
@@ -1540,7 +1543,7 @@ offset_left = 353.12
 offset_top = 1014.2
 offset_right = 431.0
 offset_bottom = 1152.92
-texture_normal = ExtResource("44_h8ixp")
+texture_normal = ExtResource("47_gy7hi")
 
 [node name="L_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1548,7 +1551,7 @@ offset_left = 1135.0
 offset_top = 1764.0
 offset_right = 1225.0
 offset_bottom = 1927.0
-texture_normal = ExtResource("46_w4lus")
+texture_normal = ExtResource("48_kmlch")
 
 [node name="L_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1556,7 +1559,7 @@ offset_left = 1137.0
 offset_top = 173.0
 offset_right = 1227.0
 offset_bottom = 336.0
-texture_normal = ExtResource("46_w4lus")
+texture_normal = ExtResource("48_kmlch")
 
 [node name="R_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1564,7 +1567,7 @@ offset_left = 2729.0
 offset_top = 1736.0
 offset_right = 2819.0
 offset_bottom = 1899.0
-texture_normal = ExtResource("47_023nd")
+texture_normal = ExtResource("49_hf050")
 
 [node name="R_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
@@ -1572,7 +1575,7 @@ offset_left = 2693.0
 offset_top = 189.0
 offset_right = 2783.0
 offset_bottom = 352.0
-texture_normal = ExtResource("47_023nd")
+texture_normal = ExtResource("49_hf050")
 
 [node name="Select_Buttonsnode" type="Control" parent="."]
 anchors_preset = 0
@@ -1585,8 +1588,8 @@ offset_left = 1610.0
 offset_top = 1046.0
 offset_right = 1660.0
 offset_bottom = 1090.0
-texture_normal = ExtResource("49_0y7kx")
-texture_disabled = ExtResource("50_wguqy")
+texture_normal = ExtResource("50_v5mpk")
+texture_disabled = ExtResource("51_pkbgd")
 
 [node name="R_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 1
@@ -1597,8 +1600,8 @@ offset_left = 1848.96
 offset_top = 1058.0
 offset_right = 1898.96
 offset_bottom = 1102.0
-texture_normal = ExtResource("51_i25jb")
-texture_disabled = ExtResource("52_4y6un")
+texture_normal = ExtResource("52_cnfyi")
+texture_disabled = ExtResource("53_1hkky")
 
 [node name="L_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
@@ -1606,8 +1609,8 @@ offset_left = 1251.0
 offset_top = 823.0
 offset_right = 1301.0
 offset_bottom = 867.0
-texture_normal = ExtResource("53_4im8k")
-texture_disabled = ExtResource("50_wguqy")
+texture_normal = ExtResource("54_sq5ny")
+texture_disabled = ExtResource("51_pkbgd")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
@@ -1615,8 +1618,8 @@ offset_left = 2170.0
 offset_top = 1205.0
 offset_right = 2220.0
 offset_bottom = 1249.0
-texture_normal = ExtResource("54_3e8eq")
-texture_disabled = ExtResource("52_4y6un")
+texture_normal = ExtResource("55_7xq13")
+texture_disabled = ExtResource("53_1hkky")
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("55_jo8fx")

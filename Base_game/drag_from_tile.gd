@@ -42,8 +42,8 @@ func _drop_data(at_position, data):
 	#drop texture
 	texture = origin_texture
 	append_node()
-	print(GlobalVars.ldb1_text, GlobalVars.ldb2_text, GlobalVars.ldb3_text)
-	print("righto side: ", GlobalVars.rbd1_text, GlobalVars.rdb2_text, GlobalVars.rdb3_text)
+	#print(GlobalVars.ldb1_text, GlobalVars.ldb2_text, GlobalVars.ldb3_text)
+	#print("righto side: ", GlobalVars.rbd1_text, GlobalVars.rdb2_text, GlobalVars.rdb3_text)
 	
 # @ Todo i think there might be a bug cant find one as of now tho	
 func append_node() -> void:

@@ -1,0 +1,34 @@
+==========================================================================
+FONT INFORMATION
+==========================================================================
+All akaType™ fonts currently released are free for use in your projects
+whether personal or commercial in nature. You may use images created using
+the fonts in any way you wish. You may give copies of the font files to
+anyone you wish so long as the restrictions listed below are adhered to.
+The only real restrictions I have on their use and/or redistribution is
+that:
+
+    1. You may not sell the actual font files, singly; nor include the font
+files in a collection of fonts which will be sold.
+    2. You may not bundle the font files with software which is to be sold,
+nor require anyone to buy something in order to receive the font files.
+    3. I require that my trademarks be respected (i.e. authorship and font
+names may not be stripped from the font files themselves).
+
+Currently there are eleven (11) akaType™ fonts:
+    akaArcade™
+    akaChen™
+    akaDora™
+    akaDylan™ Plain,
+    akaDylan™ Open,
+    akaDylan™ Collage,
+    akaFrivolity™
+    akaHoggle™
+    akaIndic™
+    akaPosse™
+    akaPotsley™
+
+James D. Milligan--akaType™
+Poteau, OK
+==========================================================================
+
