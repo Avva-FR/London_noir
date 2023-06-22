@@ -1,0 +1,170 @@
+[gd_scene load_steps=14 format=3 uid="uid://bxss372bmmx61"]
+
+[ext_resource type="Script" path="res://Transitionscreens/question_round/question_part.gd" id="1_h3ndw"]
+[ext_resource type="Texture2D" uid="uid://s2puli3kxyhm" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="2_35mbu"]
+[ext_resource type="Texture2D" uid="uid://3hoixc4j4iwy" path="res://pictures/BG_textures/tutorial_all.png" id="3_ic3lh"]
+[ext_resource type="Texture2D" uid="uid://k735x6hyh4xy" path="res://pictures/new-BG/tutoria_bg_4.png" id="4_s1ql8"]
+[ext_resource type="Texture2D" uid="uid://cde7uad428nyq" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="5_dwty6"]
+[ext_resource type="Texture2D" uid="uid://q4mlv0w0pf0i" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="6_llgah"]
+[ext_resource type="FontFile" uid="uid://dwxhcxjjdc53" path="res://pictures/fonts/Thunder-ExtraLightLC.ttf" id="7_rhdtb"]
+[ext_resource type="Texture2D" uid="uid://dl33rma464lpl" path="res://pictures/new-BG/text_shadow_1.png" id="8_2bd26"]
+[ext_resource type="Texture2D" uid="uid://bufouissxw7xg" path="res://pictures/new-BG/tutorial_detective.png" id="9_qvq01"]
+[ext_resource type="Texture2D" uid="uid://cl7hhcyt25mjc" path="res://pictures/new-BG/tutorial_smoke.png" id="10_sy2kc"]
+[ext_resource type="Texture2D" uid="uid://c0pg3co3ak37x" path="res://pictures/new-Buttons/button_next.png" id="11_603he"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_4hkhk"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="Theme" id="Theme_jjoav"]
+ItemList/colors/font_color = Color(1, 0.847059, 0.717647, 1)
+ItemList/colors/font_selected_color = Color(0.560784, 0.305882, 0.231373, 1)
+ItemList/styles/panel = SubResource("StyleBoxLine_4hkhk")
+
+[node name="question_part" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h3ndw")
+metadata/_edit_vertical_guides_ = [1035.0, 1921.0, 2805.0]
+
+[node name="TutorialFullyBg1" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+scale = Vector2(1.99584, 1.99262)
+texture = ExtResource("2_35mbu")
+
+[node name="TutorialAll" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1859.5, 1105)
+scale = Vector2(2.4935, 2.4778)
+texture = ExtResource("3_ic3lh")
+
+[node name="tutorial_bg" type="Sprite2D" parent="."]
+position = Vector2(1990.5, 1128)
+scale = Vector2(0.73625, 0.735598)
+texture = ExtResource("4_s1ql8")
+
+[node name="TutorialSidebar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(857.417, 1151.5)
+scale = Vector2(2.28774, 1.98438)
+texture = ExtResource("5_dwty6")
+
+[node name="TutorialSidebarActive" type="Sprite2D" parent="TutorialSidebar"]
+position = Vector2(-0.182404, -164.031)
+scale = Vector2(1.01435, 1.16942)
+texture = ExtResource("6_llgah")
+
+[node name="menu_1" type="TextureButton" parent="TutorialSidebar/TutorialSidebarActive"]
+offset_left = -6.89496
+offset_top = -6.03305
+offset_right = 7.10504
+offset_bottom = 7.96695
+
+[node name="menu_2" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17624
+offset_top = -88.9449
+offset_right = 6.82376
+offset_bottom = -74.9449
+
+[node name="menu_3" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17621
+offset_top = -6.80322
+offset_right = 6.82379
+offset_bottom = 7.19678
+
+[node name="menu_4" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.61334
+offset_top = 75.3385
+offset_right = 6.38666
+offset_bottom = 89.3385
+
+[node name="menu_5" type="TextureButton" parent="TutorialSidebar"]
+offset_left = -7.17627
+offset_top = 156.472
+offset_right = 6.82373
+offset_bottom = 170.472
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 1032.0
+offset_top = 715.0
+offset_right = 1539.0
+offset_bottom = 859.0
+theme_override_colors/font_color = Color(1, 0.870588, 0.439216, 1)
+theme_override_fonts/font = ExtResource("7_rhdtb")
+theme_override_font_sizes/font_size = 152
+text = "Fragerunde"
+
+[node name="TextShadow1" type="Sprite2D" parent="."]
+position = Vector2(1284.5, 781.5)
+scale = Vector2(0.3655, 0.130668)
+texture = ExtResource("8_2bd26")
+
+[node name="TutorialDetective" type="Sprite2D" parent="."]
+position = Vector2(2696, 1075)
+scale = Vector2(0.223, 0.223)
+texture = ExtResource("9_qvq01")
+
+[node name="TutorialSmoke" type="Sprite2D" parent="."]
+position = Vector2(1859, 1111)
+scale = Vector2(0.997114, 0.997114)
+texture = ExtResource("10_sy2kc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 894.0
+offset_right = 2182.0
+offset_bottom = 1095.0
+
+[node name="DisplayText" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
+theme_override_font_sizes/font_size = 40
+text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et?
+
+"
+clip_text = true
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonNext" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(239.124, 742.938)
+scale = Vector2(0.115953, 0.115953)
+texture = ExtResource("11_603he")
+
+[node name="knowledge_next" type="TextureButton" parent="VBoxContainer/ButtonNext"]
+offset_left = -2002.0
+offset_top = -413.0
+offset_right = -1110.0
+offset_bottom = -413.0
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+offset_left = 1032.0
+offset_top = 1099.0
+offset_right = 2182.0
+offset_bottom = 1099.0
+theme = SubResource("Theme_jjoav")
+theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
+theme_override_colors/font_selected_color = Color(0.560784, 0.305882, 0.231373, 1)
+item_count = 3
+max_columns = 3
+same_column_width = true
+fixed_column_width = 350
+item_0/text = "Antwort1"
+item_1/text = "Antwort2"
+item_2/text = "Antwort3"
+
+[connection signal="pressed" from="TutorialSidebar/TutorialSidebarActive/menu_1" to="." method="_on_menu_1_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu_2" to="." method="_on_menu_2_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu_3" to="." method="_on_menu_3_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu_4" to="." method="_on_menu_4_pressed"]
+[connection signal="pressed" from="TutorialSidebar/menu_5" to="." method="_on_menu_5_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonNext/knowledge_next" to="." method="_on_knowledge_next_pressed"]
+[connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]
