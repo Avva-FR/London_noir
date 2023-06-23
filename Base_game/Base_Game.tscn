@@ -67,6 +67,8 @@ var original_node_name
 # Scenes
 var L_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/l_case_info.tscn\")
 var L_Case_Info_Instance
+var R_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/r_case_info.tscn\")
+var R_Case_Info_Instance
 # bools
 var l_pp1_solved = false
 var l_pp2_solved = false
@@ -652,10 +654,13 @@ func _on_l_caseinfo_button_2_pressed():
 
 
 func _on_r_caseinfo_button_1_pressed():
-	if GlobalVars.r_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"R_PP1\":
-		pass
-	elif GlobalVars.l_pp1_solved and GlobalVars.cur_l_plotpoint == \"L_PP2\":
-		pass
+	if GlobalVars.r_pp1_solved == false and GlobalVars.cur_r_plotpoint == \"R_PP1\":
+		R_Case_Info_Instance = R_Case_Info_Scene.instantiate()
+		add_child(R_Case_Info_Instance)
+	elif GlobalVars.r_pp1_solved and GlobalVars.cur_r_plotpoint == \"R_PP2\":
+		R_Case_Info_Instance.queue_free()
+		R_Case_Info_Instance = R_Case_Info_Scene.instantiate()
+		add_child(R_Case_Info_Instance)
 		#display left pp2 info on right side
 	elif r_pp1_solved and r_pp2_solved and r_pp3_solved == false:
 		pass
@@ -663,8 +668,9 @@ func _on_r_caseinfo_button_1_pressed():
 	elif l_pp1_solved and r_pp2_solved and l_pp2_solved and l_pp3_solved and l_pp4_solved == false:
 		pass
 		# display case info of leftsides pp4 on the right side
-	
-	pass # Replace with function body.
+
+func _on_r_caseinfo_button_2_pressed():
+	_on_r_caseinfo_button_1_pressed()
 
 func check_L_PP1_success() -> bool:
 	if GlobalVars.ldb1_text == \"L_PP1_true1\" and GlobalVars.ldb2_text == \"L_PP1_true2\" and GlobalVars.ldb3_text == \"L_PP1_true3\":
@@ -713,6 +719,9 @@ func check_R_PP4_success() -> bool:
 		return true
 	else:
 		return false
+
+
+
 "
 
 [node name="Control" type="Control"]
@@ -1633,7 +1642,7 @@ script = ExtResource("55_jo8fx")
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_1" to="." method="_on_l_caseinfo_button_1_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/L_caseinfo_button_2" to="." method="_on_l_caseinfo_button_2_pressed"]
 [connection signal="pressed" from="Misc_Buttonsnode/R_caseinfo_button_1" to="." method="_on_r_caseinfo_button_1_pressed"]
-[connection signal="pressed" from="Misc_Buttonsnode/R_caseinfo_button_2" to="." method="_on_r_caseinfo_button_1_pressed"]
+[connection signal="pressed" from="Misc_Buttonsnode/R_caseinfo_button_2" to="." method="_on_r_caseinfo_button_2_pressed"]
 [connection signal="pressed" from="Select_Buttonsnode/L_PP1_Selectbutton" to="." method="_on_l_pp_1_selectbutton_pressed"]
 [connection signal="pressed" from="Select_Buttonsnode/R_PP1_Selectbutton" to="." method="_on_r_pp_1_selectbutton_pressed"]
 [connection signal="pressed" from="Select_Buttonsnode/L_PP2_Selectbutton" to="." method="_on_l_pp_2_selectbutton_pressed"]

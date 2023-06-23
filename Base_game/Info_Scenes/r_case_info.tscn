@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://uu7mt8vl8o6"]
+
+[ext_resource type="Script" path="res://Base_game/Info_Scenes/R_Case_Info.gd" id="1_dexuc"]
+[ext_resource type="Texture2D" uid="uid://cp0jykwwoa2e0" path="res://assets/BG_textures/backgrounds/R_Caseinfo_Texture.png" id="2_qgu81"]
+[ext_resource type="FontFile" uid="uid://w25kooi0ryvw" path="res://assets/fonts/akaDora.ttf" id="3_k78oc"]
+[ext_resource type="Texture2D" uid="uid://c8qvr2adgm37p" path="res://assets/Button_textures/buttons/tipp_button.svg" id="4_mpjgl"]
+
+[node name="R_Case_Info" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dexuc")
+
+[node name="RCaseinfoTexture" type="Sprite2D" parent="."]
+position = Vector2(856, 1079.75)
+scale = Vector2(0.476675, 0.430522)
+texture = ExtResource("2_qgu81")
+
+[node name="R_PP1_Text" type="Label" parent="RCaseinfoTexture"]
+anchors_preset = -1
+anchor_left = 0.147
+anchor_top = 0.318
+anchor_right = 0.831
+anchor_bottom = 0.645
+offset_left = 614.927
+offset_top = -2506.97
+offset_right = -31.3689
+offset_bottom = -1859.21
+rotation = 1.5708
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k78oc")
+theme_override_font_sizes/font_size = 100
+text = "Transkription Zeugenbericht:
+
+Befragte Person: Portier
+Datum der Befragung: 12.03.1903
+
+befragte Person gab volgende Auskünfte:
+
+- Befragter gab an sich für den gesammten 
+Abend im Eingangsbereich aufgehalten zu
+haben
+- befragte Person gab an im Zeitraum von 
+19:30 bis 20:30 4 Personen durch den
+Eingang kommen gesehen zu haben
+- Gegen 21:00 hat der Portier einen Schuss
+vernommen, er behauptet er hätte die Richtung
+des Geräusches dem Ballsaal zugeordnet
+- Nach 21:00 hat er keinen die Fronttür
+verlassen gesehen"
+horizontal_alignment = 1
+
+[node name="r_Exit_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1503.0
+offset_top = 940.0
+offset_right = 1631.0
+offset_bottom = 1152.0
+texture_normal = ExtResource("4_mpjgl")
+
+[connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]
+[connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]

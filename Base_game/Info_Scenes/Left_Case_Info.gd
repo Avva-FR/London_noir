@@ -1,6 +1,5 @@
 extends Control
 
-var scene_instance = self
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,5 +13,5 @@ func _ready():
 
 
 func _on_exit_button_pressed():
-	scene_instance.hide()
+	self.hide()
 
