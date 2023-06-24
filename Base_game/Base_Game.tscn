@@ -1,6 +1,6 @@
 [gd_scene load_steps=58 format=3 uid="uid://dsiw53ro76he6"]
 
-[ext_resource type="Texture2D" uid="uid://btnse3bl7rbd6" path="res://assets/BG_textures/backgrounds/bg_game.svg" id="1_kwkms"]
+[ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="1_m0gn6"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://assets/ER_textures/L_Plotpoint_1/benutzt.png" id="2_kynfm"]
 [ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://assets/ER_textures/L_Plotpoint_1/feuert.png" id="4_2bwnc"]
@@ -735,8 +735,8 @@ script = SubResource("GDScript_ev3ku")
 
 [node name="BgGame" type="Sprite2D" parent="."]
 position = Vector2(1920, 1080)
-scale = Vector2(1.77696, 1.99815)
-texture = ExtResource("1_kwkms")
+scale = Vector2(0.96, 1.08)
+texture = ExtResource("1_m0gn6")
 
 [node name="L_PP1_Texturesnode" type="Control" parent="."]
 anchors_preset = 0
