@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://dsiw53ro76he6"]
+[gd_scene load_steps=60 format=3 uid="uid://dsiw53ro76he6"]
 
 [ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="1_m0gn6"]
+[ext_resource type="Texture2D" uid="uid://c0f46wcx0k6wi" path="res://assets/BG_textures/backgrounds/scuffed_pinboard.png" id="2_0nqia"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://assets/ER_textures/L_Plotpoint_1/benutzt.png" id="2_kynfm"]
 [ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://assets/ER_textures/L_Plotpoint_1/feuert.png" id="4_2bwnc"]
@@ -56,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://assets/Button_textures/Pins/red_pin_right.svg" id="54_sq5ny"]
 [ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://assets/Button_textures/Pins/red_pin_left.svg" id="55_7xq13"]
 [ext_resource type="Script" path="res://Base_game/global_vars.gd" id="55_jo8fx"]
+[ext_resource type="Texture2D" uid="uid://hmgv0scyqdob" path="res://assets/BG_textures/backgrounds/bg_smoke_for_game.png" id="57_1o221"]
 
 [sub_resource type="GDScript" id="GDScript_ev3ku"]
 script/source = "extends Control
@@ -737,6 +739,16 @@ script = SubResource("GDScript_ev3ku")
 position = Vector2(1920, 1080)
 scale = Vector2(0.96, 1.08)
 texture = ExtResource("1_m0gn6")
+
+[node name="BgSmokeForGame" type="Sprite2D" parent="."]
+position = Vector2(1924, 1101)
+scale = Vector2(0.9595, 1.0725)
+texture = ExtResource("57_1o221")
+
+[node name="ScuffedPinboard" type="Sprite2D" parent="."]
+position = Vector2(1868, 1046)
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("2_0nqia")
 
 [node name="L_PP1_Texturesnode" type="Control" parent="."]
 anchors_preset = 0
@@ -1593,10 +1605,10 @@ offset_bottom = 40.0
 
 [node name="L_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 1610.0
-offset_top = 1046.0
-offset_right = 1660.0
-offset_bottom = 1090.0
+offset_left = 1614.0
+offset_top = 970.0
+offset_right = 1722.0
+offset_bottom = 1152.0
 texture_normal = ExtResource("50_v5mpk")
 texture_disabled = ExtResource("51_pkbgd")
 
@@ -1605,28 +1617,28 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.026
 anchor_right = 0.026
-offset_left = 1848.96
-offset_top = 1058.0
-offset_right = 1898.96
-offset_bottom = 1102.0
+offset_left = 1860.96
+offset_top = 898.0
+offset_right = 1968.96
+offset_bottom = 1080.0
 texture_normal = ExtResource("52_cnfyi")
 texture_disabled = ExtResource("53_1hkky")
 
 [node name="L_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 1251.0
-offset_top = 823.0
-offset_right = 1301.0
-offset_bottom = 867.0
+offset_left = 1446.0
+offset_top = 789.0
+offset_right = 1554.0
+offset_bottom = 971.0
 texture_normal = ExtResource("54_sq5ny")
 texture_disabled = ExtResource("51_pkbgd")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 2170.0
-offset_top = 1205.0
-offset_right = 2220.0
-offset_bottom = 1249.0
+offset_left = 2060.0
+offset_top = 1079.0
+offset_right = 2168.0
+offset_bottom = 1261.0
 texture_normal = ExtResource("55_7xq13")
 texture_disabled = ExtResource("53_1hkky")
 

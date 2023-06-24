@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://tip05e3gpxed"]
+
+[ext_resource type="Script" path="res://Transitionscreens/Game_TransitionScreen.gd" id="1_fmes2"]
+[ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="2_y6bxe"]
+[ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="3_mqm14"]
+[ext_resource type="Texture2D" uid="uid://ody5rchhrw3x" path="res://assets/BG_textures/backgrounds/bg_textbox.svg" id="4_lruj3"]
+[ext_resource type="Texture2D" uid="uid://gtw3vqu02jb1" path="res://assets/BG_textures/backgrounds/position_display.svg" id="5_aei2q"]
+[ext_resource type="Texture2D" uid="uid://clj5duxat7gu3" path="res://assets/Button_textures/buttons/weiter.png" id="6_irlpv"]
+
+[node name="Game_TransitionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fmes2")
+
+[node name="BgGame" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+scale = Vector2(0.96, 1.08)
+texture = ExtResource("2_y6bxe")
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(3257, 1127)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_mqm14")
+
+[node name="BgTextbox" type="Sprite2D" parent="."]
+position = Vector2(1413, 1258)
+texture = ExtResource("4_lruj3")
+
+[node name="PositionDisplay" type="Sprite2D" parent="."]
+position = Vector2(1400, 1267)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_aei2q")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 2417.0
+offset_top = 1891.0
+offset_right = 2688.0
+offset_bottom = 2216.0
+scale = Vector2(0.586, 0.586)
+texture_normal = ExtResource("6_irlpv")
+
+[node name="Text1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = 0.297
+anchor_right = 0.674
+anchor_bottom = 0.867
+offset_left = 172.92
+offset_top = 105.48
+offset_right = 172.84
+offset_bottom = 106.28
+scale = Vector2(0.85, 0.85)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Bevor es losgeht, hier die Spielpositionen:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = 0.297
+anchor_right = 0.674
+anchor_bottom = 0.867
+offset_left = 172.92
+offset_top = 105.48
+offset_right = 172.84
+offset_bottom = 106.28
+scale = Vector2(0.85, 0.85)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Ihr löst zu zweit jeweils eine Seite.
+Ihr selektiert rote oder gelbe Pinnadeln
+und \"baut\" mit Hilfe der Infos das
+jeweils richtige ER-Model zusammen.
+
+Bei roten Pins müsst ihr der anderen 
+Seite ein bisschen zuarbeiten.
+Viel Spaß !"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

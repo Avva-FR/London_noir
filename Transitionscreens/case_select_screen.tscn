@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://ct6riv3051ctu"]
 
 [ext_resource type="Script" path="res://Transitionscreens/case_select_screen.gd" id="1_pwmw3"]
 [ext_resource type="Texture2D" uid="uid://bdkrleb5eqni4" path="res://assets/BG_textures/backgrounds/bg_menu.svg" id="2_j4rrw"]
 [ext_resource type="Texture2D" uid="uid://bdcwj8if8twdd" path="res://assets/Button_textures/folder.svg" id="2_lqive"]
-
 
 [node name="Case_select_screen" type="Control"]
 layout_mode = 3

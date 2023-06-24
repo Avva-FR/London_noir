@@ -62,5 +62,5 @@ offset_right = 1631.0
 offset_bottom = 1152.0
 texture_normal = ExtResource("4_mpjgl")
 
-[connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
 [connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]
+[connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
