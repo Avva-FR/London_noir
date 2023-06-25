@@ -1,0 +1,4 @@
+Entitäten sind individuell identifizierbare Personen oder Gegenstände usw.
+Zudem können Entitäten in Gruppen sogenannten Typen zusammengefasst werden.
+Kuchen, Kekse könnten zum Beispiel dem Typ Gebäck untergeordnet sein. Man spricht dann auch von der Instanz (Kuchen ist eine Instanz von Gebäck).
+Entitäten können mit anderen Entitäten über Relationen in Verbindung stehen und können durch Attribute näher beschrieben werden.

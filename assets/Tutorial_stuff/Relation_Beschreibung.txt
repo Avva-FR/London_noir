@@ -1,0 +1,3 @@
+Relationen beschreiben wie zwei oder mehrere Entitäten zusammenhängen können.
+z.B. der Zusammenhang zwischen den Entitäten: "Autor" und "Buch" können über die Relation "schreibt" genauer beschrieben werden.
+Relationen können auch Kardinalitäten enthalten also wie viele Bücher von einem Autor geschrieben wurden.

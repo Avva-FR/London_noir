@@ -1,0 +1,3 @@
+Kardinalitäten beschreiben das Zahlenverhältnis zweier oder mehrere Entitäten welche über Relation(en) miteinander in Verbindung stehen.
+So kann z.B. [Kardinalität] 1 [Entität] Autor [Kardinalität] 15 [Entität] Bücher [Relation] geschrieben haben.
+Kardinalitäten können z.B. 1:1, 1:n oder n:n also Ganzzahlige Ausprägungen beschreiben.

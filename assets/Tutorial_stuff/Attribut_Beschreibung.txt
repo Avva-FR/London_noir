@@ -1,0 +1,3 @@
+Attribute beschreiben Eigenschaften eines Entitätstypes genauer und besitzen immer einen eindeutigen Namen.
+Ein Bespiel eines Attributes wäre "Alter", welches genauere Informationen über z.B. die Entität "Person" liefert.
+Attribute sind zudem zeitinvariant. Das bedeutet unabhängig von der Zeit ein Attribut besitzt immer den gleichen Namen.
