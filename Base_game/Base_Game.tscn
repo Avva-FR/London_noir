@@ -1640,21 +1640,25 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Board-left2" type="Sprite2D" parent="Success_Pinnboard"]
+visible = false
 position = Vector2(1460, 1232)
 scale = Vector2(0.412874, 0.412874)
 texture = ExtResource("50_m1fpv")
 
 [node name="Board-left1" type="Sprite2D" parent="Success_Pinnboard"]
+visible = false
 position = Vector2(1426, 866)
 scale = Vector2(0.385551, 0.385551)
 texture = ExtResource("51_y66gg")
 
 [node name="Board-right2" type="Sprite2D" parent="Success_Pinnboard"]
+visible = false
 position = Vector2(2283, 1367)
 scale = Vector2(0.39322, 0.39322)
 texture = ExtResource("53_knpwb")
 
 [node name="Board-right1" type="Sprite2D" parent="Success_Pinnboard"]
+visible = false
 position = Vector2(2294, 889)
 scale = Vector2(0.433328, 0.433328)
 texture = ExtResource("52_qxse5")
