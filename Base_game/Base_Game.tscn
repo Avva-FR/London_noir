@@ -1,9 +1,10 @@
-[gd_scene load_steps=60 format=3 uid="uid://dsiw53ro76he6"]
+[gd_scene load_steps=63 format=3 uid="uid://dsiw53ro76he6"]
 
 [ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="1_m0gn6"]
 [ext_resource type="Texture2D" uid="uid://c0f46wcx0k6wi" path="res://assets/BG_textures/backgrounds/scuffed_pinboard.png" id="2_0nqia"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://assets/ER_textures/L_Plotpoint_1/benutzt.png" id="2_kynfm"]
+[ext_resource type="Texture2D" uid="uid://t777h5sckljb" path="res://assets/ER_textures/pinboard/board.png" id="3_rqft1"]
 [ext_resource type="Texture2D" uid="uid://doe0fnuny3uja" path="res://assets/ER_textures/L_Plotpoint_1/feuert.png" id="4_2bwnc"]
 [ext_resource type="Script" path="res://Base_game/drag_to_tile.gd" id="4_ma1c7"]
 [ext_resource type="Texture2D" uid="uid://ckgp46kpb5f8u" path="res://assets/ER_textures/L_Plotpoint_1/hält.png" id="5_885ni"]
@@ -44,16 +45,18 @@
 [ext_resource type="Texture2D" uid="uid://bbmdt7bqob1xy" path="res://assets/ER_textures/R_Plotpoint_2/hält.png" id="40_ylou7"]
 [ext_resource type="Texture2D" uid="uid://dlkhs2fflfcdf" path="res://assets/ER_textures/R_Plotpoint_2/Messer.png" id="41_5lrrp"]
 [ext_resource type="Texture2D" uid="uid://b6umfj2cgq4aa" path="res://assets/ER_textures/Section_dropper.png" id="42_0hfj0"]
-[ext_resource type="Texture2D" uid="uid://dbpcjksevmwa2" path="res://assets/Button_textures/left_tip_texture.png" id="44_0wnfr"]
-[ext_resource type="Texture2D" uid="uid://b7i48tguesjd7" path="res://assets/Button_textures/right_tipp_texture.png" id="45_nt6lg"]
-[ext_resource type="Texture2D" uid="uid://chg17tva770xc" path="res://assets/Button_textures/r_submit_button.png" id="46_xff5c"]
-[ext_resource type="Texture2D" uid="uid://bfb13aq585uve" path="res://assets/Button_textures/l_submit_button.png" id="47_gy7hi"]
-[ext_resource type="Texture2D" uid="uid://ehnj35ftxn2y" path="res://assets/Button_textures/L_Info_button.png" id="48_kmlch"]
-[ext_resource type="Texture2D" uid="uid://c721dem6j6qra" path="res://assets/Button_textures/R_Info_button.png" id="49_hf050"]
+[ext_resource type="Texture2D" uid="uid://dy5r43i34anq" path="res://assets/Button_textures/tipp_button_1.png" id="46_qwbft"]
+[ext_resource type="Texture2D" uid="uid://bmoee8543uftd" path="res://assets/Button_textures/submit_button.png" id="47_2sr6l"]
+[ext_resource type="Texture2D" uid="uid://cvlsjhkacgke7" path="res://assets/Button_textures/info_button.png" id="48_g50n2"]
+[ext_resource type="Texture2D" uid="uid://b0jk0vd0w8yuj" path="res://assets/ER_textures/pinboard/board-left_2.png" id="50_m1fpv"]
 [ext_resource type="Texture2D" uid="uid://beb3ca4yu872w" path="res://assets/Button_textures/Pins/yellow_pin_left.svg" id="50_v5mpk"]
 [ext_resource type="Texture2D" uid="uid://coiywtttsbh7p" path="res://assets/Button_textures/Pins/gray_pin_left.svg" id="51_pkbgd"]
+[ext_resource type="Texture2D" uid="uid://eis5fo4i7uj7" path="res://assets/ER_textures/pinboard/board-left_1.png" id="51_y66gg"]
 [ext_resource type="Texture2D" uid="uid://crxm8wp8mnp0j" path="res://assets/Button_textures/Pins/yellow_pin_right.svg" id="52_cnfyi"]
+[ext_resource type="Texture2D" uid="uid://c4mj3xubiayoy" path="res://assets/ER_textures/pinboard/board-right_1.png" id="52_qxse5"]
 [ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://assets/Button_textures/Pins/gray_pin_right.svg" id="53_1hkky"]
+[ext_resource type="Texture2D" uid="uid://v86u3f8scjyt" path="res://assets/ER_textures/pinboard/board-right_2.png" id="53_knpwb"]
+[ext_resource type="Texture2D" uid="uid://c1kl0f0iopnm1" path="res://assets/ER_textures/pinboard/pinlines.png" id="54_40i4v"]
 [ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://assets/Button_textures/Pins/red_pin_right.svg" id="54_sq5ny"]
 [ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://assets/Button_textures/Pins/red_pin_left.svg" id="55_7xq13"]
 [ext_resource type="Script" path="res://Base_game/global_vars.gd" id="55_jo8fx"]
@@ -89,6 +92,11 @@ var r_select_button1
 var r_select_button2
 var r_select_button3
 var r_select_button4
+# success pinnboard
+var l_success_pinboard1
+var	l_success_pinboard2 
+var	r_success_pinboard1 
+var	r_success_pinboard2
 # tip buttons
 var l_tip_button1
 var l_tip_button2
@@ -229,6 +237,11 @@ func _ready():
 	l_select_button2 = get_node(\"Select_Buttonsnode/L_PP2_Selectbutton\")
 	r_select_button1 = get_node(\"Select_Buttonsnode/R_PP1_Selectbutton\")
 	r_select_button2 = get_node(\"Select_Buttonsnode/R_PP2_Selectbutton\")
+	#Pinboard
+	l_success_pinboard1 = get_node(\"Success_Pinnboard/Board-left1\")
+	l_success_pinboard2 = get_node(\"Success_Pinnboard/Board-left2\")
+	r_success_pinboard1 = get_node(\"Success_Pinnboard/Board-right1\")
+	r_success_pinboard2 = get_node(\"Success_Pinnboard/Board-right2\")
 	# caseinfo buttons
 	l_caseinfo_button1 = get_node(\"Misc_Buttonsnode/L_caseinfo_button_1\")
 	l_caseinfo_button2 = get_node(\"Misc_Buttonsnode/L_caseinfo_button_2\")
@@ -533,8 +546,10 @@ func _on_l_submit_button_pressed():
 			GlobalVars.l_pp1_solved = true
 			l_select_button1.disabled = true
 			l_select_button2.disabled = false
+			l_success_pinboard1.visible = true
 			reset_ldb_text()
 			deallocate_lpp1()
+			
 		else:
 			reset_ldb_text()
 			set_lpp1_pos()
@@ -545,6 +560,7 @@ func _on_l_submit_button_pressed():
 			GlobalVars.l_pp2_solved = true
 			l_select_button2.disabled = true
 			#l_select_button3.disabled = false
+			l_success_pinboard2.visible=true
 			deallocate_lpp2()
 			reset_ldb_text()
 		else:
@@ -567,6 +583,7 @@ func _on_r_submit_button_pressed():
 			GlobalVars.r_pp1_solved = true
 			r_select_button1.disabled = true
 			r_select_button2.disabled = false
+			r_success_pinboard1.visible=true
 			deallocate_rpp1()
 			reset_rdb_text()
 		else:
@@ -578,6 +595,7 @@ func _on_r_submit_button_pressed():
 			GlobalVars.r_pp2_solved = true
 			r_select_button2.disabled = true
 			#r_select_button3.disabled = false
+			r_success_pinboard2.visible=true
 			deallocate_rpp2()
 			reset_rdb_text()
 		else:
@@ -734,6 +752,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_ev3ku")
+metadata/_edit_vertical_guides_ = [1419.0, 2381.0, 1201.0, 2603.0]
+metadata/_edit_horizontal_guides_ = [1754.0, 120.0, 1105.0]
 
 [node name="BgGame" type="Sprite2D" parent="."]
 position = Vector2(1920, 1080)
@@ -745,7 +765,13 @@ position = Vector2(1924, 1101)
 scale = Vector2(0.9595, 1.0725)
 texture = ExtResource("57_1o221")
 
+[node name="Board-empty" type="Sprite2D" parent="."]
+position = Vector2(1859, 1060)
+scale = Vector2(0.933762, 0.933762)
+texture = ExtResource("3_rqft1")
+
 [node name="ScuffedPinboard" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1868, 1046)
 scale = Vector2(0.46, 0.46)
 texture = ExtResource("2_0nqia")
@@ -1510,35 +1536,39 @@ offset_bottom = 40.0
 
 [node name="L_tip_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 1298.0
-offset_top = 144.0
-offset_right = 1419.0
-offset_bottom = 358.0
-texture_normal = ExtResource("44_0wnfr")
+offset_left = 1419.0
+offset_top = 119.0
+offset_right = 1671.0
+offset_bottom = 261.0
+rotation = 1.5708
+texture_normal = ExtResource("46_qwbft")
 
 [node name="L_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 1268.0
-offset_top = 1727.0
-offset_right = 1389.0
-offset_bottom = 1941.0
-texture_normal = ExtResource("44_0wnfr")
+offset_left = 1418.0
+offset_top = 1756.0
+offset_right = 1668.0
+offset_bottom = 1914.0
+rotation = 1.5708
+texture_normal = ExtResource("46_qwbft")
 
 [node name="R_tip_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 2547.0
-offset_top = 174.0
-offset_right = 2666.0
-offset_bottom = 387.0
-texture_normal = ExtResource("45_nt6lg")
+offset_left = 2381.0
+offset_top = 368.0
+offset_right = 2631.0
+offset_bottom = 517.0
+rotation = 4.71239
+texture_normal = ExtResource("46_qwbft")
 
 [node name="R_tip_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 2559.0
-offset_top = 1696.0
-offset_right = 2678.0
-offset_bottom = 1909.0
-texture_normal = ExtResource("45_nt6lg")
+offset_left = 2381.0
+offset_top = 2006.0
+offset_right = 2631.0
+offset_bottom = 2163.0
+rotation = 4.71239
+texture_normal = ExtResource("46_qwbft")
 
 [node name="R_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 1
@@ -1547,11 +1577,12 @@ anchor_left = 0.833
 anchor_top = 0.372
 anchor_right = 0.886
 anchor_bottom = 0.652
-offset_left = 3393.68
-offset_top = 1014.12
-offset_right = 3471.56
-offset_bottom = 1152.92
-texture_normal = ExtResource("46_xff5c")
+offset_left = 3405.68
+offset_top = 1189.12
+offset_right = 3603.56
+offset_bottom = 1245.92
+rotation = 4.71239
+texture_normal = ExtResource("47_2sr6l")
 
 [node name="L_submit_button" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 1
@@ -1560,43 +1591,78 @@ anchor_left = 0.122
 anchor_top = 0.37
 anchor_right = 0.175
 anchor_bottom = 0.652
-offset_left = 353.12
-offset_top = 1014.2
-offset_right = 431.0
-offset_bottom = 1152.92
-texture_normal = ExtResource("47_gy7hi")
+offset_left = 420.12
+offset_top = 990.2
+offset_right = 618.0
+offset_bottom = 1049.92
+rotation = 1.5708
+texture_normal = ExtResource("47_2sr6l")
 
 [node name="L_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 1135.0
-offset_top = 1764.0
-offset_right = 1225.0
-offset_bottom = 1927.0
-texture_normal = ExtResource("48_kmlch")
+offset_left = 1201.0
+offset_top = 1754.0
+offset_right = 1451.0
+offset_bottom = 1897.0
+rotation = 1.5708
+texture_normal = ExtResource("48_g50n2")
 
 [node name="L_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 1137.0
-offset_top = 173.0
-offset_right = 1227.0
-offset_bottom = 336.0
-texture_normal = ExtResource("48_kmlch")
+offset_left = 1200.0
+offset_top = 121.0
+offset_right = 1450.0
+offset_bottom = 284.0
+rotation = 1.5708
+texture_normal = ExtResource("48_g50n2")
 
 [node name="R_caseinfo_button_1" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 2729.0
-offset_top = 1736.0
-offset_right = 2819.0
-offset_bottom = 1899.0
-texture_normal = ExtResource("49_hf050")
+offset_left = 2604.0
+offset_top = 2005.0
+offset_right = 2854.0
+offset_bottom = 2148.0
+rotation = 4.71239
+texture_normal = ExtResource("48_g50n2")
 
 [node name="R_caseinfo_button_2" type="TextureButton" parent="Misc_Buttonsnode"]
 layout_mode = 0
-offset_left = 2693.0
-offset_top = 189.0
-offset_right = 2783.0
-offset_bottom = 352.0
-texture_normal = ExtResource("49_hf050")
+offset_left = 2603.0
+offset_top = 370.0
+offset_right = 2853.0
+offset_bottom = 533.0
+rotation = 4.71239
+texture_normal = ExtResource("48_g50n2")
+
+[node name="Success_Pinnboard" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Board-left2" type="Sprite2D" parent="Success_Pinnboard"]
+position = Vector2(1460, 1232)
+scale = Vector2(0.412874, 0.412874)
+texture = ExtResource("50_m1fpv")
+
+[node name="Board-left1" type="Sprite2D" parent="Success_Pinnboard"]
+position = Vector2(1426, 866)
+scale = Vector2(0.385551, 0.385551)
+texture = ExtResource("51_y66gg")
+
+[node name="Board-right2" type="Sprite2D" parent="Success_Pinnboard"]
+position = Vector2(2283, 1367)
+scale = Vector2(0.39322, 0.39322)
+texture = ExtResource("53_knpwb")
+
+[node name="Board-right1" type="Sprite2D" parent="Success_Pinnboard"]
+position = Vector2(2294, 889)
+scale = Vector2(0.433328, 0.433328)
+texture = ExtResource("52_qxse5")
+
+[node name="Pinlines" type="Sprite2D" parent="."]
+position = Vector2(1880.98, 983.75)
+scale = Vector2(0.833983, 0.833982)
+texture = ExtResource("54_40i4v")
 
 [node name="Select_Buttonsnode" type="Control" parent="."]
 anchors_preset = 0
@@ -1605,10 +1671,10 @@ offset_bottom = 40.0
 
 [node name="L_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 1614.0
-offset_top = 970.0
-offset_right = 1722.0
-offset_bottom = 1152.0
+offset_left = 1132.0
+offset_top = 836.0
+offset_right = 1240.0
+offset_bottom = 1018.0
 texture_normal = ExtResource("50_v5mpk")
 texture_disabled = ExtResource("51_pkbgd")
 
@@ -1617,28 +1683,28 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.026
 anchor_right = 0.026
-offset_left = 1860.96
-offset_top = 898.0
-offset_right = 1968.96
-offset_bottom = 1080.0
+offset_left = 2286.96
+offset_top = 517.0
+offset_right = 2394.96
+offset_bottom = 699.0
 texture_normal = ExtResource("52_cnfyi")
 texture_disabled = ExtResource("53_1hkky")
 
 [node name="L_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 1446.0
-offset_top = 789.0
-offset_right = 1554.0
-offset_bottom = 971.0
+offset_left = 1326.0
+offset_top = 1305.0
+offset_right = 1434.0
+offset_bottom = 1487.0
 texture_normal = ExtResource("54_sq5ny")
 texture_disabled = ExtResource("51_pkbgd")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0
-offset_left = 2060.0
-offset_top = 1079.0
-offset_right = 2168.0
-offset_bottom = 1261.0
+offset_left = 2579.0
+offset_top = 1115.0
+offset_right = 2687.0
+offset_bottom = 1297.0
 texture_normal = ExtResource("55_7xq13")
 texture_disabled = ExtResource("53_1hkky")
 
