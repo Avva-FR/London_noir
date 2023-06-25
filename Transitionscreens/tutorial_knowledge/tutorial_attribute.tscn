@@ -1,17 +1,22 @@
-[gd_scene load_steps=13 format=3 uid="uid://0mmojcjvrvql"]
+[gd_scene load_steps=18 format=3 uid="uid://0mmojcjvrvql"]
 
 [ext_resource type="Script" path="res://Transitionscreens/tutorial_knowledge/tutorial_attribute.gd" id="1_7jn7e"]
-[ext_resource type="Texture2D" uid="uid://s2puli3kxyhm" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="3_r2evp"]
-[ext_resource type="Texture2D" uid="uid://3hoixc4j4iwy" path="res://pictures/BG_textures/tutorial_all.png" id="4_21ht5"]
-[ext_resource type="Texture2D" uid="uid://djv2splv3h1g0" path="res://pictures/new-BG/tutorial_bg_4.png" id="5_5hjgx"]
-[ext_resource type="Texture2D" uid="uid://cde7uad428nyq" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="6_av8df"]
-[ext_resource type="Texture2D" uid="uid://q4mlv0w0pf0i" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="7_dp45p"]
-[ext_resource type="FontFile" uid="uid://dwxhcxjjdc53" path="res://pictures/fonts/Thunder-ExtraLightLC.ttf" id="7_qdhlc"]
-[ext_resource type="Texture2D" uid="uid://c0pg3co3ak37x" path="res://pictures/new-Buttons/button_next.png" id="8_blt2c"]
-[ext_resource type="Texture2D" uid="uid://cx8npf5c1dany" path="res://pictures/new-BG/tutorial_bg_pinwall.png" id="8_p7c04"]
-[ext_resource type="Texture2D" uid="uid://bufouissxw7xg" path="res://pictures/new-BG/tutorial_detective.png" id="9_unj4e"]
-[ext_resource type="Texture2D" uid="uid://cl7hhcyt25mjc" path="res://pictures/new-BG/tutorial_smoke.png" id="10_llr55"]
-[ext_resource type="Texture2D" uid="uid://dl33rma464lpl" path="res://pictures/new-BG/text_shadow_1.png" id="12_a8hk2"]
+[ext_resource type="Texture2D" uid="uid://bj0pqeo8o2m7d" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="3_r2evp"]
+[ext_resource type="Texture2D" uid="uid://ch7ki2cs28yuk" path="res://pictures/BG_textures/tutorial_bg_pinwall.svg" id="4_21ht5"]
+[ext_resource type="Texture2D" uid="uid://b472jyfougclw" path="res://pictures/new-BG/tutorial_bg_4.png" id="5_5hjgx"]
+[ext_resource type="Texture2D" uid="uid://chvrlx5m0vf62" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="6_av8df"]
+[ext_resource type="Texture2D" uid="uid://kjsa3eke1a75" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="7_dp45p"]
+[ext_resource type="FontFile" uid="uid://c1k103cc6a8oj" path="res://assets/fonts/Thunder-ExtraLightLC.ttf" id="7_qdhlc"]
+[ext_resource type="Texture2D" uid="uid://khtkxygolo7y" path="res://pictures/new_Buttons/button_next.png" id="8_blt2c"]
+[ext_resource type="Texture2D" uid="uid://dneaa68fa222e" path="res://pictures/new-BG/tutorial_bg_pinwall.png" id="8_p7c04"]
+[ext_resource type="Texture2D" uid="uid://1djqsvd5fldu" path="res://pictures/new-BG/tutorial_detective.png" id="9_unj4e"]
+[ext_resource type="Texture2D" uid="uid://4y3821rw57w2" path="res://pictures/new-BG/tutorial_smoke.png" id="10_llr55"]
+[ext_resource type="Texture2D" uid="uid://1gabkn2yfpva" path="res://pictures/new-BG/text_shadow_1.png" id="12_a8hk2"]
+[ext_resource type="Texture2D" uid="uid://b2wbkes22y360" path="res://assets/Tutorial_stuff/Attribut_with_text.svg" id="13_ordk6"]
+[ext_resource type="Texture2D" uid="uid://p3xckwwgtvdf" path="res://assets/Tutorial_stuff/attribut.png" id="14_7lqr3"]
+[ext_resource type="FontFile" uid="uid://qrf0vaknvdhl" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="15_sa2vj"]
+[ext_resource type="Texture2D" uid="uid://dhyue5ooecewt" path="res://assets/Tutorial_stuff/entity.png" id="16_6brmq"]
+[ext_resource type="Texture2D" uid="uid://b22ys54ashdkg" path="res://assets/Tutorial_stuff/line.png" id="17_rbq2n"]
 
 [node name="tutorial_attribute" type="Control"]
 layout_mode = 3
@@ -21,7 +26,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jn7e")
-metadata/_edit_vertical_guides_ = [1035.0, 1921.0, 2805.0]
+metadata/_edit_vertical_guides_ = [1035.0, 1921.0, 2819.0, 2646.0]
 metadata/_edit_horizontal_guides_ = [1596.0]
 
 [node name="TutorialFullyBg1" type="Sprite2D" parent="."]
@@ -100,30 +105,45 @@ anchor_right = -1.819
 anchor_bottom = -8.189
 offset_left = 1161.88
 offset_top = 1390.97
-offset_right = 15744.9
-offset_bottom = 1721.97
+offset_right = 1974.88
+offset_bottom = 1583.97
 theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
 theme_override_font_sizes/font_size = 40
-text = "Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua:"
+text = "Attribute beschreiben Eigenschaften
+eines Entitätstypes genauer und besitzen 
+immer einen eindeutigen Namen."
 clip_text = true
 
 [node name="Label2" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 455.0
-offset_right = 736.0
-offset_bottom = 715.0
+offset_left = 63.0
+offset_top = 373.0
+offset_right = 760.0
+offset_bottom = 633.0
 theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
 theme_override_font_sizes/font_size = 35
-text = "- At vero eos et accusam et justo duo
-- Stet clita kasd gubergren, no sea 
-- takimata sanctus est Lorem ipsum dolor 
-- amet. Lorem ipsum dolor sit amet, 
-- consetetur sadipscing elitr, sed diam  
+text = "Ein Bespiel eines Attributes wäre \"Alter\", 
+welches genauere Informationen über 
+z.B. die Entität \"Person\" liefert.
 "
+
+[node name="Label3" type="Label" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.819
+anchor_top = -8.189
+anchor_right = -1.819
+anchor_bottom = -8.189
+offset_left = 1158.88
+offset_top = 1774.97
+offset_right = 1971.88
+offset_bottom = 1967.97
+theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
+theme_override_font_sizes/font_size = 40
+text = "Attribute sind zudem zeitinvariant. Das 
+bedeutet unabhängig von der Zeit ein 
+Attribut besitzt immer den gleichen Namen."
+clip_text = true
 
 [node name="ButtonNext" type="Sprite2D" parent="Label"]
 position = Vector2(238.124, 832.938)
@@ -157,6 +177,105 @@ texture = ExtResource("9_unj4e")
 position = Vector2(1859, 1111)
 scale = Vector2(0.997, 0.997)
 texture = ExtResource("10_llr55")
+
+[node name="AttributWithText" type="Sprite2D" parent="."]
+position = Vector2(2625, 670)
+scale = Vector2(1.93, 1.93)
+texture = ExtResource("13_ordk6")
+
+[node name="Attribut" type="Sprite2D" parent="."]
+position = Vector2(2645, 1314)
+scale = Vector2(0.173623, 0.173623)
+texture = ExtResource("14_7lqr3")
+
+[node name="Label" type="Label" parent="Attribut"]
+offset_left = -552.924
+offset_top = -155.51
+offset_right = 564.076
+offset_bottom = 197.49
+theme_override_fonts/font = ExtResource("15_sa2vj")
+theme_override_font_sizes/font_size = 350
+text = "Adresse"
+
+[node name="Attribut2" type="Sprite2D" parent="."]
+position = Vector2(2222, 1595)
+scale = Vector2(0.173623, 0.173623)
+texture = ExtResource("14_7lqr3")
+
+[node name="Label2" type="Label" parent="Attribut2"]
+offset_left = -650.836
+offset_top = -167.029
+offset_right = 640.164
+offset_bottom = 185.971
+theme_override_fonts/font = ExtResource("15_sa2vj")
+theme_override_font_sizes/font_size = 350
+text = "Nummer"
+
+[node name="Attribut3" type="Sprite2D" parent="."]
+position = Vector2(2646, 1595)
+scale = Vector2(0.173623, 0.173623)
+texture = ExtResource("14_7lqr3")
+
+[node name="Label3" type="Label" parent="Attribut3"]
+offset_left = -483.808
+offset_top = -167.031
+offset_right = 478.192
+offset_bottom = 185.969
+theme_override_fonts/font = ExtResource("15_sa2vj")
+theme_override_font_sizes/font_size = 350
+text = "Straße"
+
+[node name="Attribut4" type="Sprite2D" parent="."]
+position = Vector2(3069, 1596)
+scale = Vector2(0.173623, 0.173623)
+texture = ExtResource("14_7lqr3")
+
+[node name="Label4" type="Label" parent="Attribut4"]
+offset_left = -385.896
+offset_top = -172.788
+offset_right = 403.104
+offset_bottom = 180.212
+theme_override_fonts/font = ExtResource("15_sa2vj")
+theme_override_font_sizes/font_size = 350
+text = "Stadt"
+
+[node name="Entity" type="Sprite2D" parent="."]
+position = Vector2(2644, 1019)
+scale = Vector2(0.199052, 0.187279)
+texture = ExtResource("16_6brmq")
+
+[node name="Label2" type="Label" parent="Entity"]
+offset_left = -557.646
+offset_top = -170.868
+offset_right = 559.354
+offset_bottom = 182.132
+theme_override_fonts/font = ExtResource("15_sa2vj")
+theme_override_font_sizes/font_size = 350
+text = "Person"
+
+[node name="Line" type="Sprite2D" parent="."]
+position = Vector2(2646, 1167.71)
+rotation = 1.5708
+scale = Vector2(0.0427143, 0.166664)
+texture = ExtResource("17_rbq2n")
+
+[node name="Line2" type="Sprite2D" parent="."]
+position = Vector2(2646, 1454.7)
+rotation = 1.5708
+scale = Vector2(0.0364144, 0.166664)
+texture = ExtResource("17_rbq2n")
+
+[node name="Line3" type="Sprite2D" parent="."]
+position = Vector2(2889.18, 1433.44)
+rotation = 3.78562
+scale = Vector2(0.115419, 0.166664)
+texture = ExtResource("17_rbq2n")
+
+[node name="Line4" type="Sprite2D" parent="."]
+position = Vector2(2399, 1432)
+rotation = 2.48535
+scale = Vector2(0.115419, 0.166664)
+texture = ExtResource("17_rbq2n")
 
 [connection signal="pressed" from="TutorialSidebar/menu-1" to="." method="_on_menu_1_pressed"]
 [connection signal="pressed" from="TutorialSidebar/menu-2" to="." method="_on_menu_2_pressed"]

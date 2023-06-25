@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://dihmg65rcdmyv"]
 
 [ext_resource type="Script" path="res://Transitionscreens/tutorial_knowledge/tutorial_entity.gd" id="1_x8d6r"]
-[ext_resource type="Texture2D" uid="uid://s2puli3kxyhm" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="3_j2jqc"]
-[ext_resource type="Texture2D" uid="uid://3hoixc4j4iwy" path="res://pictures/BG_textures/tutorial_all.png" id="4_5ska7"]
-[ext_resource type="Texture2D" uid="uid://djv2splv3h1g0" path="res://pictures/new-BG/tutorial_bg_4.png" id="5_8ud18"]
-[ext_resource type="Texture2D" uid="uid://cde7uad428nyq" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="6_6exys"]
-[ext_resource type="Texture2D" uid="uid://dl33rma464lpl" path="res://pictures/new-BG/text_shadow_1.png" id="7_5iqej"]
-[ext_resource type="FontFile" uid="uid://dwxhcxjjdc53" path="res://pictures/fonts/Thunder-ExtraLightLC.ttf" id="7_fim44"]
-[ext_resource type="Texture2D" uid="uid://q4mlv0w0pf0i" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="7_x84d6"]
-[ext_resource type="Texture2D" uid="uid://c0pg3co3ak37x" path="res://pictures/new-Buttons/button_next.png" id="8_gancc"]
-[ext_resource type="Texture2D" uid="uid://cx8npf5c1dany" path="res://pictures/new-BG/tutorial_bg_pinwall.png" id="9_id1ct"]
-[ext_resource type="Texture2D" uid="uid://bufouissxw7xg" path="res://pictures/new-BG/tutorial_detective.png" id="10_d8487"]
-[ext_resource type="Texture2D" uid="uid://cl7hhcyt25mjc" path="res://pictures/new-BG/tutorial_smoke.png" id="11_yj2ib"]
+[ext_resource type="Texture2D" uid="uid://bj0pqeo8o2m7d" path="res://pictures/BG_textures/tutorial_fully_bg_1.svg" id="3_j2jqc"]
+[ext_resource type="Texture2D" uid="uid://b472jyfougclw" path="res://pictures/new-BG/tutorial_bg_4.png" id="5_8ud18"]
+[ext_resource type="Texture2D" uid="uid://chvrlx5m0vf62" path="res://pictures/Button_textures/tutorial_sidebar.svg" id="6_6exys"]
+[ext_resource type="Texture2D" uid="uid://1gabkn2yfpva" path="res://pictures/new-BG/text_shadow_1.png" id="7_5iqej"]
+[ext_resource type="FontFile" uid="uid://c1k103cc6a8oj" path="res://assets/fonts/Thunder-ExtraLightLC.ttf" id="7_fim44"]
+[ext_resource type="Texture2D" uid="uid://kjsa3eke1a75" path="res://pictures/Button_textures/tutorial_sidebar_active.svg" id="7_x84d6"]
+[ext_resource type="Texture2D" uid="uid://khtkxygolo7y" path="res://pictures/new_Buttons/button_next.png" id="8_gancc"]
+[ext_resource type="Texture2D" uid="uid://dneaa68fa222e" path="res://pictures/new-BG/tutorial_bg_pinwall.png" id="9_id1ct"]
+[ext_resource type="Texture2D" uid="uid://1djqsvd5fldu" path="res://pictures/new-BG/tutorial_detective.png" id="10_d8487"]
+[ext_resource type="Texture2D" uid="uid://4y3821rw57w2" path="res://pictures/new-BG/tutorial_smoke.png" id="11_yj2ib"]
+[ext_resource type="Texture2D" uid="uid://dyeepv6h1jch3" path="res://assets/Tutorial_stuff/Entity_with_text.png" id="12_px383"]
 
 [node name="tutorial_entity" type="Control"]
 layout_mode = 3
@@ -28,12 +28,6 @@ metadata/_edit_horizontal_guides_ = [1596.0]
 position = Vector2(1920, 1080)
 scale = Vector2(1.99584, 1.99262)
 texture = ExtResource("3_j2jqc")
-
-[node name="TutorialAll" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1859.5, 1105)
-scale = Vector2(2.4935, 2.4778)
-texture = ExtResource("4_5ska7")
 
 [node name="tutorial_bg" type="Sprite2D" parent="."]
 position = Vector2(1990.5, 1128)
@@ -100,14 +94,14 @@ anchor_right = -1.819
 anchor_bottom = -8.189
 offset_left = 1161.88
 offset_top = 1390.97
-offset_right = 15744.9
-offset_bottom = 1721.97
+offset_right = 2047.88
+offset_bottom = 1634.97
 theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
 theme_override_font_sizes/font_size = 40
-text = "Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua:"
+text = "Entitäten sind individuell identifizierbare 
+Personen oder Gegenstände usw. Zudem
+ können Entitäten in Gruppen sogenannten 
+Typen zusammengefasst werden."
 clip_text = true
 
 [node name="Label2" type="Label" parent="Label"]
@@ -118,15 +112,16 @@ offset_right = 736.0
 offset_bottom = 715.0
 theme_override_colors/font_color = Color(1, 0.847059, 0.717647, 1)
 theme_override_font_sizes/font_size = 35
-text = "- At vero eos et accusam et justo duo
-- Stet clita kasd gubergren, no sea 
-- takimata sanctus est Lorem ipsum dolor 
-- amet. Lorem ipsum dolor sit amet, 
-- consetetur sadipscing elitr, sed diam  
-"
+text = "Kuchen, Kekse könnten zum Beispiel dem 
+Typ Gebäck untergeordnet sein. Man spricht 
+dann auch von der Instanz (Kuchen ist eine 
+Instanz von Gebäck). Entitäten können mit 
+anderen Entitäten über Relationen in 
+Verbindung stehen und können durch 
+Attribute näher beschrieben werden."
 
 [node name="ButtonNext" type="Sprite2D" parent="Label"]
-position = Vector2(238.124, 832.938)
+position = Vector2(238.124, 928.938)
 scale = Vector2(0.115953, 0.115953)
 texture = ExtResource("8_gancc")
 
@@ -142,6 +137,7 @@ scale = Vector2(0.208, 0.107399)
 texture = ExtResource("7_5iqej")
 
 [node name="TutorialBgPinwall" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2495.63, 1186.5)
 scale = Vector2(0.252687, 0.252687)
 texture = ExtResource("9_id1ct")
@@ -156,6 +152,15 @@ texture = ExtResource("10_d8487")
 position = Vector2(1859, 1111)
 scale = Vector2(0.997, 0.997)
 texture = ExtResource("11_yj2ib")
+
+[node name="EntityWithText" type="Sprite2D" parent="."]
+position = Vector2(2293, 1057)
+texture = ExtResource("12_px383")
+
+[node name="TutorialDetective2" type="Sprite2D" parent="."]
+position = Vector2(2897, 1331)
+scale = Vector2(0.155375, 0.155375)
+texture = ExtResource("10_d8487")
 
 [connection signal="pressed" from="TutorialSidebar/menu-1" to="." method="_on_menu_1_pressed"]
 [connection signal="pressed" from="TutorialSidebar/menu-2" to="." method="_on_menu_2_pressed"]
