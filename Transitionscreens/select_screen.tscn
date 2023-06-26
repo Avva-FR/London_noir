@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://crh5www7u7165"]
 
 [ext_resource type="Script" path="res://Transitionscreens/select_screen.gd" id="1_7vmlp"]
-[ext_resource type="Texture2D" uid="uid://bp8qmo0rpirkc" path="res://pictures/new-BG/select_screen.png" id="2_8024w"]
-[ext_resource type="Texture2D" uid="uid://d4f6cxa80vsko" path="res://pictures/new_Buttons/fall_button.png" id="3_7r7b5"]
-[ext_resource type="Texture2D" uid="uid://exotx7njlo4y" path="res://pictures/new_Buttons/tutorial_button.png" id="4_pfei0"]
-[ext_resource type="Texture2D" uid="uid://53twtx27s2er" path="res://pictures/new_Buttons/einstellungen_button.png" id="5_vxd62"]
+[ext_resource type="Texture2D" uid="uid://cobfw2pfir837" path="res://pictures/new-BG/select_screen.png" id="2_8024w"]
+[ext_resource type="Texture2D" uid="uid://b51g1do8prgvg" path="res://pictures/new_Buttons/fall_button.png" id="3_7r7b5"]
+[ext_resource type="Texture2D" uid="uid://eey578s1srl7" path="res://pictures/new_Buttons/tutorial_button.png" id="4_pfei0"]
+[ext_resource type="Texture2D" uid="uid://c2k1e6b81mifi" path="res://pictures/new_Buttons/einstellungen_button.png" id="5_vxd62"]
 
 [node name="Select_screen" type="Control"]
 layout_mode = 3
@@ -32,10 +32,10 @@ anchor_left = 0.502
 anchor_top = 0.262
 anchor_right = 0.502
 anchor_bottom = 0.262
-offset_left = -4008.65
-offset_top = -631.582
-offset_right = -2456.65
-offset_bottom = -310.582
+offset_left = -4009.0
+offset_top = -631.198
+offset_right = -15.0
+offset_bottom = 198.802
 
 [node name="TutorialButton" type="Sprite2D" parent="."]
 position = Vector2(1922, 1083)
@@ -48,10 +48,10 @@ anchor_left = 0.502
 anchor_top = 0.444
 anchor_right = 0.502
 anchor_bottom = 0.444
-offset_left = -4015.07
-offset_top = -781.23
-offset_right = -2464.07
-offset_bottom = -459.23
+offset_left = -4015.0
+offset_top = -781.076
+offset_right = -11.0
+offset_bottom = 43.924
 
 [node name="EinstellungenButton" type="Sprite2D" parent="."]
 position = Vector2(1922, 1564)
@@ -64,10 +64,10 @@ anchor_left = 0.503
 anchor_top = 0.657
 anchor_right = 0.503
 anchor_bottom = 0.657
-offset_left = -4013.91
-offset_top = -957.102
-offset_right = -2460.91
-offset_bottom = -637.102
+offset_left = -4014.0
+offset_top = -956.653
+offset_right = -20.0
+offset_bottom = -131.653
 
 [connection signal="pressed" from="FallButton/cases_botton" to="." method="_on_cases_botton_pressed"]
 [connection signal="pressed" from="TutorialButton/tutorial_button" to="." method="_on_tutorial_button_pressed"]

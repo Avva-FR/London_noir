@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmoee8543uftd"
-path="res://.godot/imported/submit_button.png-b2f22f237d5b2f7134a37930d2a9d405.ctex"
+uid="uid://cipunef3b1ves"
+path="res://.godot/imported/button_next.png-6fbd201412a48a23f75526480f2e895f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Button_textures/submit_button.png"
-dest_files=["res://.godot/imported/submit_button.png-b2f22f237d5b2f7134a37930d2a9d405.ctex"]
+source_file="res://pictures/new_Buttons/button_next.png"
+dest_files=["res://.godot/imported/button_next.png-6fbd201412a48a23f75526480f2e895f.ctex"]
 
 [params]
 

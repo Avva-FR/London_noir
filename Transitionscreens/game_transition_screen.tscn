@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Transitionscreens/Game_TransitionScreen.gd" id="1_fmes2"]
 [ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="2_y6bxe"]
 [ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="3_mqm14"]
-[ext_resource type="Texture2D" uid="uid://dk82su41crequ" path="res://assets/BG_textures/bg_game_tutorial.png" id="4_skwcw"]
+[ext_resource type="Texture2D" uid="uid://bvrndjjssbc88" path="res://assets/BG_textures/bg_game_tutorial.png" id="4_skwcw"]
 [ext_resource type="Texture2D" uid="uid://gtw3vqu02jb1" path="res://assets/BG_textures/backgrounds/position_display.svg" id="5_aei2q"]
 [ext_resource type="Texture2D" uid="uid://clj5duxat7gu3" path="res://assets/Button_textures/buttons/weiter.png" id="6_irlpv"]
-[ext_resource type="FontFile" uid="uid://qrf0vaknvdhl" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="7_qdjjk"]
+[ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="7_qdjjk"]
 
 [node name="Game_TransitionScreen" type="Control"]
 layout_mode = 3

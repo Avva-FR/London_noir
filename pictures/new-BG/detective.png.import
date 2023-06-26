@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmoee8543uftd"
-path="res://.godot/imported/submit_button.png-b2f22f237d5b2f7134a37930d2a9d405.ctex"
+uid="uid://dlpenx3kc2bkk"
+path="res://.godot/imported/detective.png-16c7b72448b7e49964fcb7978f7459b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Button_textures/submit_button.png"
-dest_files=["res://.godot/imported/submit_button.png-b2f22f237d5b2f7134a37930d2a9d405.ctex"]
+source_file="res://pictures/new-BG/detective.png"
+dest_files=["res://.godot/imported/detective.png-16c7b72448b7e49964fcb7978f7459b3.ctex"]
 
 [params]
 
