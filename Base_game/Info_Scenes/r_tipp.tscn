@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx00dp0jongyf"]
+[gd_scene load_steps=5 format=3 uid="uid://nkr75fn7qhe"]
 
-[ext_resource type="Script" path="res://Control.gd" id="1_vrc8t"]
+[ext_resource type="Script" path="res://Base_game/Info_Scenes/r_tipp.gd" id="1_gdfgj"]
 [ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="2_ihyxe"]
 [ext_resource type="Texture2D" uid="uid://1p538qfcasil" path="res://assets/BG_textures/backgrounds/speechbubble.svg" id="3_ej1mw"]
 [ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="4_gj0x3"]
@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 offset_left = 1920.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vrc8t")
+script = ExtResource("1_gdfgj")
 
 [node name="Detective" type="Sprite2D" parent="."]
 position = Vector2(1624, 248)
