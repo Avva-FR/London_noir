@@ -74,6 +74,10 @@ var L_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/l_case_info.tscn\"
 var L_Case_Info_Instance
 var R_Case_Info_Scene = preload(\"res://Base_game/Info_Scenes/r_case_info.tscn\")
 var R_Case_Info_Instance
+var L_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/l_tipp.tscn\")
+var L_Tipp_Instance
+var R_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/r_tipp.tscn\")
+var R_Tipp_Instance
 # bools
 var l_pp1_solved = false
 var l_pp2_solved = false
@@ -609,16 +613,18 @@ func _on_r_submit_button_pressed():
 
 # @Todo
 func _on_l_tip_1_pressed():
-	if GlobalVars.l_tip_count != 0:
-		GlobalVars.l_tip_count = 0
-	else:
+	if GlobalVars.cur_l_plotpoint == \"L_PP1\" or GlobalVars.cur_l_plotpoint == \"L_PP2\":
 		GlobalVars.l_tip_count += 1
-		# display correspoding tip
-	if l_pp1_solved == false and l_pp2_solved == false:
-		pass
+		if GlobalVars.l_pp1_solved or GlobalVars.l_pp2_solved:
+			GlobalVars.l_tip_count = 0
+	if GlobalVars.l_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP1\":
+		L_Tipp_Instance = L_Tipp_Scene.instantiate()
+		add_child(L_Tipp_Instance)
 		#display tips for 1st left plotpoint
-	elif l_pp1_solved == true and l_pp2_solved == false:
-		pass
+	elif GlobalVars.l_pp2_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP2\":
+		L_Tipp_Instance.queue_free()
+		L_Tipp_Instance = L_Tipp_Scene.instantiate()
+		add_child(L_Tipp_Instance)
 		# display tips for left side pp2
 	elif l_pp1_solved == true and l_pp2_solved == true and l_pp3_solved == false:
 		pass
@@ -631,15 +637,18 @@ func _on_l_tip_2_pressed():
 	_on_l_tip_1_pressed()
 
 func _on_r_tip_1_pressed():
-	if GlobalVars.r_tip_count != 0:
-		GlobalVars.r_tip_count = 0
-	else:
+	if GlobalVars.cur_r_plotpoint == \"R_PP1\" or GlobalVars.cur_r_plotpoint == \"R_PP2\":
 		GlobalVars.r_tip_count += 1
-	if r_pp1_solved == false and r_pp2_solved == false:
-		pass
+		if GlobalVars.r_pp1_solved or GlobalVars.r_pp2_solved:
+			GlobalVars.r_tip_count = 0
+	if GlobalVars.r_pp1_solved == false and GlobalVars.cur_r_plotpoint == \"R_PP1\":
+		R_Tipp_Instance = R_Tipp_Scene.instantiate()
+		add_child(R_Tipp_Instance)
 		#display tips for 1st left plotpoint
-	elif r_pp1_solved == true and r_pp2_solved == false:
-		pass
+	elif GlobalVars.r_pp2_solved == false and GlobalVars.cur_r_plotpoint == \"R_PP2\":
+		R_Tipp_Instance.queue_free()
+		R_Tipp_Instance = R_Tipp_Scene.instantiate()
+		add_child(R_Tipp_Instance)
 		# display tips for left side pp2
 	elif r_pp1_solved == true and r_pp2_solved == true and r_pp3_solved == false:
 		pass

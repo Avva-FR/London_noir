@@ -29,8 +29,8 @@ var r_pp2_solved = false
 var r_pp3_solved = false
 var r_pp4_solved = false
 # increments when tip button is clicked
-var l_tip_count
-var r_tip_count
+var l_tip_count = 0
+var r_tip_count = 0
 
 
 # Called when the node enters the scene tree for the first time.

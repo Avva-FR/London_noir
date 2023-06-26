@@ -1,0 +1,132 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx00dp0jongyf"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_vrc8t"]
+[ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="2_ihyxe"]
+[ext_resource type="Texture2D" uid="uid://1p538qfcasil" path="res://assets/BG_textures/backgrounds/speechbubble.svg" id="3_ej1mw"]
+[ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="4_gj0x3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vrc8t")
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(1624, 248)
+rotation = -1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ihyxe")
+
+[node name="Speechbubble" type="Sprite2D" parent="."]
+position = Vector2(972, 1268)
+rotation = -1.5708
+texture = ExtResource("3_ej1mw")
+
+[node name="R_pp1_tip1" type="Label" parent="Speechbubble"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+text = "Lest euch die
+ Fallinformationen 
+nochmal durch."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R_pp1_tip2" type="Label" parent="Speechbubble"]
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+text = "Im anderen Text Standen 
+sd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R_pp1_tip3" type="Label" parent="Speechbubble"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+text = "Der Zeugenbericht schreibt
+der Portiet hätte etwas
+gehört."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R_pp2_tip1" type="Label" parent="Speechbubble"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R_pp2_tip2" type="Label" parent="Speechbubble"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+text = "i love loot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R_pp2_tip3" type="Label" parent="Speechbubble"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.855
+anchor_bottom = 0.855
+offset_left = -580.0
+offset_top = -1004.22
+offset_right = 562.0
+offset_bottom = -377.22
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gj0x3")
+theme_override_font_sizes/font_size = 100
+text = "i love loot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 1920.0
+offset_bottom = 2160.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
