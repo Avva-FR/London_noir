@@ -78,6 +78,8 @@ var L_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/l_tipp.tscn\")
 var L_Tipp_Instance
 var R_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/r_tipp.tscn\")
 var R_Tipp_Instance
+
+var dragData = {}
 # bools
 var l_pp1_solved = false
 var l_pp2_solved = false
