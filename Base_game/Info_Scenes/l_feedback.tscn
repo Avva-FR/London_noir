@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://duanlvj8337a"]
+
+[ext_resource type="Script" path="res://Base_game/Info_Scenes/L_feedback.gd" id="1_nyt1o"]
+[ext_resource type="Texture2D" uid="uid://ckq74kcopgob1" path="res://assets/BG_textures/backgrounds/Textbox.svg" id="2_8xpl5"]
+[ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="3_vdi5k"]
+[ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="4_g3a6i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nyt1o")
+
+[node name="L_Feedbackbox" type="Sprite2D" parent="."]
+position = Vector2(798, 1099)
+scale = Vector2(0.76, 0.913)
+texture = ExtResource("2_8xpl5")
+
+[node name="L_Feedbacktext" type="Label" parent="L_Feedbackbox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 145.0
+offset_top = -340.0
+offset_right = 537.0
+offset_bottom = -731.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vdi5k")
+theme_override_font_sizes/font_size = 50
+text = "Das haut noch nicht ganz hin.
+Schaut mal bei den Tipps 
+vorbei.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(613, 1568)
+rotation = 1.5708
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_g3a6i")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 789.0
+offset_right = 914.0
+offset_bottom = 1732.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

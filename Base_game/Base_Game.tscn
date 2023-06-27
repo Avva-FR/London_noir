@@ -1,7 +1,6 @@
-[gd_scene load_steps=63 format=3 uid="uid://dsiw53ro76he6"]
+[gd_scene load_steps=62 format=3 uid="uid://dsiw53ro76he6"]
 
 [ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="1_m0gn6"]
-[ext_resource type="Texture2D" uid="uid://c0f46wcx0k6wi" path="res://assets/BG_textures/backgrounds/scuffed_pinboard.png" id="2_0nqia"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
 [ext_resource type="Texture2D" uid="uid://b1gto0t1sn035" path="res://assets/ER_textures/L_Plotpoint_1/benutzt.png" id="2_kynfm"]
 [ext_resource type="Texture2D" uid="uid://4dhmly0h7kl0" path="res://assets/ER_textures/pinboard/board.png" id="3_rqft1"]
@@ -78,6 +77,10 @@ var L_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/l_tipp.tscn\")
 var L_Tipp_Instance
 var R_Tipp_Scene = preload(\"res://Base_game/Info_Scenes/r_tipp.tscn\")
 var R_Tipp_Instance
+var L_Feedback_Scene = preload(\"res://Base_game/Info_Scenes/l_feedback.tscn\")
+var L_Feedback_Instance
+var R_Feedback_Scene = preload(\"res://Base_game/Info_Scenes/r_feedback.tscn\")
+var R_Feedback_Instance
 
 var dragData = {}
 # bools
@@ -557,6 +560,8 @@ func _on_l_submit_button_pressed():
 			deallocate_lpp1()
 			
 		else:
+			L_Feedback_Instance = L_Feedback_Scene.instantiate()
+			add_child(L_Feedback_Instance)
 			reset_ldb_text()
 			set_lpp1_pos()
 			
@@ -573,6 +578,9 @@ func _on_l_submit_button_pressed():
 			reset_lpp2_names()
 			set_lpp2_pos()
 			reset_ldb_text()
+			L_Feedback_Instance.queue_free()
+			L_Feedback_Instance = L_Feedback_Scene.instantiate()
+			add_child(L_Feedback_Instance)
 	# @ Todo 
 	elif GlobalVars.cur_l_plotpoint == \"L_PP3\" and GlobalVars.l_pp3_solved == false:
 		if check_L_PP3_success():
@@ -596,6 +604,8 @@ func _on_r_submit_button_pressed():
 			reset_rpp1_names()
 			set_rpp1_pos()
 			reset_rdb_text()
+			R_Feedback_Instance = R_Feedback_Scene.instantiate()
+			add_child(R_Feedback_Instance)
 	elif GlobalVars.cur_r_plotpoint == \"R_PP2\" and GlobalVars.r_pp1_solved == true and GlobalVars.r_pp2_solved == false:
 		if check_R_PP2_success():
 			GlobalVars.r_pp2_solved = true
@@ -608,6 +618,9 @@ func _on_r_submit_button_pressed():
 			reset_rpp2_names()
 			set_rpp2_pos()
 			reset_rdb_text()
+			R_Feedback_Instance.queue_free()
+			R_Feedback_Instance = R_Feedback_Scene.instantiate()
+			add_child(R_Feedback_Instance)
 	elif GlobalVars.cur_r_plotpoint == \"R_PP3\":
 		pass
 	elif GlobalVars.cur_r_plotpoint == \"R_PP4\":
@@ -777,15 +790,9 @@ scale = Vector2(0.9595, 1.0725)
 texture = ExtResource("57_1o221")
 
 [node name="Board-empty" type="Sprite2D" parent="."]
-position = Vector2(1859, 1060)
+position = Vector2(1914, 1054)
 scale = Vector2(0.933762, 0.933762)
 texture = ExtResource("3_rqft1")
-
-[node name="ScuffedPinboard" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1868, 1046)
-scale = Vector2(0.46, 0.46)
-texture = ExtResource("2_0nqia")
 
 [node name="L_PP1_Texturesnode" type="Control" parent="."]
 anchors_preset = 0
@@ -1647,8 +1654,10 @@ texture_normal = ExtResource("48_g50n2")
 
 [node name="Success_Pinnboard" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 55.0
+offset_top = -6.0
+offset_right = 95.0
+offset_bottom = 34.0
 
 [node name="Board-left2" type="Sprite2D" parent="Success_Pinnboard"]
 visible = false
@@ -1675,14 +1684,16 @@ scale = Vector2(0.433328, 0.433328)
 texture = ExtResource("52_qxse5")
 
 [node name="Pinlines" type="Sprite2D" parent="."]
-position = Vector2(1880.98, 983.75)
+position = Vector2(1935.98, 977.75)
 scale = Vector2(0.833983, 0.833982)
 texture = ExtResource("54_40i4v")
 
 [node name="Select_Buttonsnode" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 55.0
+offset_top = -6.0
+offset_right = 95.0
+offset_bottom = 34.0
 
 [node name="L_PP1_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
 layout_mode = 0

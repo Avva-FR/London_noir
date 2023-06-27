@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0gwaufumhkco"]
+
+[ext_resource type="Texture2D" uid="uid://ckq74kcopgob1" path="res://assets/BG_textures/backgrounds/Textbox.svg" id="1_igoqy"]
+[ext_resource type="Script" path="res://Base_game/Info_Scenes/r_feedback.gd" id="1_pftm2"]
+[ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="2_46w6p"]
+[ext_resource type="Texture2D" uid="uid://shds81x1va4g" path="res://assets/BG_textures/backgrounds/detective.png" id="3_bp0e0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pftm2")
+
+[node name="R_Feedbackbox" type="Sprite2D" parent="."]
+position = Vector2(1148, 1098)
+scale = Vector2(0.76, 0.913)
+texture = ExtResource("1_igoqy")
+
+[node name="R_Feedbacktext" type="Label" parent="R_Feedbackbox"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.661
+offset_top = 338.497
+offset_right = 268.339
+offset_bottom = -52.5028
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_46w6p")
+theme_override_font_sizes/font_size = 50
+text = "Das haut noch nicht ganz hin.
+Schaut mal bei den Tipps 
+vorbei.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(1330, 640)
+rotation = -1.5708
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_bp0e0")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1022.0
+offset_top = 481.0
+offset_right = -303.0
+offset_bottom = -750.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
