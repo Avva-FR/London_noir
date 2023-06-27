@@ -26,32 +26,32 @@ anchor_left = 0.147
 anchor_top = 0.318
 anchor_right = 0.831
 anchor_bottom = 0.645
-offset_left = 614.927
-offset_top = -2506.97
-offset_right = -31.3689
-offset_bottom = -1859.21
-rotation = 1.5708
+offset_left = -1664.72
+offset_top = -862.589
+offset_right = -2311.02
+offset_bottom = -214.829
+rotation = -1.5708
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_k78oc")
 theme_override_font_sizes/font_size = 100
 text = "Transkription Zeugenbericht:
 
-Befragte Person: Portier
-Datum der Befragung: 12.03.1903
+Befragte Person: Hausmädchen
+Datum der Befragung: 13.03.1903
 
 befragte Person gab volgende Auskünfte:
 
-- Befragter gab an sich für den gesammten 
-Abend im Eingangsbereich aufgehalten zu
-haben
-- befragte Person gab an im Zeitraum von 
-19:30 bis 20:30 4 Personen durch den
-Eingang kommen gesehen zu haben
-- Gegen 21:00 hat der Portier einen Schuss
-vernommen, er behauptet er hätte die Richtung
-des Geräusches dem Ballsaal zugeordnet
-- Nach 21:00 hat er keinen die Fronttür
-verlassen gesehen"
+- Befragte hätte laut eigenen Angaben
+im Ballsaal über den Verlauf des 
+gesammten Abends Drinks serviert
+
+- Zur Zeit der Tat war befragte Person 
+auf dem Weg das Serviertablett neu
+zu bestücken. Sie befand sich im Gang
+der zum Tatzimmer führt.
+
+- Sie soll dort eine Perosn gesehen haben, 
+welche einen spitzen Gegenstand gehalten hat."
 horizontal_alignment = 1
 
 [node name="r_Exit_button" type="TextureButton" parent="."]
