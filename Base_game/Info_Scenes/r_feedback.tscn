@@ -21,7 +21,7 @@ scale = Vector2(0.76, 0.913)
 texture = ExtResource("1_igoqy")
 
 [node name="R_Feedbacktext" type="Label" parent="R_Feedbackbox"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -123.661
@@ -35,8 +35,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_46w6p")
 theme_override_font_sizes/font_size = 50
 text = "Das haut noch nicht ganz hin.
-Schaut mal bei den Tipps 
-vorbei.
+Schaut mal bei der Info
+oder den Tipps vorbei.
 "
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -237,7 +237,7 @@ var r_pp4_node8
 var r_pp4_node9
 var r_pp4_node10
 
-#spawn positions for on clickevent on selectbutton_presses
+#spawn positions for on clickevent on selectbuttpresses
 # @Todo fill in once ready
 func _ready():
 	#connect(\"get\")
@@ -256,11 +256,19 @@ func _ready():
 	l_caseinfo_button2 = get_node(\"Misc_Buttonsnode/L_caseinfo_button_2\")
 	r_caseinfo_button1 = get_node(\"Misc_Buttonsnode/R_caseinfo_button_1\")
 	r_caseinfo_button2 = get_node(\"Misc_Buttonsnode/R_caseinfo_button_2\")
+	l_caseinfo_button1.visible = false
+	l_caseinfo_button2.visible = false
+	r_caseinfo_button1.visible = false
+	r_caseinfo_button2.visible = false
 	# tip buttons
 	l_tip_button1 = get_node(\"Misc_Buttonsnode/L_tip_1\")
 	l_tip_button2 = get_node(\"Misc_Buttonsnode/L_tip_2\")
 	r_tip_button1 = get_node(\"Misc_Buttonsnode/R_tip_1\")
 	r_tip_button2 = get_node(\"Misc_Buttonsnode/R_tip_2\")
+	l_tip_button1.visible = false
+	l_tip_button2.visible = false
+	r_tip_button1.visible = false
+	r_tip_button2.visible = false
 	# dropbox_nodes
 	l_db_box1 = get_node(\"L_Container/L_DB_Slot1/L_DB_Frame/Drop_Box_L1\")
 	l_db_box2 = get_node(\"L_Container/L_DB_Slot2/L_DB_Frame2/Drop_Box_L2\")
@@ -527,11 +535,15 @@ func reset_rdb_text() -> void:
 	r_db_box3.texture = empty_texture
 	
 func _on_l_pp_1_selectbutton_pressed():
+	l_caseinfo_button1.visible = true
+	l_caseinfo_button2.visible = true
 	GlobalVars.cur_l_plotpoint = \"L_PP1\"
 	set_lpp1_pos()
 	l_select_button1.disabled = true
 	
 func _on_r_pp_1_selectbutton_pressed():
+	r_caseinfo_button1.visible = true
+	r_caseinfo_button2.visible = true
 	GlobalVars.cur_r_plotpoint = \"R_PP1\"
 	set_rpp1_pos()
 	r_select_button1.disabled = true
@@ -682,10 +694,14 @@ func _on_r_tip_2_pressed():
 
 func _on_l_caseinfo_button_1_pressed():
 	if GlobalVars.l_pp1_solved == false and GlobalVars.cur_l_plotpoint == \"L_PP1\":
+		l_tip_button1.visible = true
+		l_tip_button2.visible = true
 		L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
 		add_child(L_Case_Info_Instance)
 		# display case info for left side
 	elif GlobalVars.l_pp1_solved and GlobalVars.cur_l_plotpoint == \"L_PP2\":
+		l_tip_button1.visible = true
+		l_tip_button2.visible = true
 		if L_Case_Info_Instance:
 			L_Case_Info_Instance.queue_free()
 		L_Case_Info_Instance = L_Case_Info_Scene.instantiate()
@@ -704,9 +720,13 @@ func _on_l_caseinfo_button_2_pressed():
 
 func _on_r_caseinfo_button_1_pressed():
 	if GlobalVars.r_pp1_solved == false and GlobalVars.cur_r_plotpoint == \"R_PP1\":
+		r_tip_button1.visible = true
+		r_tip_button2.visible = true
 		R_Case_Info_Instance = R_Case_Info_Scene.instantiate()
 		add_child(R_Case_Info_Instance)
 	elif GlobalVars.r_pp1_solved and GlobalVars.cur_r_plotpoint == \"R_PP2\":
+		r_tip_button1.visible = true
+		r_tip_button2.visible = true
 		if R_Case_Info_Instance:
 			R_Case_Info_Instance.queue_free()
 		R_Case_Info_Instance = R_Case_Info_Scene.instantiate()
