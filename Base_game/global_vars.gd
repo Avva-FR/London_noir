@@ -31,7 +31,8 @@ var r_pp4_solved = false
 # increments when tip button is clicked
 var l_tip_count = 0
 var r_tip_count = 0
-
+var l_tip_count_reset = false
+var r_tip_count_reset = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
