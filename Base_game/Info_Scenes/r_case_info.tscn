@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Base_game/Info_Scenes/R_Case_Info.gd" id="1_dexuc"]
 [ext_resource type="Texture2D" uid="uid://cp0jykwwoa2e0" path="res://assets/BG_textures/backgrounds/R_Caseinfo_Texture.png" id="2_qgu81"]
 [ext_resource type="FontFile" uid="uid://w25kooi0ryvw" path="res://assets/fonts/akaDora.ttf" id="3_k78oc"]
-[ext_resource type="Texture2D" uid="uid://c8qvr2adgm37p" path="res://assets/Button_textures/buttons/tipp_button.svg" id="4_mpjgl"]
+[ext_resource type="Texture2D" uid="uid://csnsixfqnju4d" path="res://assets/Button_textures/exit_button.png" id="4_674ay"]
 
 [node name="R_Case_Info" type="Control"]
 layout_mode = 3
@@ -56,11 +56,13 @@ horizontal_alignment = 1
 
 [node name="r_Exit_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1503.0
-offset_top = 940.0
-offset_right = 1631.0
-offset_bottom = 1152.0
-texture_normal = ExtResource("4_mpjgl")
+offset_left = 1391.0
+offset_top = 1169.0
+offset_right = 3391.0
+offset_bottom = 2284.0
+rotation = -1.5708
+scale = Vector2(0.121, 0.121)
+texture_normal = ExtResource("4_674ay")
 
-[connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]
 [connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
+[connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]

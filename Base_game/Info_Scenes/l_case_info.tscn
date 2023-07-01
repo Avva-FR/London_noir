@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Base_game/Info_Scenes/Left_Case_Info.gd" id="1_sqbco"]
 [ext_resource type="Texture2D" uid="uid://d0d6tqpmpsaue" path="res://assets/BG_textures/backgrounds/L_Case_Info_Text.png" id="2_hinov"]
 [ext_resource type="FontFile" uid="uid://w25kooi0ryvw" path="res://assets/fonts/akaDora.ttf" id="3_n20p2"]
-[ext_resource type="Texture2D" uid="uid://c8qvr2adgm37p" path="res://assets/Button_textures/buttons/tipp_button.svg" id="4_2sksf"]
+[ext_resource type="Texture2D" uid="uid://csnsixfqnju4d" path="res://assets/Button_textures/exit_button.png" id="4_1e1d6"]
 
 [node name="L_Case_Info" type="Control"]
 layout_mode = 3
@@ -56,10 +56,12 @@ horizontal_alignment = 1
 
 [node name="Exit_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 968.0
-offset_right = 268.0
-offset_bottom = 1180.0
-texture_normal = ExtResource("4_2sksf")
+offset_left = 343.0
+offset_top = 995.0
+offset_right = 2343.0
+offset_bottom = 2110.0
+rotation = 1.5708
+scale = Vector2(0.121, 0.121)
+texture_normal = ExtResource("4_1e1d6")
 
 [connection signal="pressed" from="Exit_button" to="." method="_on_exit_button_pressed"]
