@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dsiw53ro76he6"]
+[gd_scene load_steps=60 format=3 uid="uid://dsiw53ro76he6"]
 
 [ext_resource type="Texture2D" uid="uid://d1l1eq03xjb6d" path="res://assets/BG_textures/backgrounds/bg_game.png" id="1_m0gn6"]
 [ext_resource type="Script" path="res://Base_game/drag_from_tile.gd" id="2_hip4l"]
@@ -24,11 +24,11 @@
 [ext_resource type="Texture2D" uid="uid://dl3fciucntf6q" path="res://assets/ER_textures/L_Plotpoint_2/Waffenauslage.png" id="20_buxex"]
 [ext_resource type="Texture2D" uid="uid://d04ay5ggiriav" path="res://assets/ER_textures/L_Plotpoint_2/fehlt.png" id="21_30m0r"]
 [ext_resource type="Texture2D" uid="uid://by13recixlhod" path="res://assets/ER_textures/L_Plotpoint_2/Revolver.png" id="22_jg3pd"]
-[ext_resource type="Texture2D" uid="uid://bjn6fcghj2nyd" path="res://assets/ER_textures/R_Plotpoint_1/Koch.png" id="23_4ek0j"]
+[ext_resource type="Texture2D" path="res://assets/ER_textures/R_Plotpoint_1/Koch.png" id="23_4ek0j"]
 [ext_resource type="Texture2D" uid="uid://celmsn0fd0vxs" path="res://assets/ER_textures/R_Plotpoint_1/Dame.png" id="24_h4nex"]
 [ext_resource type="Texture2D" uid="uid://dswrv18i67m2b" path="res://assets/ER_textures/R_Plotpoint_1/isst.png" id="25_fcjlc"]
 [ext_resource type="Texture2D" uid="uid://uh7v2xbsx0jg" path="res://assets/ER_textures/R_Plotpoint_1/Kuchen.png" id="26_0i57f"]
-[ext_resource type="Texture2D" uid="uid://cp1prkpod1krp" path="res://assets/ER_textures/R_Plotpoint_1/Messer.png" id="27_qlnfq"]
+[ext_resource type="Texture2D" path="res://assets/ER_textures/R_Plotpoint_1/Messer.png" id="27_qlnfq"]
 [ext_resource type="Texture2D" uid="uid://d0qqmbhrnso7w" path="res://assets/ER_textures/R_Plotpoint_1/schneidet.png" id="28_0sfgl"]
 [ext_resource type="Texture2D" uid="uid://bmac1pccv4o13" path="res://assets/ER_textures/R_Plotpoint_1/Person.png" id="29_150re"]
 [ext_resource type="Texture2D" uid="uid://celvaxiabsi6p" path="res://assets/ER_textures/R_Plotpoint_1/hält.png" id="30_0xisw"]
@@ -56,8 +56,6 @@
 [ext_resource type="Texture2D" uid="uid://cvs8a7flv0242" path="res://assets/Button_textures/Pins/gray_pin_right.svg" id="53_1hkky"]
 [ext_resource type="Texture2D" uid="uid://by0cyvl4gry16" path="res://assets/ER_textures/pinboard/board-right_2.png" id="53_knpwb"]
 [ext_resource type="Texture2D" uid="uid://b2vsfu5sucgh4" path="res://assets/ER_textures/pinboard/pinlines.png" id="54_40i4v"]
-[ext_resource type="Texture2D" uid="uid://bj58gw2oxr77u" path="res://assets/Button_textures/Pins/red_pin_right.svg" id="54_sq5ny"]
-[ext_resource type="Texture2D" uid="uid://b10gdeodvnp16" path="res://assets/Button_textures/Pins/red_pin_left.svg" id="55_7xq13"]
 [ext_resource type="Script" path="res://Base_game/global_vars.gd" id="55_jo8fx"]
 [ext_resource type="Texture2D" uid="uid://hmgv0scyqdob" path="res://assets/BG_textures/backgrounds/bg_smoke_for_game.png" id="57_1o221"]
 
@@ -1748,7 +1746,7 @@ offset_left = 1326.0
 offset_top = 1305.0
 offset_right = 1434.0
 offset_bottom = 1487.0
-texture_normal = ExtResource("54_sq5ny")
+texture_normal = ExtResource("50_v5mpk")
 texture_disabled = ExtResource("51_pkbgd")
 
 [node name="R_PP2_Selectbutton" type="TextureButton" parent="Select_Buttonsnode"]
@@ -1757,7 +1755,7 @@ offset_left = 2579.0
 offset_top = 1115.0
 offset_right = 2687.0
 offset_bottom = 1297.0
-texture_normal = ExtResource("55_7xq13")
+texture_normal = ExtResource("52_cnfyi")
 texture_disabled = ExtResource("53_1hkky")
 
 [node name="Node" type="Node" parent="."]
