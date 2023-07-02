@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://uu7mt8vl8o6"]
 
 [ext_resource type="Script" path="res://Base_game/Info_Scenes/R_Case_Info.gd" id="1_dexuc"]
-[ext_resource type="Texture2D" uid="uid://cp0jykwwoa2e0" path="res://assets/BG_textures/backgrounds/R_Caseinfo_Texture.png" id="2_qgu81"]
-[ext_resource type="FontFile" uid="uid://w25kooi0ryvw" path="res://assets/fonts/akaDora.ttf" id="3_k78oc"]
+[ext_resource type="Texture2D" uid="uid://dlx0mh67kjxyr" path="res://assets/ER_textures/pinboard/RCaseinfoTexture-1.png" id="2_mftsc"]
+[ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="3_61vol"]
 [ext_resource type="Texture2D" uid="uid://csnsixfqnju4d" path="res://assets/Button_textures/exit_button.png" id="4_674ay"]
 
 [node name="R_Case_Info" type="Control"]
@@ -16,9 +16,10 @@ grow_vertical = 2
 script = ExtResource("1_dexuc")
 
 [node name="RCaseinfoTexture" type="Sprite2D" parent="."]
-position = Vector2(856, 1079.75)
-scale = Vector2(0.476675, 0.430522)
-texture = ExtResource("2_qgu81")
+position = Vector2(1052, 1094.75)
+rotation = -1.5708
+scale = Vector2(0.541, 0.524)
+texture = ExtResource("2_mftsc")
 
 [node name="R_PP1_Text" type="Label" parent="RCaseinfoTexture"]
 anchors_preset = -1
@@ -26,14 +27,13 @@ anchor_left = 0.147
 anchor_top = 0.318
 anchor_right = 0.831
 anchor_bottom = 0.645
-offset_left = -1664.72
-offset_top = -862.589
-offset_right = -2311.02
-offset_bottom = -214.829
-rotation = -1.5708
+offset_left = -1665.0
+offset_top = -1502.72
+offset_right = -2178.0
+offset_bottom = -205.326
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_k78oc")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_61vol")
+theme_override_font_sizes/font_size = 90
 text = "Transkription Zeugenbericht:
 
 Befragte Person: Hausmädchen
@@ -41,28 +41,26 @@ Datum der Befragung: 13.03.1903
 
 befragte Person gab volgende Auskünfte:
 
-- Befragte hätte laut eigenen Angaben
-im Ballsaal über den Verlauf des 
-gesammten Abends Drinks serviert
+- Befragte hätte laut eigenen Angaben im Ballsaal über 
+den Verlauf des gesammten Abends Drinks serviert
 
-- Zur Zeit der Tat war befragte Person 
-auf dem Weg das Serviertablett neu
-zu bestücken. Sie befand sich im Gang
-der zum Tatzimmer führt.
+- Zur Zeit der Tat war befragte Person auf dem Weg 
+das Serviertablett neu zu bestücken. Sie befand sich 
+im Gang der zum Tatzimmer führt.
 
-- Sie soll dort eine Perosn gesehen haben, 
-welche einen spitzen Gegenstand gehalten hat."
+- Sie soll dort eine Perosn gesehen haben, welche
+einen spitzen Gegenstand gehalten hat."
 horizontal_alignment = 1
 
 [node name="r_Exit_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1391.0
+offset_left = 1543.0
 offset_top = 1169.0
-offset_right = 3391.0
+offset_right = 3543.0
 offset_bottom = 2284.0
 rotation = -1.5708
 scale = Vector2(0.121, 0.121)
 texture_normal = ExtResource("4_674ay")
 
-[connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
 [connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]
+[connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
