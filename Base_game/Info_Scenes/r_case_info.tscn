@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://uu7mt8vl8o6"]
+[gd_scene load_steps=6 format=3 uid="uid://uu7mt8vl8o6"]
 
 [ext_resource type="Script" path="res://Base_game/Info_Scenes/R_Case_Info.gd" id="1_dexuc"]
-[ext_resource type="Texture2D" uid="uid://dlx0mh67kjxyr" path="res://assets/ER_textures/pinboard/RCaseinfoTexture-1.png" id="2_mftsc"]
+[ext_resource type="Texture2D" uid="uid://n48owosn2lwb" path="res://assets/ER_textures/pinboard/RCaseinfoTexture-1.png" id="2_mftsc"]
 [ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="3_61vol"]
 [ext_resource type="Texture2D" uid="uid://csnsixfqnju4d" path="res://assets/Button_textures/exit_button.png" id="4_674ay"]
+[ext_resource type="Texture2D" uid="uid://5pq5f573o024" path="res://assets/BG_textures/Waffendisplay.png" id="5_i53t5"]
 
 [node name="R_Case_Info" type="Control"]
 layout_mode = 3
@@ -61,6 +62,12 @@ offset_bottom = 2284.0
 rotation = -1.5708
 scale = Vector2(0.121, 0.121)
 texture_normal = ExtResource("4_674ay")
+
+[node name="Waffendisplay" type="Sprite2D" parent="."]
+position = Vector2(1093, 1037)
+rotation = -1.5708
+scale = Vector2(1.23338, 1.26774)
+texture = ExtResource("5_i53t5")
 
 [connection signal="pressed" from="r_Exit_button" to="." method="_on_exit_button_pressed" flags=18]
 [connection signal="pressed" from="r_Exit_button" to="." method="_on_r_exit_button_pressed"]
