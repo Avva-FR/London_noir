@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1wlc67jikjsd"]
+[gd_scene load_steps=7 format=3 uid="uid://d1wlc67jikjsd"]
 
 [ext_resource type="Script" path="res://Base_game/Info_Scenes/Left_Case_Info.gd" id="1_sqbco"]
-[ext_resource type="Texture2D" uid="uid://bmqrnxme82a0a" path="res://assets/ER_textures/pinboard/RCaseinfoTexture.png" id="2_28clf"]
+[ext_resource type="Texture2D" uid="uid://qwiekq6dmv2g" path="res://assets/ER_textures/pinboard/RCaseinfoTexture.png" id="2_28clf"]
 [ext_resource type="FontFile" uid="uid://tm3cqhd2r5il" path="res://assets/fonts/Chaparral Pro Regular.ttf" id="3_nj0wn"]
 [ext_resource type="Texture2D" uid="uid://csnsixfqnju4d" path="res://assets/Button_textures/exit_button.png" id="4_1e1d6"]
+[ext_resource type="Texture2D" uid="uid://bqtp0fa1qj0sd" path="res://assets/ER_textures/pinboard/koch.png" id="5_s4476"]
+[ext_resource type="Texture2D" uid="uid://bkwqr1a4a1lj0" path="res://assets/ER_textures/pinboard/messer.png" id="6_cs560"]
 
 [node name="L_Case_Info" type="Control"]
 layout_mode = 3
@@ -60,5 +62,17 @@ offset_bottom = 2110.0
 rotation = 1.5708
 scale = Vector2(0.121, 0.121)
 texture_normal = ExtResource("4_1e1d6")
+
+[node name="Koch" type="Sprite2D" parent="."]
+position = Vector2(1016, 955)
+rotation = 1.5708
+scale = Vector2(0.3, 0.248)
+texture = ExtResource("5_s4476")
+
+[node name="Messer" type="Sprite2D" parent="."]
+position = Vector2(618, 1682)
+rotation = 1.5708
+scale = Vector2(0.2, 0.243)
+texture = ExtResource("6_cs560")
 
 [connection signal="pressed" from="Exit_button" to="." method="_on_exit_button_pressed"]
